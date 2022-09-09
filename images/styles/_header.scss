@@ -1,0 +1,62 @@
+.header {
+    margin-bottom: 40px;
+    &__inner {
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bottom {
+    }
+}
+.site-info {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        margin-right: 20px;
+    }
+    &__text {
+    }
+    &__name {
+        a {
+            display: inline-flex;
+            text-decoration: none;
+            font-size: 26px;
+        }
+    }
+    &__desc {
+    }
+}
+.contacts-block {
+    &__items {
+    }
+    &__item {
+    }
+    &__desc {
+    }
+    &__item-left {
+    }
+    &__link {
+    }
+    &__item-right {
+    }
+    &__number {
+    }
+    &__more {
+    }
+    &__more_btn {
+    }
+}
+.site-menu {
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
