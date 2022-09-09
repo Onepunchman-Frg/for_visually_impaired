@@ -10,6 +10,7 @@ $(function() {
         defaultVoice = voices.find((voice) => voice.name === "Google русский");
 
         wrapper.addEventListener("click", handleClick);
+        wrapper.addEventListener("touch", handleClick);
         window.addEventListener("keydown", handleKeydown);
     };
 
