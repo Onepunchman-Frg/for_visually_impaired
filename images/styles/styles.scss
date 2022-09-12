@@ -9,7 +9,8 @@ html {
     height: 100%;
 }
 
-body {
+body,
+figure {
     margin: 0;
     padding: 0;
 }
@@ -30,6 +31,10 @@ body {
 
 .main {
     flex: 1 0 auto;
+}
+
+*:focus {
+    outline: dashed;
 }
 
 
@@ -70,4 +75,9 @@ button:focus::before {
 }
 .resume::after {
   content: "🔉";
+}
+
+.test {
+  max-width: 1200px;
+  margin: 0 auto;
 }

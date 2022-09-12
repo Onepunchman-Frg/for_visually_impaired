@@ -61,12 +61,19 @@
 
                 <div class="header__bottom">
                     <nav class="site-menu">
-                        <ul class="site-menu__list">
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Галерея</a></li>
-                            <li><a href="#">Частые вопросы</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Контакты</a></li>
+                        <ul class="site-menu__list" role="menubar">
+                            <li role="menuitem" aria-current="page"><a tabindex="0" href="#">Главная</a></li>
+                            <li role="menuitem" aria-haspopup="true">
+                                <a href="#">О нас</a>
+                                <ul aria-expanded="true||false" role="menu">
+                                    <li role="menuitem"><a href="#">Тест</a></li>
+                                    <li role="menuitem"><a href="#">Тест</a></li>
+                                </ul>
+                            </li>
+                            <li role="menuitem"><a href="#">Галерея</a></li>
+                            <li role="menuitem"><a href="#">Частые вопросы</a></li>
+                            <li role="menuitem"><a href="#">Отзывы</a></li>
+                            <li role="menuitem"><a href="#">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -87,12 +94,72 @@
                                     <h2>Универсальное решение для вашего бизнеса</h2>
                                 </div>
                                 <div class="main-slider__desc">
-                                    <button class="play" tabindex="4"></button>
+                                    <button class="play"></button>
                                     <p>
                                         Начните бизнес правильно и добейтесь вершин. Станьте лучшим в своем деле.
                                     </p>
                                 </div>
-                                <button class="main-slider__btn">Оставить заявку</button>
+                                <button class="main-slider__btn"><span>Оставить заявку</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-block block-padding">
+            <div class="services-block__inner block-width">
+                <div class="services-block__title">
+                    <h2>Широкий профиль услуг</h2>
+                </div>
+                <div class="services-block__desc">
+                    <span>Краткая информация о ваших услугах</span>
+                </div>
+
+                <div class="services-block__items">
+                    <div class="services-block__item">
+                        <div class="services-block__img">
+                            <img src="images/img/services_1.jpg" alt="ОПИСАНИЕ">
+                        </div>
+                        <div class="services-block__text">
+                            <div class="services-block__name">
+                                <button class="play"></button>
+                                <h4>Универсальное решение для вашего бизнеса</h4>
+                            </div>
+                            <div class="services-block__announcement">
+                                <button class="play"></button>
+                                <span>
+                                    Начните бизнес правильно и добейтесь вершин. Станьте лучшим в своем деле.
+                                </span>
+                            </div>
+                            <div class="services-block__addition">
+                                <div class="services-block__price">
+                                    <span>2 400 руб.</span>
+                                </div>
+                                <button class="services-block__btn"><span>Заказать</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-block__item">
+                        <div class="services-block__img">
+                            <img src="images/img/services_2.jpg" alt="ОПИСАНИЕ">
+                        </div>
+                        <div class="services-block__text">
+                            <div class="services-block__name">
+                                <button class="play"></button>
+                                <h4>Универсальное решение для вашего бизнеса</h4>
+                            </div>
+                            <div class="services-block__announcement">
+                                <button class="play"></button>
+                                <span>
+                                    Начните бизнес правильно и добейтесь вершин. Станьте лучшим в своем деле.
+                                </span>
+                            </div>
+                            <div class="services-block__addition">
+                                <div class="services-block__price">
+                                    <span>2 400 руб.</span>
+                                </div>
+                                <button class="services-block__btn"><span>Заказать</span></button>
                             </div>
                         </div>
                     </div>
@@ -102,9 +169,205 @@
 
         <main class="main block-padding">
             <div class="main__inner block-width">
-                <h1>MAIN</h1>
+                <h1 class="main__title">Несколько слов о нас</h1>
+                <div class="main__text">
+                    <button class="play"></button>
+                    <p>
+                        Мы рады, что Вы сделали правильный выбор, ведь, создав сайт, Ваша компания приобрела свое лицо в безграничном пространстве Интернет!
+                    </p>
+                    <p>
+                        Надеемся, что благодаря этому сайту Ваши потенциальные клиенты будут легко находить Вас в сети Интернет, и сайт в скором времени начнет приносить прибыль.
+                    </p>
+                    <p>
+                        Ваш сайт имеет систему управления (CMS-S3 MegaSite), которая позволяет легко управлять содержанием сайта без наличия навыков программирования благодаря удобному пользовательскому интерфейсу.
+                    </p>
+                </div>
+
+                <a class="main__btn" href="#">
+                    Подробнее
+                </a>
             </div>
         </main>
+
+        <section class="reviews-block block-padding">
+            <div class="reviews-block__inner block-width">
+                <div class="reviews-block__top">
+                    <div class="reviews-block__heading">
+                        <div class="reviews-block__title">
+                            <h2>Что о нас говорят</h2>
+                        </div>
+                        <div class="reviews-block__desc">
+                            <span>Отзывы наших клиентов</span>
+                        </div>
+                    </div>
+                    <button class="reviews-block__btn"><span>Все отзывы</span></button>
+                </div>
+
+                <div class="reviews-block__items">
+                    <div class="reviews-block__item">
+                        <div class="reviews-block__content">
+                            <div class="reviews-block__body">
+                                <div class="reviews-block__icon">
+                                    <img src="images/img/quotes.svg" alt="ОПИСАНИЕ">
+                                </div>
+                                <div class="reviews-block__text">
+                                    Наша компания выражает искреннюю благодарность Вашей компании за длительное и взаимовыгодное сотрудничество! Благодарим за индивидуальный подход к каждому клиенту, высокий уровень профессионализма оперативность.
+                                </div>
+                                <div class="reviews-block__rating">
+                                    <div class="reviews-block__stars">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews-block__name">
+                                <span>Универсальное решение для вашего бизнеса</span>
+                            </div>
+                            <div class="reviews-block__desc">
+                                <p>
+                                    ООО «Antarctica»
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-block__item">
+                        <div class="reviews-block__content">
+                            <div class="reviews-block__body">
+                                <div class="reviews-block__icon">
+                                    <img src="images/img/quotes.svg" alt="ОПИСАНИЕ">
+                                </div>
+                                <div class="reviews-block__text">
+                                    Наша компания выражает искреннюю благодарность Вашей компании за длительное и взаимовыгодное сотрудничество! Благодарим за индивидуальный подход к каждому клиенту, высокий уровень профессионализма оперативность.
+                                </div>
+                                <div class="reviews-block__rating">
+                                    <div class="reviews-block__stars">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews-block__name">
+                                <span>Универсальное решение для вашего бизнеса</span>
+                            </div>
+                            <div class="reviews-block__desc">
+                                <p>
+                                    ООО «Antarctica»
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-block block-padding">
+            <div class="gallery-block__inner">
+                <div class="gallery-block__top block-width">
+                    <div class="gallery-block__heading">
+                        <div class="gallery-block__title">
+                            <h2>Портфолио</h2>
+                        </div>
+                        <div class="gallery-block__desc">
+                            <span>Наши последние работы</span>
+                        </div>
+                    </div>
+                    <button class="gallery-block__btn"><span>Все фото</span></button>
+                </div>
+                <div class="gallery-block__items">
+                    <div class="gallery-block__item">
+                        <div class="gallery-block__content">
+                            <div class="gallery-block__img">
+                                <img src="images/img/gallery_1.jpg" alt="ОПИСАНИЕ">
+                            </div>
+                            <div class="gallery-block__name">
+                                <span>Универсальное решение для вашего бизнеса</span>
+                            </div>
+                            <div class="gallery-block__desc">
+                                <p>
+                                    ООО «Antarctica»
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-block__item">
+                        <div class="gallery-block__content">
+                            <div class="gallery-block__img">
+                                <img src="images/img/gallery_2.jpg" alt="ОПИСАНИЕ">
+                            </div>
+                            <div class="gallery-block__name">
+                                <span>Универсальное решение для вашего бизнеса</span>
+                            </div>
+                            <div class="gallery-block__desc">
+                                <p>
+                                    ООО «Antarctica»
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-block block-padding">
+            <div class="form-block__inner block-width">
+                <div class="form-block__left">
+                    <div class="form-block__title">
+                        <h2>Нужна помощь?</h2>
+                    </div>
+                    <div class="form-block__desc">
+                        <span>Перезвоним, проконсультируем, подберем лучшие варианты</span>
+                    </div>
+                </div>
+                <div class="form-block__right">
+                    <button class="form-block__btn">
+                        <span>Консультация</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="articles-block block-padding">
+            <div class="articles-block__inner block-width">
+                <div class="articles-block__top">
+                    <div class="articles-block__heading">
+                        <div class="articles-block__title">
+                            <h2>Статьи и советы</h2>
+                        </div>
+                        <div class="articles-block__desc">
+                            <span>Блог компании</span>
+                        </div>
+                    </div>
+                    <button class="articles-block__btn"><span>Все статьи</span></button>
+                </div>
+                <div class="articles-block__items">
+                    <div class="articles-block__item">
+                        <div class="articles-block__content">
+                            <div class="articles-block__date">
+                                <span>12 августа 2022</span>
+                            </div>
+                            <div class="articles-block__name">
+                                <a href="#">Работа в единой команде</a>
+                            </div>
+                            <div class="articles-block__announcement">
+                                <span>Тут Вы видите пример заполнения анонса новости. Пройдя по ссылке "читать дальше" Вы можете ознакомиться с полным текстом новостей и примером заполнения ...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles-block__item">
+                        <div class="articles-block__content">
+                            <div class="articles-block__date">
+                                <span>12 августа 2022</span>
+                            </div>
+                            <div class="articles-block__name">
+                                <a href="#">Работа в единой команде</a>
+                            </div>
+                            <div class="articles-block__announcement">
+                                <span>Тут Вы видите пример заполнения анонса новости. Пройдя по ссылке "читать дальше" Вы можете ознакомиться с полным текстом новостей и примером заполнения ...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
 
         <footer class="footer block-padding">
             <div class="footer__inner block-width">
@@ -115,10 +378,10 @@
 
 
 
-        <div>
+        <div class="test">
             <h1>Speech Synthesis - Page Reader</h1>
             <div>
-              <button class="play" tabindex="1"></button>
+              <button class="play" ></button>
               <p>
                 JavaScript — мультипарадигменный язык программирования. Поддерживает
                 объектно-ориентированный, императивный и функциональный стили.
@@ -126,7 +389,7 @@
               </p>
             </div>
             <div>
-              <button class="play" tabindex="2"></button>
+              <button class="play" ></button>
               <p>
                 JavaScript обычно используется как встраиваемый язык для программного
                 доступа к объектам приложений. Наиболее широкое применение находит в
@@ -135,7 +398,7 @@
               </p>
             </div>
             <div>
-              <button class="play" tabindex="3"></button>
+              <button class="play" ></button>
               <p>
                 Основные архитектурные черты: динамическая типизация, слабая
                 типизация, автоматическое управление памятью, прототипное
@@ -144,7 +407,7 @@
             </div>
         </div>
 
-
+    </div>
 
 </body>
 </html>
