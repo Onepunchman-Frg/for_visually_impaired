@@ -1,6 +1,11 @@
 .main-slider {
     position: relative;
     min-height: 700px;
+    padding: 0;
+
+    .tns-controls {
+        display: none;
+    }
 
     &__inner {
         height: 100%;
@@ -10,6 +15,7 @@
     }
     &__item {
         height: 100%;
+        position: relative;
     }
     &__img {
         position: absolute;

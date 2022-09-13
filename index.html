@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="images/styles/color.css">
     <link rel="stylesheet" href="images/styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="images/js/main.js"></script>
@@ -29,7 +30,7 @@
                                 </a>
                             </div>
                             <div class="site-info__desc">
-                                <p>Универсальное решение</p>
+                                <span>Универсальное решение</span>
                             </div>
                         </div>
                     </div>
@@ -38,22 +39,28 @@
                         <div class="contacts-block__items">
                             <div class="contacts-block__item">
                                 <div class="contacts-block__desc">
-                                    г. Москва
+                                    <span>г. Москва</span>
                                 </div>
-                                <div class="contacts-block__item-left">
-                                    <a href="#" class="contacts-block__link" target="_blank">
-                                        <img width="28" height="28" src="images/img/tg.png" class="" alt="Telegram" title="Telegram">
-                                    </a>
-                                </div>
-                                <div class="contacts-block__item-right">
-                                    <a class="contacts-block__number" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                                <div class="contacts-block__links">
+                                    <div class="contacts-block__links-left">
+                                        <a href="#" class="contacts-block__social" target="_blank">
+                                            <img width="28" height="28" src="images/img/tg.png" class="" alt="Telegram" title="Telegram">
+                                        </a>
+                                    </div>
+                                    <div class="contacts-block__links-right">
+                                        <a class="contacts-block__number" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="contacts-block__more">
                             <button class="contacts-block__more_btn">
-                                ...
+                                <i>
+                                    <svg class="svg-icon">
+                                        <use xlink:href="#more"></use>
+                                    </svg>
+                                </i>
                             </button>
                         </div>
                     </div>
@@ -82,7 +89,7 @@
 
         <section class="main-slider block-padding">
             <div class="main-slider__inner">
-                <div class="main-slider__items">
+                <div class="main-slider__items" data-autoplay="true">
 
                     <div class="main-slider__item">
                         <div class="main-slider__img">
@@ -95,9 +102,28 @@
                                 </div>
                                 <div class="main-slider__desc">
                                     <button class="play"></button>
-                                    <p>
+                                    <span>
                                         Начните бизнес правильно и добейтесь вершин. Станьте лучшим в своем деле.
-                                    </p>
+                                    </span>
+                                </div>
+                                <button class="main-slider__btn"><span>Оставить заявку</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-slider__item">
+                        <div class="main-slider__img">
+                            <img src="images/img/slider_2.jpg" alt="ОПИСАНИЕ">
+                        </div>
+                        <div class="main-slider__content block-width">
+                            <div class="main-slider__text">
+                                <div class="main-slider__title">
+                                    <h2>Универсальное решение для вашего бизнеса</h2>
+                                </div>
+                                <div class="main-slider__desc">
+                                    <button class="play"></button>
+                                    <span>
+                                        Начните бизнес правильно и добейтесь вершин. Станьте лучшим в своем деле.
+                                    </span>
                                 </div>
                                 <button class="main-slider__btn"><span>Оставить заявку</span></button>
                             </div>
@@ -281,9 +307,9 @@
                                 <span>Универсальное решение для вашего бизнеса</span>
                             </div>
                             <div class="gallery-block__desc">
-                                <p>
+                                <span>
                                     ООО «Antarctica»
-                                </p>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -296,9 +322,9 @@
                                 <span>Универсальное решение для вашего бизнеса</span>
                             </div>
                             <div class="gallery-block__desc">
-                                <p>
+                                <span>
                                     ООО «Antarctica»
-                                </p>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -368,14 +394,258 @@
             </div>
         </section>
         
+        <section class="advantage-block block-padding">
+            <div class="advantage-block__inner">
+                <div class="advantage-block__top block-width">
+                    <div class="advantage-block__title">
+                        <h2>Алгоритм нашей работы</h2>
+                    </div>
+                    <div class="advantage-block__desc">
+                        <span>4 простых шага на пути к сотрудничеству</span>
+                    </div>
+                </div>
+                <div class="advantage-block__items">
+                    <div class="advantage-block__item">
+                        <div class="advantage-block__count">
+                            <span>01</span>
+                        </div>
+                        <div class="advantage-block__text">
+                            <div class="advantage-block__name">
+                                <span>Звоните нам</span>
+                            </div>
+                            <div class="advantage-block__desc">
+                                <span>
+                                    Указываете какой вид работ/товар Вас интересует
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-block block-padding">
+            <div class="faq-block__inner">
+                <div class="faq-block__top block-width">
+                    <div class="articles-block__heading">
+                        <div class="faq-block__title">
+                            <h2>Вопрос? Ответ!</h2>
+                        </div>
+                        <div class="faq-block__desc">
+                            <span>Часто задаваемые вопросы</span>
+                        </div>
+                    </div>
+                    <button class="articles-block__btn"><span>Задать вопрос</span></button>
+                </div>
+                <div class="faq-block__items">
+                    <ul class="faq-block__accordion">
+                        <li class="faq-block__item">
+                            <a class="faq-block__question" href="#">Вкладка №1<ins></ins></a>
+                            <div class="faq-block__answer">
+                                <div class="faq-block__text">
+                                    <p>
+                                        Если Вы хотите, чтобы Ваш сайт не просто занимал свою нишу в сети Интернет, но и хорошо воспринимался поисковыми системами,
+                                        Вы можете прочитать рекомендации, которые дает Яндекс - «Чем отличается качественный сайт от некачественного с точки зрения Яндекса» .
+                                    </p>
+                                    <p>
+                                        Обращаем Ваше внимание, что текстовая информация на сайте должна быть индивидуальной, не скопированной с других Интернет-ресурсов,
+                                        о чем указано в рекомендациях Яндекса: «Мы стараемся не индексировать или не ранжировать высоко сайты, копирующие информацию
+                                        с других ресурсов и не создающие оригинального контента или сервиса».
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq-block__item">
+                            <a class="faq-block__question" href="#">Вкладка №2<ins></ins></a>
+                            <div class="faq-block__answer">
+                                <div class="faq-block__text">
+                                    <p>
+                                        Если Вы хотите, чтобы Ваш сайт не просто занимал свою нишу в сети Интернет, но и хорошо воспринимался поисковыми системами,
+                                        Вы можете прочитать рекомендации, которые дает Яндекс - «Чем отличается качественный сайт от некачественного с точки зрения Яндекса» .
+                                    </p>
+                                    <p>
+                                        Обращаем Ваше внимание, что текстовая информация на сайте должна быть индивидуальной, не скопированной с других Интернет-ресурсов,
+                                        о чем указано в рекомендациях Яндекса: «Мы стараемся не индексировать или не ранжировать высоко сайты, копирующие информацию
+                                        с других ресурсов и не создающие оригинального контента или сервиса».
+                                    </p>
+                                </div>
+                            </div>
+        
+                        </li>
+                        <li class="faq-block__item">
+                            <a class="faq-block__question" href="#">Вкладка №3<ins></ins></a>
+                            <div class="faq-block__answer">
+                                <div class="faq-block__text">
+                                    <p>
+                                        Если Вы хотите, чтобы Ваш сайт не просто занимал свою нишу в сети Интернет, но и хорошо воспринимался поисковыми системами,
+                                        Вы можете прочитать рекомендации, которые дает Яндекс - «Чем отличается качественный сайт от некачественного с точки зрения Яндекса» .
+                                    </p>
+                                    <p>
+                                        Обращаем Ваше внимание, что текстовая информация на сайте должна быть индивидуальной, не скопированной с других Интернет-ресурсов,
+                                        о чем указано в рекомендациях Яндекса: «Мы стараемся не индексировать или не ранжировать высоко сайты, копирующие информацию
+                                        с других ресурсов и не создающие оригинального контента или сервиса».
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-block block-padding">
+            <div class="partners-block__inner block-width">
+                <div class="partners-block__top">
+                    <div class="partners-block__heading">
+                        <div class="partners-block__title">
+                            <h2>Партнеры</h2>
+                        </div>
+                        <div class="partners-block__desc">
+                            <span>Нас уже выбрали</span>
+                        </div>
+                    </div>
+                    <button class="partners-block__btn"><span>Все партнеры</span></button>
+                </div>
+                <div class="partners-block__items">
+                    <div class="partners-block__item">
+                        <div class="partners-block__content">
+                            <div class="partners-block__img">
+                                <img src="/images/img/partners_1.png" alt="ОПИСАНИЕ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners-block__item">
+                        <div class="partners-block__content">
+                            <div class="partners-block__img">
+                                <img src="/images/img/partners_2.png" alt="ОПИСАНИЕ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
 
         <footer class="footer block-padding">
             <div class="footer__inner block-width">
-                footer
+
+                <div class="footer__menu">
+                    <nav class="site-menu">
+                        <ul class="site-menu__list" role="menubar">
+                            <li role="menuitem" aria-current="page"><a tabindex="0" href="#">Главная</a></li>
+                            <li role="menuitem" aria-haspopup="true">
+                                <a href="#">О нас</a>
+                                <ul aria-expanded="true||false" role="menu">
+                                    <li role="menuitem"><a href="#">Тест</a></li>
+                                    <li role="menuitem"><a href="#">Тест</a></li>
+                                </ul>
+                            </li>
+                            <li role="menuitem"><a href="#">Галерея</a></li>
+                            <li role="menuitem"><a href="#">Частые вопросы</a></li>
+                            <li role="menuitem"><a href="#">Отзывы</a></li>
+                            <li role="menuitem"><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__contacts">
+                    <div class="phones-block">
+                        <div class="phones-block__title footer-title">
+                            <span>Звоните по номеру:</span>
+                        </div>
+                        <div class="phones-block__items">
+                            <div class="phones-block__item">
+                                <div class="phones-block__item-left">
+                                    <a href="#" class="phones-block__link" target="_blank">
+                                        <img width="28" height="28" src="images/img/tg.png" class="" alt="Telegram" title="Telegram">
+                                    </a>
+                                </div>
+                                <div class="phones-block__item-right">
+                                    <a class="phones-block__number" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-block">
+                        <div class="schedule-block__title footer-title">
+                            <span>График работы:</span>
+                        </div>
+                        <div class="schedule-block__items">
+                            <div class="schedule-block__item">
+                                <div class="schedule-block__days">Пн-Пт:</div>
+                                <div class="schedule-block__time">с 09:00 до 17:00</div>
+                            </div>
+                            <div class="schedule-block__item">
+                                <div class="schedule-block__days">Суббота:</div>
+                                <div class="schedule-block__time">с 11:00 до 15:00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="address-block">
+                        <div class="address-block__title footer-title">
+                            <span>Мы  находимся по адресу:</span>
+                        </div>
+                        <div class="address-block__body">
+                            <span>г. Москва, Ленинский проспект, дом, строение, номер кабинета</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__social">
+                    <div class="social-block">
+                        <ul class="social__list">
+                            <li>
+                                <a href="#">
+                                    <img src="images/img/social_1.png" alt="ОПИСАНИЕ">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/img/social_2.png" alt="ОПИСАНИЕ">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/img/social_3.png" alt="ОПИСАНИЕ">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="literary-property">
+                        <div class="literary-property__text">
+                            <span>Все материалы, находящиеся на сайте, охраняются в соответствии с законодательством, в том числе, об авторском праве и смежных правах</span>
+                        </div>
+                    </div>
+
+                    <div class="link-top-btn">
+                        <button></button>
+                    </div>
+                </div>
+
+                <div class="footer__copyright">
+                    <div class="company-name">
+                        <span>2022 © Название сайта</span>
+                    </div>
+
+                    <div class="counter-block">
+                        <span>Счетчики</span>
+                    </div>
+
+                    <div class="mega-copyright">
+                        <span>Создание сайта: megagroup.ru</span>
+                    </div>
+                </div>
+
             </div>
         </footer>
 
 
+        <div class="icons hide">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 14 4" id="more" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 3.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm5.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM14 2a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></symbol></svg>
+        </div>
 
 
         <div class="test">
@@ -408,6 +678,14 @@
         </div>
 
     </div>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="images/styles/plugins.css">
+    <script src="images/js/plugins.js"></script>
 
 </body>
 </html>

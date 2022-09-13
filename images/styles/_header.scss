@@ -1,12 +1,14 @@
 .header {
-    margin-bottom: 40px;
     &__inner {
     }
     &__top {
         display: flex;
         justify-content: space-between;
+        padding: 28px 0;
     }
     &__bottom {
+        box-shadow: 0 -1px 0 0 var(--on_gr_bg_border2_07);
+        padding: 26px 0;
     }
 }
 .site-info {
@@ -14,7 +16,7 @@
     align-items: center;
 
     &__logo {
-        margin-right: 20px;
+        margin-right: 24px;
     }
     &__text {
     }
@@ -22,30 +24,97 @@
         a {
             display: inline-flex;
             text-decoration: none;
-            font-size: 26px;
+            font-size: 1.625rem;
+            font-family: var(--font2);
+            font-weight: var(--font2_700);
+            color: var(--on_gr_bg_acc_text);
         }
     }
     &__desc {
+        font-size: 1.0625rem;
+        color: var(--on_gr_bg_sec_text);
+        line-height: 1.5;
     }
 }
 .contacts-block {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 24px;
+
     &__items {
-    }
-    &__item {
+        display: flex;
+        flex-direction: column;
     }
     &__desc {
+        font-size: 1.0625rem;
+        color: var(--on_gr_bg_sec_text);
+        margin-bottom: 2px;
+        line-height: 1.5;
     }
-    &__item-left {
+
+    &__item {
+        display: flex;
+        flex-direction: column;
     }
-    &__link {
+    &__links {
+        display: flex;
+        align-items: center;
     }
-    &__item-right {
+    &__links-left {
+        display: inline-flex;
+        flex-wrap: wrap;
+        max-width: 94px;
+        margin-right: 14px;
+    }
+    &__links-right {
+    }
+    &__social {
+        display: inline-flex;
+        text-decoration: none;
+        width: 24px;
+        height: 24px;
+        margin: 2px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     &__number {
+        display: inline-flex;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-family: var(--font2);
+        font-weight: var(--font2_700);
+        color: var(--on_gr_bg_acc_text);
     }
+
     &__more {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 0;
+        bottom: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
     &__more_btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
     }
 }
 .site-menu {
@@ -53,10 +122,16 @@
         list-style-type: none;
         display: flex;
         align-items: center;
-        column-gap: 20px;
+        column-gap: 30px;
 
         a {
             text-decoration: none;
+        }
+
+        & > li {
+            & > ul {
+                display: none;
+            }
         }
     }
 }

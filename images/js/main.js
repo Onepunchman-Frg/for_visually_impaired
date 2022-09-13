@@ -1,6 +1,93 @@
 'use strict';
 
 $(function() {
+    // Аккордеон
+    $.fn.accordion = function(options) {
+        options = $.extend({
+            headerSelector: '>li>a'
+        }, options);
+
+        return this.each(function() {
+            var $this = $(this),
+                header = $this.find(options.headerSelector);
+
+            header.click(function() {
+                var $this = $(this),
+                    txt = $this.next(),
+                    li = $this.parent();
+                txt.slideToggle();
+                li.toggleClass('active');
+                return false;
+            });
+        });
+    }
+    
+    $(function() {
+        $('.faq-block__accordion').accordion();
+    });
+    // Аккордеон
+
+
+
+
+
+    
+
+    (function( ) {
+
+        var slider = document.querySelector('.main-slider__items');
+
+        if ($('.main-slider__items').length>0) {
+
+            var sliderAutoplay = +slider.getAttribute('data-autoplay');
+            var vslider = tns({
+                container: slider,
+                slideBy: 1,
+                mode: 'carousel',
+                axis: 'horizontal',
+                mouseDrag: true,
+                center: false,
+                autoWidth: false,
+                loop: false,
+                rewind: true,
+                preventActionWhenRunning: false,
+                nav: true,
+                lazyload: true,
+                swipeAngle: 50,
+                gutter: 0,
+                navPosition: 'bottom',
+                autoplayButton: false,
+                autoplayButtonOutput: false,
+                responsive: {
+                    0: {
+                        autoHeight: true,
+                        controls: false,
+                        autoplay: false
+                    },
+                    768: {
+                        autoHeight: true,
+                        controls: false,
+                        autoplay: false
+                    },
+                    1024: {
+                        autoHeight: false,
+                        controls: false,
+                        autoplay: false
+                    },
+                    1261: {
+                        autoHeight: false,
+                        controls: true,
+                        autoplay: sliderAutoplay
+                    }
+                }
+            });
+        };
+
+    })(); /*Слайдер в шапке*/
+
+
+
+
 
     let voices = speechSynthesis.getVoices();
     let defaultVoice;
