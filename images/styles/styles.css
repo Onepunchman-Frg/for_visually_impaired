@@ -13,7 +13,7 @@ html {
 }
 
 html {
-  font-size: 16px;
+  font-size: calc(18px * var(--font1Ratio));
 }
 
 body {
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: calc(36px * var(--font2Ratio));
   margin: 0 0 30px;
 }
 
@@ -61,7 +61,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: calc(32px * var(--font2Ratio));
   margin: 0 0 30px;
 }
 
@@ -78,7 +78,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.8125rem;
+  font-size: calc(29px * var(--font2Ratio));
   margin: 0 0 25px;
 }
 
@@ -95,7 +95,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.625rem;
+  font-size: calc(26px * var(--font2Ratio));
   margin: 0 0 20px;
 }
 
@@ -112,7 +112,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: calc(20px * var(--font2Ratio));
   margin: 0 0 15px;
 }
 
@@ -123,7 +123,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: calc(16px * var(--font2Ratio));
   margin: 0 0 15px;
 }
 
@@ -176,6 +176,18 @@ button {
   display: none;
 }
 
+.settings-panel__inner {
+  padding: 34px 34px 40px 40px;
+  background: var(--gr_bg);
+}
+
+.settings-panel__title {
+  font-family: var(--font2);
+  font-weight: var(--font2_700);
+  font-size: calc(26px * var(--font2Ratio));
+  margin-bottom: 20px;
+}
+
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,6 +215,16 @@ button {
 
 .site-info__logo {
   margin-right: 24px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.site-info__img {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 0;
 }
 
 .site-info__name a {
@@ -210,14 +232,14 @@ button {
   display: -ms-inline-flexbox;
   display: inline-flex;
   text-decoration: none;
-  font-size: 1.625rem;
+  font-size: calc(26px * var(--font2Ratio));
   font-family: var(--font2);
   font-weight: var(--font2_700);
   color: var(--on_gr_bg_acc_text);
 }
 
 .site-info__desc {
-  font-size: 1.0625rem;
+  font-size: calc(17px * var(--font1Ratio));
   color: var(--on_gr_bg_sec_text);
   line-height: 1.5;
 }
@@ -244,7 +266,7 @@ button {
 }
 
 .contacts-block__desc {
-  font-size: 1.0625rem;
+  font-size: calc(17px * var(--font1Ratio));
   color: var(--on_gr_bg_sec_text);
   margin-bottom: 2px;
   line-height: 1.5;
@@ -299,7 +321,7 @@ button {
   display: -ms-inline-flexbox;
   display: inline-flex;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: calc(20px * var(--font1Ratio));
   font-family: var(--font2);
   font-weight: var(--font2_700);
   color: var(--on_gr_bg_acc_text);
@@ -451,7 +473,7 @@ button {
   position: absolute;
   left: -1.25rem;
   top: 0.1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .play::after {

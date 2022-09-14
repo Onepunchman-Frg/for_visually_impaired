@@ -13,13 +13,71 @@
 </head>
 <body>
     <div class="site-wrapper" id="wrapper">
+    
+    
+        <div class="settings-panel">
+            <div class="settings-panel__inner">
+                <div class="settings-panel__title">
+                    <span>Настройки для слабовидящих</span>
+                </div>
+
+                <div class="settings-panel__items">
+                    <div class="settings-panel__item">
+                        <div class="settings-panel__name">
+                            <span>Размер шрифта</span>
+                        </div>
+                        <div class="settings-panel__list">
+                            <label for="fs_1">
+                                <input type="radio" name="font_size" id="fs_1" value="100" checked>
+                                <span>A</span>
+                            </label>
+                            
+                            <label for="fs_2">
+                                <input type="radio" name="font_size" id="fs_2" value="150">
+                                <span>A</span>
+                            </label>
+                            
+                            <label for="fs_3">
+                                <input type="radio" name="font_size" id="fs_3" value="200">
+                                <span>A</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-panel__item">
+                        <div class="settings-panel__name">
+                            <span>Цвет сайта</span>
+                        </div>
+                        <div class="settings-panel__list">
+                            <label for="sc_1">
+                                <input type="radio" name="site_color" id="sc_1" value="1" checked>
+                            </label>
+                            <label for="sc_2">
+                                <input type="radio" name="site_color" id="sc_2" value="2">
+                            </label>
+                            <label for="sc_3">
+                                <input type="radio" name="site_color" id="sc_3" value="3">
+                            </label>
+                            <label for="sc_4">
+                                <input type="radio" name="site_color" id="sc_4" value="4">
+                            </label>
+                            <label for="sc_5">
+                                <input type="radio" name="site_color" id="sc_5" value="5">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
         <header class="header block-padding">
             <div class="header__inner block-width">
                 <div class="header__top">
                     <div class="site-info">
                         <div class="site-info__logo">
-                            <a href="#">
+                            <a class="site-info__img" href="#">
                                 <img src="images/img/Logo.svg" alt="Логотип">
                             </a>
                         </div>

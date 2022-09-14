@@ -4,6 +4,9 @@
         --font1: 'Roboto', sans-serif; 
         --font2: 'Inter', sans-serif;
 
+        --font1Ratio: 1; 
+        --font2Ratio: 1;
+
 
     /*----------Primary----------*/
         --Primary: #3CACFE;

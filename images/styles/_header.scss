@@ -17,6 +17,12 @@
 
     &__logo {
         margin-right: 24px;
+        display: inline-flex;
+    }
+
+    &__img {
+        display: inline-flex;
+        font-size: 0;
     }
     &__text {
     }
@@ -24,14 +30,14 @@
         a {
             display: inline-flex;
             text-decoration: none;
-            font-size: 1.625rem;
+            font-size: calc(26px * var(--font2Ratio));
             font-family: var(--font2);
             font-weight: var(--font2_700);
             color: var(--on_gr_bg_acc_text);
         }
     }
     &__desc {
-        font-size: 1.0625rem;
+        font-size: calc(17px * var(--font1Ratio));
         color: var(--on_gr_bg_sec_text);
         line-height: 1.5;
     }
@@ -47,7 +53,7 @@
         flex-direction: column;
     }
     &__desc {
-        font-size: 1.0625rem;
+        font-size: calc(17px * var(--font1Ratio));
         color: var(--on_gr_bg_sec_text);
         margin-bottom: 2px;
         line-height: 1.5;
@@ -84,7 +90,7 @@
     &__number {
         display: inline-flex;
         text-decoration: none;
-        font-size: 1.25rem;
+        font-size: calc(20px * var(--font1Ratio));
         font-family: var(--font2);
         font-weight: var(--font2_700);
         color: var(--on_gr_bg_acc_text);

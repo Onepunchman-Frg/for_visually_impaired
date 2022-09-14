@@ -1,5 +1,6 @@
-$siteFontFamily: var(--font1);			// Основное семейство
-$siteFontSize: 16px;				    // Основной размер			
+$siteFontFamily: var(--font1);			// Основное семейство	
+
+
 
 *,
 *::before,
@@ -14,7 +15,7 @@ html {
 }
 
 html {
-    font-size: $siteFontSize;
+    font-size: calc(18px * var(--font1Ratio));
 }
 
 body {
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.25rem;
+    font-size: calc(36px * var(--font2Ratio));
     margin: 0 0 30px;
 
     @media all and (max-width: 1023px) {
@@ -57,7 +58,7 @@ h1 {
     }
 }
 h2 {
-    font-size: 2rem;
+    font-size: calc(32px * var(--font2Ratio));
     margin: 0 0 30px;
 
     @media all and (max-width: 1023px) {
@@ -69,7 +70,7 @@ h2 {
     }
 }
 h3 {
-    font-size: 1.8125rem; 
+    font-size: calc(29px * var(--font2Ratio)); 
     margin: 0 0 25px;
 
     @media all and (max-width: 1023px) {
@@ -81,7 +82,7 @@ h3 {
     }
 }
 h4 {
-    font-size: 1.625rem; 
+    font-size: calc(26px * var(--font2Ratio)); 
     margin: 0 0 20px;
 
     @media all and (max-width: 1023px) {
@@ -93,7 +94,7 @@ h4 {
     }
 }
 h5 {
-    font-size: 1.25rem; 
+    font-size: calc(20px * var(--font2Ratio)); 
     margin: 0 0 15px;
 
     @media all and (max-width: 1023px) {
@@ -101,7 +102,7 @@ h5 {
     }
 }
 h6 {
-    font-size: 1rem; 
+    font-size: calc(16px * var(--font2Ratio)); 
     margin: 0 0 15px;
 
     @media all and (max-width: 767px) {
@@ -146,6 +147,8 @@ button {
 
 
 
+@import '_settings_panel.scss';
+
 @import '_header.scss';
 @import '_slider.scss';
 
@@ -172,7 +175,7 @@ button {
   position: absolute;
   left: -1.25rem;
   top: 0.1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .play::after {
   content: "🔊";

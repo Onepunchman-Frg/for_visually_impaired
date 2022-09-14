@@ -1,0 +1,21 @@
+.settings-panel {
+    &__inner {
+        padding: 34px 34px 40px 40px;
+        background: var(--gr_bg);
+    }
+    &__title {
+        font-family: var(--font2);
+        font-weight: var(--font2_700);
+        font-size: calc(26px * var(--font2Ratio));
+        margin-bottom: 20px;
+    }
+    &__items {
+    }
+    &__item {
+    }
+    &__name {
+        
+    }
+    &__list {
+    }
+}
