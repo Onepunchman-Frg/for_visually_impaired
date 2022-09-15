@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="images/styles/color.css">
     <link rel="stylesheet" href="images/styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="images/js/cookie.js"></script>
     <script src="images/js/main.js"></script>
 </head>
 <body>
@@ -22,7 +23,7 @@
                 </div>
 
                 <div class="settings-panel__items">
-                    <div class="settings-panel__item">
+                    <div class="settings-panel__item fs-setting">
                         <div class="settings-panel__name">
                             <span>Размер шрифта</span>
                         </div>
@@ -44,13 +45,16 @@
                         </div>
                     </div>
 
-                    <div class="settings-panel__item">
+                    <div class="settings-panel__item color-setting">
                         <div class="settings-panel__name">
                             <span>Цвет сайта</span>
                         </div>
                         <div class="settings-panel__list">
+                            <label for="sc_0">
+                                <input type="radio" name="site_color" id="sc_0" value="0">
+                            </label>
                             <label for="sc_1">
-                                <input type="radio" name="site_color" id="sc_1" value="1" checked>
+                                <input type="radio" name="site_color" id="sc_1" value="1">
                             </label>
                             <label for="sc_2">
                                 <input type="radio" name="site_color" id="sc_2" value="2">
@@ -745,5 +749,6 @@
     <link rel="stylesheet" href="images/styles/plugins.css">
     <script src="images/js/plugins.js"></script>
 
+    
 </body>
 </html>

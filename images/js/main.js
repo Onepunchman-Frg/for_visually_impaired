@@ -27,10 +27,6 @@ $(function() {
     });
     // Аккордеон
 
-
-
-    
-
     (function( ) {
 
         var slider = document.querySelector('.main-slider__items');
@@ -82,6 +78,130 @@ $(function() {
         };
 
     })(); /*Слайдер в шапке*/
+
+
+
+
+
+    let readCookieFontSize = () => {
+        var rdCke = readCookie('ui_fs_stng');
+        if (rdCke == '200') {
+            $('body').removeClass('fs_150').addClass('fs_200');
+            document.documentElement.style.setProperty('--font1Ratio', '2');
+            document.documentElement.style.setProperty('--font2Ratio', '2');
+        } else if (rdCke == '150') {
+            $('body').removeClass('fs_200').addClass('fs_150');
+            document.documentElement.style.setProperty('--font1Ratio', '1.5');
+            document.documentElement.style.setProperty('--font2Ratio', '1.5');
+        } else {
+            $('body').removeClass('fs_200').removeClass('fs_150');
+            document.documentElement.style.setProperty('--font1Ratio', '1');
+            document.documentElement.style.setProperty('--font2Ratio', '1');
+        }
+    }
+
+    $(".fs-setting input:radio").on('change', function() {
+        eraseCookie('ui_fs_stng');
+        var $this 			= $(this),
+            value 			= $this.val();
+        createCookie("ui_fs_stng", value, 30);
+        readCookieFontSize();
+    });
+    $(".fs-setting input:radio").each(function () {
+        var $this = $(this);
+        var $val = $this.val();
+        var rdCke = readCookie('ui_fs_stng');
+
+        if (rdCke == $val) {
+            $this.prop({'aria-checked': 'true', 'checked': true});
+        };
+
+        readCookieFontSize();
+    });
+
+    
+
+    
+    
+    let readCookieFontColor = () => {
+        var rdCke = readCookie('ui_color_stng');
+        if (rdCke == '5') {
+            $('body').removeClass('color_1')
+                    .removeClass('color_2')
+                    .removeClass('color_3')
+                    .removeClass('color_4')
+                    .addClass('color_5');
+            $("LINK[href*='color']").remove();
+            $('head').append('<link rel="stylesheet" href="images/styles/color5.css" type="text/css" />');
+        } else if (rdCke == '4') {
+            $('body').removeClass('color_1')
+                    .removeClass('color_2')
+                    .removeClass('color_3')
+                    .removeClass('color_5')
+                    .addClass('color_4');
+            $("LINK[href*='color']").remove();
+            $('head').append('<link rel="stylesheet" href="images/styles/color4.css" type="text/css" />');
+        } else if (rdCke == '3') {
+            $('body').removeClass('color_1')
+                    .removeClass('color_2')
+                    .removeClass('color_4')
+                    .removeClass('color_5')
+                    .addClass('color_3');
+            $("LINK[href*='color']").remove();
+            $('head').append('<link rel="stylesheet" href="images/styles/color3.css" type="text/css" />');
+        } else if (rdCke == '2') {
+            $('body').removeClass('color_1')
+                    .removeClass('color_3')
+                    .removeClass('color_4')
+                    .removeClass('color_5')
+                    .addClass('color_2');
+            $("LINK[href*='color']").remove();
+            $('head').append('<link rel="stylesheet" href="images/styles/color2.css" type="text/css" />');
+        } else if (rdCke == '1') {
+            $('body').removeClass('color_2')
+                    .removeClass('color_3')
+                    .removeClass('color_4')
+                    .removeClass('color_5')
+                    .addClass('color_1');
+            $("LINK[href*='color']").remove();
+            $('head').append('<link rel="stylesheet" href="images/styles/color1.css" type="text/css" />');
+        } else {
+            $('body').removeClass('color_1')
+                    .removeClass('color_2')
+                    .removeClass('color_3')
+                    .removeClass('color_4')
+                    .removeClass('color_5');
+            $("LINK[href*='color']").remove();
+            $('head').append('<link rel="stylesheet" href="images/styles/color.css" type="text/css" />');
+        }
+    }
+
+    $(".color-setting input:radio").on('change', function() {
+        eraseCookie('ui_color_stng');
+        var $this 			= $(this),
+            value 			= $this.val();
+        createCookie("ui_color_stng", value, 30);
+        readCookieFontColor();
+    });
+    $(".color-setting input:radio").each(function () {
+        var $this = $(this);
+        var $val = $this.val();
+        var rdCke = readCookie('ui_color_stng');
+
+        if (rdCke == $val) {
+            $this.prop({'aria-checked': 'true', 'checked': true});
+        };
+
+        readCookieFontColor();
+    });
+
+
+
+
+
+
+			
+
 
 
 

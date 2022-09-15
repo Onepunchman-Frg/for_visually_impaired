@@ -132,6 +132,10 @@
 
         a {
             text-decoration: none;
+            font-size: calc(18px * var(--font2Ratio));
+            font-family: var(--font2);
+            font-weight: var(--font2_600);
+            color: var(--on_gr_bg_acc_text);
         }
 
         & > li {
