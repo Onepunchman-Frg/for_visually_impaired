@@ -119,9 +119,7 @@ $(function() {
         readCookieFontSize();
     });
 
-    
-
-    
+        
     
     let readCookieFontColor = () => {
         var rdCke = readCookie('ui_color_stng');
@@ -195,9 +193,107 @@ $(function() {
         readCookieFontColor();
     });
 
+    
+
+    let readCookieLineHeight = () => {
+        var rdCke = readCookie('ui_lh_stng');
+        if (rdCke == '3') {
+            $('body').removeClass('lh_2').addClass('lh_3');
+            document.documentElement.style.setProperty('--lineHeightRatio', '2');
+        } else if (rdCke == '2') {
+            $('body').removeClass('lh_3').addClass('lh_2');
+            document.documentElement.style.setProperty('--lineHeightRatio', '1.5');
+        } else {
+            $('body').removeClass('lh_2').removeClass('lh_3');
+            document.documentElement.style.setProperty('--lineHeightRatio', '1');
+        }
+    }
+
+    $(".lh-setting input:radio").on('change', function() {
+        eraseCookie('ui_lh_stng');
+        var $this 			= $(this),
+            value 			= $this.val();
+        createCookie("ui_lh_stng", value, 30);
+        readCookieLineHeight();
+    });
+    $(".lh-setting input:radio").each(function () {
+        var $this = $(this);
+        var $val = $this.val();
+        var rdCke = readCookie('ui_lh_stng');
+
+        if (rdCke == $val) {
+            $this.prop({'aria-checked': 'true', 'checked': true});
+        };
+
+        readCookieLineHeight();
+    });
+
+    
+
+    let readCookieLetterSpacing = () => {
+        var rdCke = readCookie('ui_ls_stng');
+        if (rdCke == '3') {
+            $('body').removeClass('ls_2').addClass('ls_3');
+        } else if (rdCke == '2') {
+            $('body').removeClass('ls_3').addClass('ls_2');
+        } else {
+            $('body').removeClass('ls_2').removeClass('ls_3');
+        }
+    }
+
+    $(".ls-setting input:radio").on('change', function() {
+        eraseCookie('ui_ls_stng');
+        var $this 			= $(this),
+            value 			= $this.val();
+        createCookie("ui_ls_stng", value, 30);
+        readCookieLetterSpacing();
+    });
+    $(".ls-setting input:radio").each(function () {
+        var $this = $(this);
+        var $val = $this.val();
+        var rdCke = readCookie('ui_ls_stng');
+
+        if (rdCke == $val) {
+            $this.prop({'aria-checked': 'true', 'checked': true});
+        };
+
+        readCookieLetterSpacing();
+    });
 
 
 
+    let readCookieImgSetting = () => {
+        var rdCke = readCookie('ui_img_stng');
+        if (rdCke == '3') {
+            $('body').removeClass('img_setting_2').addClass('img_setting_3');
+        } else if (rdCke == '2') {
+            $('body').removeClass('img_setting_3').addClass('img_setting_2');
+        } else {
+            $('body').removeClass('img_setting_2').removeClass('img_setting_3');
+        }
+    }
+
+    $(".img-setting input:radio").on('change', function() {
+        eraseCookie('ui_img_stng');
+        var $this 			= $(this),
+            value 			= $this.val();
+        createCookie("ui_img_stng", value, 30);
+        readCookieImgSetting();
+    });
+    $(".img-setting input:radio").each(function () {
+        var $this = $(this);
+        var $val = $this.val();
+        var rdCke = readCookie('ui_img_stng');
+
+        if (rdCke == $val) {
+            $this.prop({'aria-checked': 'true', 'checked': true});
+        };
+
+        readCookieImgSetting();
+    });
+
+
+    
 
 
 			

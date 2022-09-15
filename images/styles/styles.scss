@@ -26,8 +26,37 @@ body {
     font-family: var(--font1);
     font-weight: var(--font1_400);
     background: var(--on_gr_bg_bg);
-    line-height: 1.2;
+    line-height: calc(1.2 * var(--lineHeightRatio));
     color: var(--on_gr_bg_sec_text);
+
+    &.ls_3 {
+        letter-spacing: 5px;
+    }
+
+    &.ls_2 {
+        letter-spacing: 2.16px;
+    }
+
+    &.img_setting_3 {
+        img {
+            visibility: hidden;
+            opacity: 0;
+        }
+        .show-text {
+            display: block;
+        }
+    }
+
+    &.img_setting_2 {
+        img {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    }
+}
+
+.show-text {
+    display: none;
 }
 
 ul,
@@ -42,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font2);
     font-weight: var(--font2_700);
     font-style: normal;
-    line-height: 1.2;
+    line-height: calc(1.2 * var(--lineHeightRatio));
 }
 
 h1 {

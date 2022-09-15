@@ -23,6 +23,7 @@
                 </div>
 
                 <div class="settings-panel__items">
+                    
                     <div class="settings-panel__item fs-setting">
                         <div class="settings-panel__name">
                             <span>Размер шрифта</span>
@@ -70,6 +71,74 @@
                             </label>
                         </div>
                     </div>
+                    
+                    <div class="settings-panel__item lh-setting">
+                        <div class="settings-panel__name">
+                            <span>Межстрочный интервал</span>
+                        </div>
+                        <div class="settings-panel__list">
+                            <label for="lh_1">
+                                <input type="radio" name="line_height" id="lh_1" value="1" checked>
+                                <span>1</span>
+                            </label>
+                            
+                            <label for="lh_2">
+                                <input type="radio" name="line_height" id="lh_2" value="2">
+                                <span>1,5</span>
+                            </label>
+                            
+                            <label for="lh_3">
+                                <input type="radio" name="line_height" id="lh_3" value="3">
+                                <span>2</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-panel__item ls-setting">
+                        <div class="settings-panel__name">
+                            <span>Межбуквенный интервал</span>
+                        </div>
+                        <div class="settings-panel__list">
+                            <label for="ls_1">
+                                <input type="radio" name="letter_spacing" id="ls_1" value="1" checked>
+                                <span>1</span>
+                            </label>
+                            
+                            <label for="ls_2">
+                                <input type="radio" name="letter_spacing" id="ls_2" value="2">
+                                <span>1,5</span>
+                            </label>
+                            
+                            <label for="ls_3">
+                                <input type="radio" name="letter_spacing" id="ls_3" value="3">
+                                <span>2</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-panel__item img-setting">
+                        <div class="settings-panel__name">
+                            <span>Изображения сайта</span>
+                        </div>
+                        <div class="settings-panel__list">
+                            <label for="img_1">
+                                <input type="radio" name="img_setting" id="img_1" value="1" checked>
+                                <span>Вкл</span>
+                            </label>
+                            
+                            <label for="img_2">
+                                <input type="radio" name="img_setting" id="img_2" value="2">
+                                <span>Монохром</span>
+                            </label>
+                            
+                            <label for="img_3">
+                                <input type="radio" name="img_setting" id="img_3" value="3">
+                                <span>Выкл.</span>
+                            </label>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -155,7 +224,8 @@
 
                     <div class="main-slider__item">
                         <div class="main-slider__img">
-                            <img src="images/img/slider_1.jpg" alt="ОПИСАНИЕ">
+                            <img src="images/img/slider_1.jpg" alt="ОПИСАНИЕ" title="ОПИСАНИЕ">
+                            <span class="show-text">ОПИСАНИЕ</span>
                         </div>
                         <div class="main-slider__content block-width">
                             <div class="main-slider__text">
@@ -174,7 +244,8 @@
                     </div>
                     <div class="main-slider__item">
                         <div class="main-slider__img">
-                            <img src="images/img/slider_2.jpg" alt="ОПИСАНИЕ">
+                            <img src="images/img/slider_2.jpg" alt="ОПИСАНИЕ" title="ОПИСАНИЕ">
+                            <span class="show-text">ОПИСАНИЕ</span>
                         </div>
                         <div class="main-slider__content block-width">
                             <div class="main-slider__text">

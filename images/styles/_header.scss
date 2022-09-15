@@ -39,7 +39,7 @@
     &__desc {
         font-size: calc(17px * var(--font1Ratio));
         color: var(--on_gr_bg_sec_text);
-        line-height: 1.5;
+        line-height: calc(1.5 * var(--lineHeightRatio));
     }
 }
 .contacts-block {
@@ -56,7 +56,7 @@
         font-size: calc(17px * var(--font1Ratio));
         color: var(--on_gr_bg_sec_text);
         margin-bottom: 2px;
-        line-height: 1.5;
+        line-height: calc(1.5 * var(--lineHeightRatio));
     }
 
     &__item {
@@ -120,6 +120,7 @@
         svg {
             width: 14px;
             height: 14px;
+            fill: var(--on_gr_bg_icon);
         }
     }
 }
