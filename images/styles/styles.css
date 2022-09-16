@@ -50,6 +50,14 @@ body.img_setting_2 img {
   filter: grayscale(100%);
 }
 
+body.fs_200 svg {
+  zoom: 200%;
+}
+
+body.fs_150 svg {
+  zoom: 150%;
+}
+
 .show-text {
   display: none;
 }
@@ -202,18 +210,6 @@ button {
   display: none;
 }
 
-.settings-panel__inner {
-  padding: 34px 34px 40px 40px;
-  background: var(--gr_bg);
-}
-
-.settings-panel__title {
-  font-family: var(--font2);
-  font-weight: var(--font2_700);
-  font-size: calc(26px * var(--font2Ratio));
-  margin-bottom: 20px;
-}
-
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,6 +292,7 @@ button {
   color: var(--on_gr_bg_sec_text);
   margin-bottom: 2px;
   line-height: calc(1.5 * var(--lineHeightRatio));
+  width: 100%;
 }
 
 .contacts-block__item {
@@ -354,11 +351,8 @@ button {
 }
 
 .contacts-block__more {
-  position: absolute;
   width: 20px;
   height: 20px;
-  right: 0;
-  bottom: 12px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -368,6 +362,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 14px;
 }
 
 .contacts-block__more_btn {

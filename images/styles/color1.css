@@ -9,6 +9,8 @@
 
         --lineHeightRatio: 1; 
 
+        --siteTransition: all 0.3s ease;
+
 
     /*----------Primary----------*/
         --Primary: #000000;

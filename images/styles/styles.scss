@@ -53,6 +53,18 @@ body {
             filter: grayscale(100%);
         }
     }
+
+    &.fs_200 {
+        svg {
+            zoom: 200%;
+        }
+    }
+
+    &.fs_150 {
+        svg {
+            zoom: 150%;
+        }
+    }
 }
 
 .show-text {

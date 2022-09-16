@@ -80,8 +80,21 @@ $(function() {
     })(); /*Слайдер в шапке*/
 
 
+    
+    
 
+    // $('.settings-panel__btn').on("click", function (){
+    //     var $this = $(this);
+    //     var $body = $('.settings-panel');
 
+    //     if ($this.hasClass('active')){
+    //         $this.removeClass('active');
+    //         $body.removeClass('active');
+    //     } else {
+    //         $this.addClass('active');
+    //         $body.addClass('active');
+    //     }
+    // });
 
     let readCookieFontSize = () => {
         var rdCke = readCookie('ui_fs_stng');
@@ -95,8 +108,10 @@ $(function() {
             document.documentElement.style.setProperty('--font2Ratio', '1.5');
         } else {
             $('body').removeClass('fs_200').removeClass('fs_150');
-            document.documentElement.style.setProperty('--font1Ratio', '1');
-            document.documentElement.style.setProperty('--font2Ratio', '1');
+            document.documentElement.style.removeProperty('--font1Ratio', '2');
+            document.documentElement.style.removeProperty('--font2Ratio', '2');
+            document.documentElement.style.removeProperty('--font1Ratio', '1.5');
+            document.documentElement.style.removeProperty('--font2Ratio', '1.5');
         }
     }
 
@@ -205,7 +220,8 @@ $(function() {
             document.documentElement.style.setProperty('--lineHeightRatio', '1.5');
         } else {
             $('body').removeClass('lh_2').removeClass('lh_3');
-            document.documentElement.style.setProperty('--lineHeightRatio', '1');
+            document.documentElement.style.removeProperty('--lineHeightRatio', '2');
+            document.documentElement.style.removeProperty('--lineHeightRatio', '1.5');
         }
     }
 
@@ -294,8 +310,42 @@ $(function() {
 
 
     
+    let readCookieFontFam = () => {
+        var rdCke = readCookie('ui_ffam_stng');
+        if (rdCke == '2') {
+            $('body').addClass('ffam_setting_2');
+            document.documentElement.style.setProperty('--font1', '"PT Serif", serif');
+            document.documentElement.style.setProperty('--font2', '"PT Serif", serif');
+        } else {
+            $('body').removeClass('ffam_setting_2');
+            document.documentElement.style.removeProperty('--font1', '"PT Serif", serif');
+            document.documentElement.style.removeProperty('--font2', '"PT Serif", serif');
+        }
+    }
+
+    $(".ffam-setting input:radio").on('change', function() {
+        eraseCookie('ui_ffam_stng');
+        var $this 			= $(this),
+            value 			= $this.val();
+        createCookie("ui_ffam_stng", value, 30);
+        readCookieFontFam();
+    });
+    $(".ffam-setting input:radio").each(function () {
+        var $this = $(this);
+        var $val = $this.val();
+        var rdCke = readCookie('ui_ffam_stng');
+
+        if (rdCke == $val) {
+            $this.prop({'aria-checked': 'true', 'checked': true});
+        };
+
+        readCookieFontFam();
+    });
 
 
+    
+
+    
 			
 
 

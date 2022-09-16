@@ -1,21 +1,48 @@
-.settings-panel {
-    &__inner {
-        padding: 34px 34px 40px 40px;
-        background: var(--gr_bg);
-    }
-    &__title {
-        font-family: var(--font2);
-        font-weight: var(--font2_700);
-        font-size: calc(26px * var(--font2Ratio));
-        margin-bottom: 20px;
-    }
-    &__items {
-    }
-    &__item {
-    }
-    &__name {
+// .settings-panel {
+//     position: fixed;
+//     left: 100%;
+//     top: 50%;
+//     transform: translateY(-20%);
+//     z-index: 9999;
+
+//     transition: var(--siteTransition);
+
+//     &.active {
+//         right: 0;
+//         left: auto;
+//     }
+
+//     &__inner {
+//         background: var(--gr_bg);
+//         position: relative;
+//     }
+//     &__btn {
+//         position: absolute;
+//         top: 0;
+//         left: -84px;
+//         width: 84px;
+//         height: 84px;
+//         background: var(--gr_bg);
+
+//         cursor: pointer;
+//     }
+//     &__title {
+//         padding: 34px 34px 10px 40px;
+//         font-family: var(--font2);
+//         font-weight: var(--font2_700);
+//         font-size: calc(26px * var(--font2Ratio));
+//         margin-bottom: 20px;
+//     }
+//     &__items {
+//         max-height: 40vh;
+//         padding: 14px 34px 40px 40px;
+//         overflow-y: auto;
+//     }
+//     &__item {
+//     }
+//     &__name {
         
-    }
-    &__list {
-    }
-}
+//     }
+//     &__list {
+//     }
+// }
