@@ -118,7 +118,7 @@
     /*----------Background----------*/
     
     /*----------Закругления----------*/
-        --gr_wrap_radius: 5px;
+        --gr_wrap_radius: 6px;
         --gr_inner_radius: 4px;
         --gr_medium_radius: 3px;
         --gr_small_radius: 2px;

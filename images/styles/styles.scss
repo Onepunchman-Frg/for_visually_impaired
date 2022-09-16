@@ -8,6 +8,15 @@ $siteFontFamily: var(--font1);			// Основное семейство
   box-sizing: border-box;
 }
 
+::-moz-selection {
+    color: var(--on_gr_accent_text);
+    background: var(--gr_accent);
+}
+::selection {
+    color: var(--on_gr_accent_text);
+    background: var(--gr_accent);
+}
+
 body,
 html {
     height: 100%;
@@ -25,7 +34,7 @@ body {
     text-align: left;
     font-family: var(--font1);
     font-weight: var(--font1_400);
-    background: var(--on_gr_bg_bg);
+    background: var(--gr_bg);
     line-height: calc(1.2 * var(--lineHeightRatio));
     color: var(--on_gr_bg_sec_text);
 
@@ -153,6 +162,7 @@ h6 {
 
 .block-width {
     margin: 0 auto;
+    width: 100%;
     max-width: 1200px;
 }
 .block-padding {
@@ -188,6 +198,7 @@ button {
 
 
 
+@import '_buttons.scss';
 @import '_settings_panel.scss';
 
 @import '_header.scss';

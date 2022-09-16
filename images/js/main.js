@@ -34,17 +34,22 @@ $(function() {
         if ($('.main-slider__items').length>0) {
 
             var sliderAutoplay = +slider.getAttribute('data-autoplay');
+
             var vslider = tns({
                 container: slider,
                 slideBy: 1,
-                mode: 'carousel',
+                mode: 'gallery',
                 axis: 'horizontal',
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                animateDelay: 0,
+                speed: 0,
                 mouseDrag: true,
-                center: false,
+                center: true,
                 autoWidth: false,
                 loop: false,
                 rewind: true,
-                preventActionWhenRunning: false,
+                preventActionWhenRunning: true,
                 nav: true,
                 lazyload: true,
                 swipeAngle: 50,
@@ -52,32 +57,61 @@ $(function() {
                 navPosition: 'bottom',
                 autoplayButton: false,
                 autoplayButtonOutput: false,
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
                 responsive: {
-                    0: {
-                        autoHeight: true,
-                        controls: false,
-                        autoplay: false
-                    },
-                    768: {
-                        autoHeight: true,
-                        controls: false,
-                        autoplay: false
+                    320: {
+                        autoplay: false,
+                        controls: false
                     },
                     1024: {
-                        autoHeight: false,
-                        controls: false,
-                        autoplay: false
-                    },
-                    1261: {
-                        autoHeight: false,
-                        controls: true,
-                        autoplay: sliderAutoplay
+                        autoplay: sliderAutoplay,
+                        controls: true
                     }
                 }
             });
+
+            var small_slider = tns({
+                container: '.main-slider__images_content',
+                loop: false,
+                rewind: true,
+                gutter: 0,
+                center:false,
+                mouseDrag: true,
+                nav: false,
+                lazyload: true,
+                controls: false,
+                navPosition: 'bottom',
+                preventActionWhenRunning: true,
+                axis: 'horizontal',
+                mode: 'gallery',
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                animateDelay: 10,
+                speed: 500,
+                items: 1
+            });
+            
+            var navIndex = $('.main-slider__items .main-slider__item').index();
+                $('.main-slider__images_content .main-slider__img').removeClass('tns-nav-active');
+                $('.main-slider__images_content .main-slider__img').eq(navIndex).addClass('tns-nav-active');
+            
+            vslider.events.on('indexChanged', function(){
+                var navIndex = $('.main-slider__items .tns-nav-active').index();
+                $('.main-slider__images_content .main-slider__img').removeClass('tns-nav-active');
+                $('.main-slider__images_content .main-slider__img').eq(navIndex).addClass('tns-nav-active');
+            });
+
+            vslider.events.on('indexChanged', function(){
+                small_slider.goTo(vslider.getInfo().index);
+            });
+				
+            setTimeout(function(){
+                $('.main-slider__text').matchHeight();
+            }, 100);
         };
 
     })(); /*Слайдер в шапке*/
+
 
 
     
@@ -121,6 +155,9 @@ $(function() {
             value 			= $this.val();
         createCookie("ui_fs_stng", value, 30);
         readCookieFontSize();
+        setTimeout(function(){
+            $('.main-slider__text').matchHeight();
+        }, 100);
     });
     $(".fs-setting input:radio").each(function () {
         var $this = $(this);

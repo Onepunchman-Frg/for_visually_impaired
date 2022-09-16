@@ -88,7 +88,7 @@
     
     
     /*----------Background----------*/
-        --gr_bg: #FFFFFF;
+        --gr_bg: #EDF3FF;
     
         --on_gr_bg_acc_text: #232328;
         --on_gr_bg_acc_text_5: rgba(46, 47, 56, .5);
@@ -108,8 +108,8 @@
         --on_gr_bg_border2: #000000;
         --on_gr_bg_border2_07: rgba(0, 0, 0, .07);
     
-        --on_gr_bg_bg: #EDF3FF;
-        --on_gr_bg_bg_5: rgb(237, 243, 255, .5);
+        --on_gr_bg_bg: #FFFFFF;
+        --on_gr_bg_bg_5: rgb(255, 255, 255, .5);
 
         --on_gr_bg_lg: linear-gradient(90deg, #F8F4E5 3.57%, #E9F5F7 100%);
 
@@ -118,7 +118,7 @@
     /*----------Background----------*/
     
     /*----------Закругления----------*/
-        --gr_wrap_radius: 5px;
+        --gr_wrap_radius: 6px;
         --gr_inner_radius: 4px;
         --gr_medium_radius: 3px;
         --gr_small_radius: 2px;
@@ -171,11 +171,11 @@
     
     /*----------Кнопки только с иконкой----------*/
         /*Кнопка 1*/
-            --gr_icon_btn_1_icon: var(--on_gr_bg_icon);
+            --gr_icon_btn_1_icon: var(--on_gr_primary_icon);
             --gr_icon_btn_1_icon_h: var(--on_gr_primary_icon);
             --gr_icon_btn_1_icon_a: var(--on_gr_primary_icon);
     
-            --gr_icon_btn_1_bg: var(--gr_primary_1);
+            --gr_icon_btn_1_bg: var(--gr_primary);
             --gr_icon_btn_1_bg_h: var(--gr_primary);
             --gr_icon_btn_1_bg_a: var(--gr_primary);
     
