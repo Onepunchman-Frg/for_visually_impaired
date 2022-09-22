@@ -71,13 +71,13 @@
 
 		// Background 
 		$btn3BackgroundDefault:             none;             
-		$btn3BackgroundHover:               none;             
-		$btn3BackgroundActive:              var(--gr_accent_1);
+		$btn3BackgroundHover:               var(--gr_primary);             
+		$btn3BackgroundActive:              var(--gr_primary);
 
 		// Box-shadow
-		$btn3ShadowDefault:                 inset 0 0 0 1px var(--on_gr_bg_border_12);             
-		$btn3ShadowHover:                   inset 0 0 0 1px var(--gr_accent_4);             
-		$btn3ShadowActive:                  inset 0 0 0 1px var(--gr_accent_4);
+		$btn3ShadowDefault:                 inset 0 0 0 2px var(--gr_primary_6);             
+		$btn3ShadowHover:                   inset 0 0 0 2px var(--gr_primary);             
+		$btn3ShadowActive:                  inset 0 0 0 2px var(--gr_primary);
 
 		// Border 
 		$btn3BorderDefault:                 none;             
@@ -264,63 +264,63 @@
 
 /*----Text buttons----*/
 	.gr-large-btn-desktop {
-		font-size: 16px;
-		line-height: 1.125;
+		font-size: calc(16px * var(--font2Ratio));
+		line-height: calc(1.125 * var(--lineHeightRatio));
 		padding: 19px 30px;
 	}
 	.gr-large-btn-tablet {
 		@media all and (max-width: 1260px) {
-			font-size: 16px;
-			line-height: 1.125;
+			font-size: calc(16px * var(--font2Ratio));
+			line-height: calc(1.125 * var(--lineHeightRatio));
 			padding: 19px 30px;
 		}
 	}
 	.gr-large-btn-mobile {
 		@media all and (max-width: 767px) {
-			font-size: 16px;
-			line-height: 1.125;
+			font-size: calc(16px * var(--font2Ratio));
+			line-height: calc(1.125 * var(--lineHeightRatio));
 			padding: 16px 24px;
 		}
 	}
 
 
 	.gr-medium-btn-desktop {
-		font-size: 16px;
-		line-height: 1.125;
+		font-size: calc(16px * var(--font2Ratio));
+		line-height: calc(1.125 * var(--lineHeightRatio));
 		padding: 15px 30px;
 	}
 	.gr-medium-btn-tablet {
 		@media all and (max-width: 1260px) {
-			font-size: 16px;
-			line-height: 1.125;
+			font-size: calc(16px * var(--font2Ratio));
+			line-height: calc(1.125 * var(--lineHeightRatio));
 			padding: 15px 30px;
 		}
 	}
 	.gr-medium-btn-mobile {
 		@media all and (max-width: 767px) {
-			font-size: 16px;
-			line-height: 1.125;
+			font-size: calc(16px * var(--font2Ratio));
+			line-height: calc(1.125 * var(--lineHeightRatio));
 			padding: 12px 20px;
 		}
 	}
 
 
 	.gr-small-btn-desktop {
-		font-size: 15px;
-		line-height: 1.2;
+		font-size: calc(15px * var(--font2Ratio));
+		line-height: calc(1.2 * var(--lineHeightRatio));
 		padding: 11px 20px;
 	}
 	.gr-small-btn-tablet {
 		@media all and (max-width: 1260px) {
-			font-size: 15px;
-			line-height: 1.2;
+			font-size: calc(15px * var(--font2Ratio));
+			line-height: calc(1.2 * var(--lineHeightRatio));
 			padding: 11px 20px;
 		}
 	}
 	.gr-small-btn-mobile {
 		@media all and (max-width: 767px) {
-			font-size: 14px;
-			line-height: 1.2;	
+			font-size: calc(14px * var(--font2Ratio));
+			line-height: calc(1.2 * var(--lineHeightRatio));	
 			padding: 11px 16px;
 		}
 	}
@@ -628,7 +628,7 @@ body .product-compare {
 	position: relative;
 	padding: 0;
 	border: none;
-	line-height: 1;
+	line-height: calc(1 * var(--lineHeightRatio));
 
 	&.product-compare-added {
 		font-size: 0;
@@ -1070,7 +1070,6 @@ body .product-compare {
 
 	&:before {
 		border-radius: var(--gr_icon_btn_radius);
-		display: none;
 	}
 
 	&:hover {
@@ -1349,8 +1348,8 @@ a.tpl-button,
 	color: var(--on_gr_bg_acc_text);
 	font-family: var(--font2);
 	font-weight: var(--font2_500);
-	font-size: 15px;
-	line-height: 1.1;
+	font-size: calc(15px * var(--font2Ratio));
+	line-height: calc(1.1 * var(--lineHeightRatio));
 	transition: var(--siteTransition);
 	@extend .gr-btn-icon-right-2;
 

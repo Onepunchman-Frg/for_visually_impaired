@@ -112,23 +112,56 @@ $(function() {
 
     })(); /*Слайдер в шапке*/
 
+    (function( ) {		
+        var slider = document.querySelector('.reviews_slider');
+        var sliderAutoplay = +slider.getAttribute('data-autoplay');
+        
+        var respSettings = {
+            320: {controls: false,items: 1,gutter: 20},
+            768: {controls: false,items: 2,gutter: 20},
+            1024: {controls: true,items: 2,gutter: 20},
+            1261: {controls: true,items: 2,gutter: 35}
+        };
+
+        var reviewsSlider = tns({
+            loop: false,
+            rewind: true,
+            container: slider,
+            slideBy: 1,
+            mode: "carousel",
+            axis: "horizontal",
+            autoplayHoverPause: true,
+            autoplay: sliderAutoplay,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            nav: true,
+            navPosition: "bottom",
+            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+            preventActionWhenRunning: true,
+            responsive: respSettings
+        });
+        
+        setTimeout(function(){
+            $('.reviews-block__text').matchHeight();
+        }, 100);
+    })(); /*Отзывы*/
 
 
     
     
 
-    // $('.settings-panel__btn').on("click", function (){
-    //     var $this = $(this);
-    //     var $body = $('.settings-panel');
+    $('.settings-panel__btn').on("click", function (){
+        var $this = $(this);
+        var $body = $('.settings-panel');
 
-    //     if ($this.hasClass('active')){
-    //         $this.removeClass('active');
-    //         $body.removeClass('active');
-    //     } else {
-    //         $this.addClass('active');
-    //         $body.addClass('active');
-    //     }
-    // });
+        if ($this.hasClass('active')){
+            $this.removeClass('active');
+            $body.removeClass('active');
+        } else {
+            $this.addClass('active');
+            $body.addClass('active');
+        }
+    });
 
     let readCookieFontSize = () => {
         var rdCke = readCookie('ui_fs_stng');
@@ -379,88 +412,4 @@ $(function() {
         readCookieFontFam();
     });
 
-
-    
-
-    
-			
-
-
-
-
-
-
-    let voices = speechSynthesis.getVoices();
-    let defaultVoice;
-
-    speechSynthesis.onvoiceschanged = () => {
-        voices = speechSynthesis.getVoices();
-        defaultVoice = voices.find((voice) => voice.name === "Google русский");
-
-        wrapper.addEventListener("click", handleClick);
-        wrapper.addEventListener("touch", handleClick);
-        window.addEventListener("keydown", handleKeydown);
-    };
-
-    const PLAY = "play";
-    const PAUSE = "pause";
-    const RESUME = "resume";
-
-    function handleClick({ target }) {
-        switch (target.className) {
-            case PLAY:
-                speechSynthesis.cancel();
-
-                const { textContent } = target.nextElementSibling;
-
-                textContent.split(".").forEach((text) => {
-                    const trimmed = text.trim();
-                    if (trimmed) {
-                        const U = getUtterance(target, text);
-                        speechSynthesis.speak(U);
-                    }
-                });
-                break;
-            case PAUSE:
-                target.className = RESUME;
-                speechSynthesis.pause();
-                break;
-            case RESUME:
-                target.className = PAUSE;
-                speechSynthesis.resume();
-                break;
-            default:
-                break;
-        }
-    }
-
-    function handleKeydown({ code }) {
-        switch (code) {
-            case "Escape":
-                return speechSynthesis.cancel();
-            default:
-                break;
-        }
-    }
-
-    function getUtterance(target, text) {
-        const U = new SpeechSynthesisUtterance(text);
-            U.voice = defaultVoice;
-            U.lang = defaultVoice.lang;
-            U.volume = 1;
-            U.rate = 1;
-            U.pitch = 1;
-
-        U.onstart = () => {
-            console.log("Started");
-            target.className = PAUSE;
-        };
-        U.onend = () => {
-            console.log("Finished");
-            target.className = PLAY;
-        };
-        U.onerror = (err) => console.error(err);
-
-        return U;
-    }
 });

@@ -1,0 +1,45 @@
+.reviews-block {
+    &__inner {
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__heading {
+    }
+    &__title {
+        h2 {
+            margin: 0;
+        }
+    }
+    &__desc {
+        margin-top: 6px;
+    }
+    &__btn {
+        margin-left: 15px;
+    }
+
+    &__items {
+        margin-top: 50px;
+    }
+    &__item {
+    }
+    &__content {
+        padding: 40px;
+        border-radius: var(--gr_wrap_radius);
+        background: var(--on_gr_bg_bg);
+    }
+    &__body {
+    }
+    &__icon {
+    }
+    &__text {
+    }
+    &__rating {
+    }
+    &__stars {
+    }
+    &__name {
+    }
+}

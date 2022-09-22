@@ -35,7 +35,7 @@ body {
     font-family: var(--font1);
     font-weight: var(--font1_400);
     background: var(--gr_bg);
-    line-height: calc(1.2 * var(--lineHeightRatio));
+    line-height: calc(1.5 * var(--lineHeightRatio));
     color: var(--on_gr_bg_sec_text);
 
     &.ls_3 {
@@ -99,56 +99,85 @@ h1 {
     font-size: calc(36px * var(--font2Ratio));
     margin: 0 0 30px;
 
-    @media all and (max-width: 1023px) {
+    @media all and (max-width: 1260px) {
+        font-size: calc(34px * var(--font2Ratio));
         margin: 0 0 20px;
     }
 
     @media all and (max-width: 767px) {
+        font-size: calc(30px * var(--font2Ratio));
         margin: 0 0 16px;
+    }
+
+    @media all and (max-width: 639px) {
+        font-size: calc(26px * var(--font2Ratio));
     }
 }
 h2 {
     font-size: calc(32px * var(--font2Ratio));
     margin: 0 0 30px;
 
-    @media all and (max-width: 1023px) {
+    @media all and (max-width: 1260px) {
+        font-size: calc(30px * var(--font2Ratio));
         margin: 0 0 20px;
     }
 
     @media all and (max-width: 767px) {
+        font-size: calc(26px * var(--font2Ratio));
         margin: 0 0 16px;
+    }
+
+    @media all and (max-width: 639px) {
+        font-size: calc(22px * var(--font2Ratio));
     }
 }
 h3 {
     font-size: calc(29px * var(--font2Ratio)); 
     margin: 0 0 25px;
 
-    @media all and (max-width: 1023px) {
+    @media all and (max-width: 1260px) {
+        font-size: calc(26px * var(--font2Ratio)); 
         margin: 0 0 20px;
     }
 
     @media all and (max-width: 767px) {
+        font-size: calc(24px * var(--font2Ratio));
         margin: 0 0 16px;
+    }
+
+    @media all and (max-width: 639px) {
+        font-size: calc(20px * var(--font2Ratio));
     }
 }
 h4 {
     font-size: calc(26px * var(--font2Ratio)); 
     margin: 0 0 20px;
 
-    @media all and (max-width: 1023px) {
+    @media all and (max-width: 1260px) {
+        font-size: calc(22px * var(--font2Ratio)); 
         margin: 0 0 15px;
     }
 
     @media all and (max-width: 767px) {
+        font-size: calc(20px * var(--font2Ratio)); 
         margin: 0 0 10px;
+    }
+
+    @media all and (max-width: 639px) {
+        font-size: calc(18px * var(--font2Ratio));
     }
 }
 h5 {
     font-size: calc(20px * var(--font2Ratio)); 
     margin: 0 0 15px;
 
-    @media all and (max-width: 1023px) {
+    @media all and (max-width: 1260px) {
+        font-size: calc(18px * var(--font2Ratio)); 
         margin: 0 0 10px;
+    }
+
+    @media all and (max-width: 639px) {
+        font-size: calc(16px * var(--font2Ratio)); 
     }
 }
 h6 {
@@ -177,6 +206,24 @@ h6 {
 
 .main {
     flex: 1 0 auto;
+    background: var(--on_gr_bg_bg);
+    margin-bottom: 100px;
+
+    &__inner {
+        padding: 100px 0;
+    }
+
+    &__title {
+
+    }
+
+    &__text {
+
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
 }
 
 *:focus {
@@ -196,6 +243,25 @@ button {
     display: none;
 }
 
+.gr-svg-icon {
+    width: 30px;
+    height: 30px; 
+
+    &.gr_small_icon, &.gr_big_icon {
+        display: none;
+    }
+    
+    &.gr_small_icon {
+    	width: 20px;
+    	height: 20px;
+    }
+
+    &.gr_big_icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
 
 @import '_buttons.scss';
@@ -203,6 +269,8 @@ button {
 
 @import '_header.scss';
 @import '_slider.scss';
+@import '_services_block.scss';
+@import '_reviews_block.scss';
 
 
 
