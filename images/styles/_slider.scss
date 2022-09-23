@@ -8,6 +8,10 @@
         bottom: 60px;
         right: 0;
         z-index: 10;
+
+        button[data-controls="next"] {
+            margin-left: 10px;
+        }
     }
     
     .tns-nav {

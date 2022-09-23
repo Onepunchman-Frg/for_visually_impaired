@@ -146,6 +146,41 @@ $(function() {
         }, 100);
     })(); /*Отзывы*/
 
+    (function( ) {		
+        var slider = document.querySelector('.gallery_slider');
+        var sliderAutoplay = +slider.getAttribute('data-autoplay');
+        
+        var respSettings = {
+            320: {controls: false,items: 1,gutter: 20},
+            768: {controls: false,items: 2,gutter: 20},
+            1024: {controls: true,items: 2,gutter: 20},
+            1261: {controls: true,items: 3,gutter: 40}
+        };
+
+        var gallerySlider = tns({
+            loop: true,
+            rewind: false,
+            container: slider,
+            slideBy: 1,
+            mode: "carousel",
+            axis: "horizontal",
+            autoplayHoverPause: true,
+            autoplay: sliderAutoplay,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            nav: true,
+            navPosition: "bottom",
+            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+            preventActionWhenRunning: true,
+            center: true,
+            responsive: respSettings
+        });
+        
+        setTimeout(function(){
+            $('.gallery-block__content').matchHeight();
+        }, 100);
+    })(); /*Галерея*/
+
 
     
     

@@ -15,6 +15,7 @@
     /*----------Primary----------*/
         --Primary: #3CACFE;
         --Primary_1: rgba(60, 172, 254, .1);
+        --Primary_3: rgba(60, 172, 254, .3);
         --Primary_4: rgba(60, 172, 254, .4);
         --Primary_6: rgba(60, 172, 254, .6);
         --Primary_8: rgba(60, 172, 254, .8);
@@ -22,6 +23,7 @@
     
         --gr_primary: var(--Primary);
         --gr_primary_1: var(--Primary_1);
+        --gr_primary_3: var(--Primary_3);
         --gr_primary_4: var(--Primary_4);
         --gr_primary_6: var(--Primary_6);
         --gr_primary_8: var(--Primary_8);
@@ -42,6 +44,7 @@
     /*----------Accent----------*/
         --Accent: #FF6B03;
         --Accent_1: rgba(255, 107, 3, .1);
+        --Accent_3: rgba(255, 107, 3, .3);
         --Accent_4: rgba(255, 107, 3, .4);
         --Accent_6: rgba(255, 107, 3, .6);
         --Accent_8: rgba(255, 107, 3, .8);
@@ -49,6 +52,7 @@
     
         --gr_accent: var(--Accent);
         --gr_accent_1: var(--Accent_1);
+        --gr_accent_3: var(--Accent_3);
         --gr_accent_4: var(--Accent_4);
         --gr_accent_6: var(--Accent_6);
         --gr_accent_8: var(--Accent_8);
@@ -67,12 +71,14 @@
     /*----------Additional----------*/
         --Additional: #143650;
         --Additional_1: rgba(20, 54, 80, .1);
+        --Additional_3: rgba(20, 54, 80, .3);
         --Additional_4: rgba(20, 54, 80, .4);
         --Additional_6: rgba(20, 54, 80, .6);
         --Additional_8: rgba(20, 54, 80, .8);
     
         --gr_additional: var(--Additional);
         --gr_additional_1: var(--Additional_1);
+        --gr_additional_3: var(--Additional_3);
         --gr_additional_4: var(--Additional_4);
         --gr_additional_6: var(--Additional_6);
         --gr_additional_8: var(--Additional_8);
