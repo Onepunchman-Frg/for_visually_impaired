@@ -107,6 +107,7 @@
 
         --on_gr_bg_border2: #ffffff;
         --on_gr_bg_border2_07: rgba(255, 255, 255, .07);
+        --on_gr_bg_border2_1: rgba(0, 0, 0, .1);
     
         --on_gr_bg_bg: #000;
         --on_gr_bg_bg_5: rgb(0, 0, 0, .5);

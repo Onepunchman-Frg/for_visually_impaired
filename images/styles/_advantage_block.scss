@@ -1,0 +1,46 @@
+.advantage-block {
+    &__inner {
+    }
+    &__content {
+        padding: 100px 0;
+    }
+    &__top {
+    }
+    &__title {
+        h2 {
+            margin: 0;
+        }
+    }
+    &__desc {
+        margin-top: 6px;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px -17.5px 0;
+    }
+    &__item {
+        margin: 0 17.5px 35px;
+        display: inline-flex;
+        padding-bottom: 35px;
+        width: calc(50% - 35px);
+        border-bottom: 1px solid var(--on_gr_bg_border2_1);
+    }
+    &__count {
+        margin-right: 24px;
+        font-family: var(--font2);
+        font-size: calc(36px * var(--font1Ratio));
+        font-weight: var(--font2_700);
+        color: var(--gr_primary_3);
+        line-height: calc(1.1 * var(--lineHeightRatio));
+    }
+    &__text {
+    }
+    &__name {
+        margin: 0;
+    }
+    &__announcement {
+        margin-top: 8px;
+        font-size: calc(17px * var(--font1Ratio));
+    }
+}
