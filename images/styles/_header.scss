@@ -125,10 +125,19 @@
 }
 .site-menu {
     &__list {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        column-gap: 30px;
+        width: 100%;
+
+        & > li {
+            display: inline-block;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            & > ul {
+                display: none;
+            }
+        }
 
         a {
             text-decoration: none;
@@ -136,11 +145,11 @@
             font-family: var(--font2);
             font-weight: var(--font2_600);
             color: var(--on_gr_bg_acc_text);
-        }
+            transition: var(--siteTransition);
 
-        & > li {
-            & > ul {
-                display: none;
+            &:focus,
+            &:hover {
+                color: var(--gr_accent);
             }
         }
     }

@@ -6,25 +6,60 @@
 
     &.active {
         right: 0;
-        left: auto;
+        left: auto;   
+
+        .open-icon {
+            display: none;
+        }
+        .close-icon {
+            display: inline-flex;
+        }
     }
 
     &__inner {
         background: var(--on_gr_bg_bg);
         position: relative;
+        border-radius: 0 0 0 var(--gr_wrap_radius);
+        border: 2px solid var(--on_gr_bg_border2);
+        border-right: 0;
+        max-width: 480px;
     }
     &__btn {
         position: absolute;
-        top: 0;
-        left: -84px;
-        width: 84px;
-        height: 84px;
+        top: -2px;
+        left: -82px;
+        width: 82px;
+        height: 82px;
         background: var(--on_gr_bg_bg);
+        border-radius: var(--gr_wrap_radius) 0 0 var(--gr_wrap_radius);
+        border: 2px solid var(--on_gr_bg_border2);
+        border-right: 0;
 
         cursor: pointer;
+    }
 
-        svg {
+    &__icon {       
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        &.close-icon {
+            display: none;
+        }
+
+        i {
+            display: inline-flex;
+            font-size: 0;
+        }
+
+        .gr-svg-icon {
             fill: var(--on_gr_bg_icon);
+
+            &.gr_big_icon {
+                display: inline-flex;
+            }
         }
     }
     &__title {
@@ -40,6 +75,8 @@
         overflow-y: auto;
     }
     &__item {
+        display: flex;
+
     }
     &__name {
         

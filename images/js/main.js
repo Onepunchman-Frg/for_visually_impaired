@@ -1,7 +1,128 @@
 'use strict';
 
 $(function() {
-    // Аккордеон
+    
+
+    setTimeout(function(){
+        $('.header-menu').rowMenu({
+            "moreText":"<span>Ещё</span>",
+            "moreWidth": 130
+        });
+
+        $('.footer-menu').rowMenu({
+            "moreText":"<span>Ещё</span>",
+            "moreWidth": 130
+        });
+
+        // if (!isMobile) {
+        //     $('.menu-top ul').parent().each(function() {
+        //         var o = $(this);
+        //         var s = o.find('>ul');
+        //         var l = o.parents('ul').length;
+        //         var k = false;
+        //         o.hover(
+        //             function() {
+        //                 o.find('>a').addClass('active').removeClass('normal');
+        //                 for (i = $('.menu-top ul').length; i >= 0; i--) {
+        //                     o.parent().find('>li').not(o).find('ul').eq(i).hide();
+        //                 }
+        //                 k = true;
+                        
+        //                 s.show();
+                        
+        //                 var fixedMenuWidth = Math.ceil(o.offset().left) + o.find('>ul').outerWidth() + o.outerWidth();
+                        
+        //                 if (fixedMenuWidth > $(window).outerWidth()) {
+        //                     o.find('>ul').addClass('right_level');
+        //                 };
+                        
+        //                 if ($(document).outerWidth() > $(window).outerWidth()) {
+        //                     o.find('>ul').addClass('right_level');
+        //                 };
+        //             },
+        //             function() {
+        //                 o.find('>a').removeClass('active').addClass('normal');
+        //                 k = false;
+        //                 window.setTimeout(function() {
+        //                     if (!k) {
+        //                         s.hide()
+        //                         o.find('>ul').removeClass('right_level');
+        //                     };
+        //                 }, 500);
+        //             }
+        //         );
+        //     });
+        // };
+
+        // if (!isMobile) {
+        //     var foldersTimeOut;
+        //     $('.top-folders ul').parent().each(function() {
+        //         var o = $(this);
+        //         var s = o.find('>ul');
+        //         var l = o.parents('ul').length;
+        //         var k = false;
+        //         o.hover(
+        //             function() {
+        //                 o.find('>a').addClass('active').removeClass('normal');
+        //                 for (i = $('.top-folders ul').length; i >= 0; i--) {
+        //                     o.parent().find('>li').not(o).find('ul').eq(i).hide();
+        //                 }
+        //                 k = true;
+
+        //                 s.show();
+
+        //                 if ($(document).outerWidth() > $(window).outerWidth()) {
+        //                     o.find('>ul').addClass('right_level');
+        //                 };
+        //             },
+        //             function() {
+        //                 o.find('>a').removeClass('active').addClass('normal');
+        //                 k = false;
+        //                 window.setTimeout(function() {
+        //                     if (!k) {
+        //                         s.hide()
+        //                         o.find('>ul').removeClass('right_level');
+        //                     };
+                            
+        //                     if (!$('.row-menu-btn > a').hasClass('active') && !k) {
+        //                         $('.top-folders li').removeClass('has_image_item');
+        //                     };
+        //                 }, 500);
+        //             }
+        //         );
+        //     });
+        // };
+        
+        // $('.top-folders-wrapper, .menu-top-wrapper').removeClass('hideOverflow');
+    }, 300);
+
+    // let rowTimeOut;
+    // $(window).on('resize.rowTimeOutResize', function(){
+    //     if (window.matchMedia("(min-width: 1341px)").matches) {
+    //         if (rowTimeOut) {
+    //             clearTimeout(rowTimeOut);
+    //         };
+    //         rowTimeOut = setTimeout(function(){
+    //             if (!$('.header-menu').hasClass('row-menu-init')) {
+    //                 $('.header-menu').rowMenu({
+    //                     "moreText":"Еще",
+    //                     "moreWidth": 70
+    //                 });
+    //             };
+
+    //             if (!$('.footer-menu').hasClass('row-menu-init')) {
+    //                 $('.footer-menu').rowMenu({
+    //                     "moreText":"Ещё",
+    //                     "moreWidth": 120
+    //                 });
+    //             };
+    //         }, 300);
+    //     };
+    //     if ($('.row-menu-init').length) {
+    //         $(window).off('resize.rowTimeOutResize');
+    //     };
+    // });
+
     $.fn.accordion = function(options) {
         options = $.extend({
             headerSelector: '>li>a'
@@ -15,17 +136,16 @@ $(function() {
                 var $this = $(this),
                     txt = $this.next(),
                     li = $this.parent();
-                txt.slideToggle();
+                txt.slideToggle(200);
                 li.toggleClass('active');
                 return false;
             });
         });
-    }
+    } /*Аккордеон*/
     
     $(function() {
         $('.faq-block__accordion').accordion();
-    });
-    // Аккордеон
+    }); /*Аккордеон*/
 
     (function( ) {
 
@@ -219,10 +339,41 @@ $(function() {
         }, 100);
     })(); /*Галерея*/
 
+    (function( ) {		
+        var slider = document.querySelector('.partners_slider');
+        var sliderAutoplay = +slider.getAttribute('data-autoplay');
+        
+        var respSettings = {
+            320: {controls: false,items: 1,gutter: 20},
+            768: {controls: false,items: 2,gutter: 20},
+            1024: {controls: true,items: 2,gutter: 20},
+            1261: {controls: true,items: 4,gutter: 28}
+        };
+
+        var partnersSlider = tns({
+            loop: false,
+            rewind: true,
+            container: slider,
+            slideBy: 1,
+            mode: "carousel",
+            axis: "horizontal",
+            autoplayHoverPause: true,
+            autoplay: sliderAutoplay,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            nav: true,
+            navPosition: "bottom",
+            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+            preventActionWhenRunning: true,
+            controlsPosition: "bottom",
+            responsive: respSettings
+        });
+    })(); /*Бренды*/
+
 
     
     
-
+    /*Панель для слабовидящих*/
     $('.settings-panel__btn').on("click", function (){
         var $this = $(this);
         var $body = $('.settings-panel');
@@ -276,8 +427,7 @@ $(function() {
 
         readCookieFontSize();
     });
-
-        
+       
     
     let readCookieFontColor = () => {
         var rdCke = readCookie('ui_color_stng');
@@ -350,7 +500,6 @@ $(function() {
 
         readCookieFontColor();
     });
-
     
 
     let readCookieLineHeight = () => {
@@ -386,7 +535,6 @@ $(function() {
 
         readCookieLineHeight();
     });
-
     
 
     let readCookieLetterSpacing = () => {
@@ -420,7 +568,6 @@ $(function() {
     });
 
 
-
     let readCookieImgSetting = () => {
         var rdCke = readCookie('ui_img_stng');
         if (rdCke == '3') {
@@ -450,7 +597,6 @@ $(function() {
 
         readCookieImgSetting();
     });
-
 
     
     let readCookieFontFam = () => {
@@ -484,5 +630,14 @@ $(function() {
 
         readCookieFontFam();
     });
+    /*Панель для слабовидящих*/
+
+
+    	
+    $('.link-top-btn').on('click', function() {
+        $('html, body').stop().animate({
+            scrollTop: 0
+        }, 800);
+    });/*Кнопка наверх*/	
 
 });
