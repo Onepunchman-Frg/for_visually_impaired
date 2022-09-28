@@ -16,14 +16,14 @@
 		$btn1ColorActive:                   var(--gr_btn_1_text_a);
 
 		// Background 
-		$btn1BackgroundDefault:             var(--gr_primary);             
-		$btn1BackgroundHover:               var(--gr_primary);             
-		$btn1BackgroundActive:              var(--gr_primary);
+		$btn1BackgroundDefault:             var(--gr_btn_1_backgroun);             
+		$btn1BackgroundHover:               var(--gr_btn_1_backgroun_h);             
+		$btn1BackgroundActive:              var(--gr_btn_1_backgroun_a);
 
 		// Box-shadow
-		$btn1ShadowDefault:                 none;             
-		$btn1ShadowHover:                   none;             
-		$btn1ShadowActive:                  none;
+		$btn1ShadowDefault:                 var(--gr_btn_1_shadow);             
+		$btn1ShadowHover:                   var(--gr_btn_1_shadow_h);             
+		$btn1ShadowActive:                  var(--gr_btn_1_shadow_a);
 
 		// Border 
 		$btn1BorderDefault:                 none;             
@@ -43,14 +43,14 @@
 		$btn2ColorActive:                   var(--gr_btn_2_text_a);
 
 		// Background 
-		$btn2BackgroundDefault:             var(--gr_accent);             
-		$btn2BackgroundHover:               var(--gr_accent);             
-		$btn2BackgroundActive:              var(--gr_accent);
+		$btn2BackgroundDefault:             var(--gr_btn_2_backgroun);             
+		$btn2BackgroundHover:               var(--gr_btn_2_backgroun_h);             
+		$btn2BackgroundActive:              var(--gr_btn_2_backgroun_a);
 
 		// Box-shadow
-		$btn2ShadowDefault:                 none;             
-		$btn2ShadowHover:                   none;             
-		$btn2ShadowActive:                  none;
+		$btn2ShadowDefault:                 var(--gr_btn_2_shadow);             
+		$btn2ShadowHover:                   var(--gr_btn_2_shadow_h);             
+		$btn2ShadowActive:                  var(--gr_btn_2_shadow_a);
 
 		// Border 
 		$btn2BorderDefault:                 none;             
@@ -70,14 +70,14 @@
 		$btn3ColorActive:                   var(--gr_btn_3_text_a);
 
 		// Background 
-		$btn3BackgroundDefault:             none;             
-		$btn3BackgroundHover:               var(--gr_primary);             
-		$btn3BackgroundActive:              var(--gr_primary);
+		$btn3BackgroundDefault:             var(--gr_btn_3_backgroun);             
+		$btn3BackgroundHover:               var(--gr_btn_3_backgroun_h);             
+		$btn3BackgroundActive:              var(--gr_btn_3_backgroun_a);
 
 		// Box-shadow
-		$btn3ShadowDefault:                 inset 0 0 0 2px var(--gr_primary_6);             
-		$btn3ShadowHover:                   inset 0 0 0 2px var(--gr_primary);             
-		$btn3ShadowActive:                  inset 0 0 0 2px var(--gr_primary);
+		$btn3ShadowDefault:                 var(--gr_btn_3_shadow);             
+		$btn3ShadowHover:                   var(--gr_btn_3_shadow_h);             
+		$btn3ShadowActive:                  var(--gr_btn_3_shadow_a);
 
 		// Border 
 		$btn3BorderDefault:                 none;             
@@ -97,14 +97,14 @@
 		$btn4ColorActive:                   var(--gr_btn_4_text_a);
 
 		// Background 
-		$btn4BackgroundDefault:             var(--gr_btn_4_bg);             
-		$btn4BackgroundHover:               var(--gr_btn_4_bg_h);             
-		$btn4BackgroundActive:              var(--gr_btn_4_bg_a);
+		$btn4BackgroundDefault:             var(--gr_btn_4_backgroun);             
+		$btn4BackgroundHover:               var(--gr_btn_4_backgroun_h);             
+		$btn4BackgroundActive:              var(--gr_btn_4_backgroun_a);
 
 		// Box-shadow
-		$btn4ShadowDefault:                 none;             
-		$btn4ShadowHover:                   none;             
-		$btn4ShadowActive:                  none;
+		$btn4ShadowDefault:                 var(--gr_btn_4_shadow);             
+		$btn4ShadowHover:                   var(--gr_btn_4_shadow_h);             
+		$btn4ShadowActive:                  var(--gr_btn_4_shadow_a);
 
 		// Border 
 		$btn4BorderDefault:                 none;             
@@ -117,13 +117,13 @@
 	//---------------------------------------------------//
 		// Background 
 		$icon1BackgroundDefault:             var(--gr_icon_btn_1_bg);             
-		$icon1BackgroundHover:               var(--gr_icon_btn_1_bg);             
-		$icon1BackgroundActive:              var(--gr_icon_btn_1_bg);
+		$icon1BackgroundHover:               var(--gr_icon_btn_1_bg_h);             
+		$icon1BackgroundActive:              var(--gr_icon_btn_1_bg_a);
 
 		// Box-shadow
-		$icon1ShadowDefault:                 0 0 0 1px var(--gr_icon_btn_1_border);             
-		$icon1ShadowHover:                   0 0 0 1px var(--gr_icon_btn_1_border_h);             
-		$icon1ShadowActive:                  0 0 0 1px var(--gr_icon_btn_1_border_a);
+		$icon1ShadowDefault:                 var(--gr_icon_btn_1_shadow);
+		$icon1ShadowHover:                   var(--gr_icon_btn_1_shadow_h);
+		$icon1ShadowActive:                  var(--gr_icon_btn_1_shadow_a);
 
 		// Border 
 		$icon1BorderDefault:                 none;             
@@ -139,9 +139,9 @@
 		$icon2BackgroundActive:              var(--gr_icon_btn_2_bg);
 
 		// Box-shadow
-		$icon2ShadowDefault:                 none;             
-		$icon2ShadowHover:                   none;             
-		$icon2ShadowActive:                  none;
+		$icon2ShadowDefault:                 var(--gr_icon_btn_2_shadow);             
+		$icon2ShadowHover:                   var(--gr_icon_btn_2_shadow_h);             
+		$icon2ShadowActive:                  var(--gr_icon_btn_2_shadow_a);
 
 		// Border 
 		$icon2BorderDefault:                 none;             
@@ -157,9 +157,9 @@
 		$icon3BackgroundActive:              var(--gr_icon_btn_3_bg);
 
 		// Box-shadow
-		$icon3ShadowDefault:                 none;             
-		$icon3ShadowHover:                   none;             
-		$icon3ShadowActive:                  none;
+		$icon3ShadowDefault:                 var(--gr_icon_btn_3_shadow);             
+		$icon3ShadowHover:                   var(--gr_icon_btn_3_shadow_h);             
+		$icon3ShadowActive:                  var(--gr_icon_btn_3_shadow_a);
 
 		// Border 
 		$icon3BorderDefault:                 none;             
@@ -176,19 +176,19 @@
 
 
 		// Text color
-		$buyColorDefault:                  var(--gr_btn_2_text);             
-		$buyColorHover:                    var(--gr_btn_2_text_h);             
-		$buyColorActive:                   var(--gr_btn_2_text_a);
+		$buyColorDefault:                  var(--gr_btn_buy_text);             
+		$buyColorHover:                    var(--gr_btn_buy_text_h);             
+		$buyColorActive:                   var(--gr_btn_buy_text_a);
 
 		// Background 
-		$buyBackgroundDefault:             var(--gr_accent);             
-		$buyBackgroundHover:               var(--gr_accent);             
-		$buyBackgroundActive:              var(--gr_accent);
+		$buyBackgroundDefault:             var(--gr_btn_buy_backgroun);             
+		$buyBackgroundHover:               var(--gr_btn_buy_backgroun_h);             
+		$buyBackgroundActive:              var(--gr_btn_buy_backgroun_a);
 
 		// Box-shadow
-		$buyShadowDefault:                 none;             
-		$buyShadowHover:                   none;             
-		$buyShadowActive:                  none;
+		$buyShadowDefault:                 var(--gr_btn_buy_shadow);             
+		$buyShadowHover:                   var(--gr_btn_buy_shadow_h);             
+		$buyShadowActive:                  var(--gr_btn_buy_shadow_a);
 
 		// Border 
 		$buyBorderDefault:                 none;             

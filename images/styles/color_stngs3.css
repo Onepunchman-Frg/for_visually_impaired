@@ -3,6 +3,7 @@
     /*----------Fonts----------*/
         --font1: 'Roboto', sans-serif; 
         --font2: 'Inter', sans-serif;
+        --font3: "PT Serif", serif;
 
         --font1Ratio: 1; 
         --font2Ratio: 1;
@@ -10,6 +11,8 @@
         --lineHeightRatio: 1; 
 
         --siteTransition: all 0.3s ease;
+        
+        --font_stngs: 'Inter', sans-serif;
 
 
     /*----------Primary----------*/
@@ -141,6 +144,14 @@
             --gr_btn_1_icon_h: var(--on_gr_primary_icon);
             --gr_btn_1_icon_a: rgba(255,255,255,.7);
     
+            --gr_btn_1_backgroun: var(--gr_primary);
+            --gr_btn_1_backgroun_h: var(--gr_primary);
+            --gr_btn_1_backgroun_a: var(--gr_primary);
+    
+            --gr_btn_1_shadow: none;
+            --gr_btn_1_shadow_h: none;
+            --gr_btn_1_shadow_a: none;
+    
         /*Кнопка 2*/
             --gr_btn_2_text: var(--on_gr_accent_text);
             --gr_btn_2_text_h: var(--on_gr_accent_text);
@@ -150,14 +161,30 @@
             --gr_btn_2_icon_h: var(--on_gr_accent_icon);
             --gr_btn_2_icon_a: rgba(255,255,255,.7);
     
+            --gr_btn_2_backgroun: var(--gr_accent);
+            --gr_btn_2_backgroun_h: var(--gr_accent);
+            --gr_btn_2_backgroun_a: var(--gr_accent);
+    
+            --gr_btn_2_shadow: none;
+            --gr_btn_2_shadow_h: none;
+            --gr_btn_2_shadow_a: none;
+    
         /*Кнопка 3*/
-            --gr_btn_3_text: var(--gr_primary);
+            --gr_btn_3_text: var(--gr_accent);
             --gr_btn_3_text_h: #fff;
             --gr_btn_3_text_a: rgba(255,255,255,.7);
     
-            --gr_btn_3_icon: var(--gr_primary);
+            --gr_btn_3_icon: var(--gr_accent);
             --gr_btn_3_icon_h: #fff;
             --gr_btn_3_icon_a: rgba(255,255,255,.7);
+    
+            --gr_btn_3_backgroun: none;
+            --gr_btn_3_backgroun_h: var(--gr_accent);
+            --gr_btn_3_backgroun_a: var(--gr_accent);
+    
+            --gr_btn_3_shadow: inset 0 0 0 2px var(--gr_accent_6);             
+            --gr_btn_3_shadow_h: inset 0 0 0 2px var(--gr_accent);             
+            --gr_btn_3_shadow_a: inset 0 0 0 2px var(--gr_accent);
     
         /*Кнопка 4*/
             --gr_btn_4_text: var(--gr_white);
@@ -167,22 +194,30 @@
             --gr_btn_4_icon: var(--gr_white);
             --gr_btn_4_icon_h: #fff;
             --gr_btn_4_icon_a: rgba(255,255,255,.7);
+    
+            --gr_btn_4_backgroun: none;
+            --gr_btn_4_backgroun_h: none;
+            --gr_btn_4_backgroun_a: none;
+    
+            --gr_btn_4_shadow: none;
+            --gr_btn_4_shadow_h: none;
+            --gr_btn_4_shadow_a: none;
     /*----------Кнопки с текстом----------*/
     
     
     /*----------Кнопки только с иконкой----------*/
         /*Кнопка 1*/
-            --gr_icon_btn_1_icon: var(--on_gr_bg_icon);
+            --gr_icon_btn_1_icon: var(--on_gr_primary_icon);
             --gr_icon_btn_1_icon_h: var(--on_gr_primary_icon);
             --gr_icon_btn_1_icon_a: var(--on_gr_primary_icon);
     
-            --gr_icon_btn_1_bg: var(--gr_primary_1);
+            --gr_icon_btn_1_bg: var(--gr_primary);
             --gr_icon_btn_1_bg_h: var(--gr_primary);
             --gr_icon_btn_1_bg_a: var(--gr_primary);
     
-            --gr_icon_btn_1_border: none;
-            --gr_icon_btn_1_border_h: none;
-            --gr_icon_btn_1_border_a: none;
+            --gr_icon_btn_1_shadow: none;
+            --gr_icon_btn_1_shadow_h: none;
+            --gr_icon_btn_1_shadow_a: none;
     
         /*Кнопка 2*/
             --gr_icon_btn_2_icon: var(--on_gr_bg_icon);
@@ -193,6 +228,10 @@
             --gr_icon_btn_2_bg_h: var(--gr_primary);
             --gr_icon_btn_2_bg_a: var(--gr_primary);
     
+            --gr_icon_btn_2_shadow: none;
+            --gr_icon_btn_2_shadow_h: none;
+            --gr_icon_btn_2_shadow_a: none;
+    
         /*Кнопка 3*/
             --gr_icon_btn_3_icon: var(--on_gr_bg_icon);
             --gr_icon_btn_3_icon_h: var(--gr_primary_6);
@@ -202,15 +241,29 @@
             --gr_icon_btn_3_bg_h: transparent;
             --gr_icon_btn_3_bg_a: transparent;
     
-        /*Кнопка 4*/
-            --gr_icon_btn_4_icon: var(--on_gr_primary_icon);
-            --gr_icon_btn_4_icon_h: var(--on_gr_primary_icon);
-            --gr_icon_btn_4_icon_a: var(--on_gr_primary_icon);
-    
-            --gr_icon_btn_4_bg: var(--gr_primary);
-            --gr_icon_btn_4_bg_h: var(--gr_primary);
-            --gr_icon_btn_4_bg_a: var(--gr_primary);
+            --gr_icon_btn_3_shadow: none;
+            --gr_icon_btn_3_shadow_h: none;
+            --gr_icon_btn_3_shadow_a: none;
     /*----------Кнопки только с иконкой----------*/
+
+
+    /*----------Кнопка купить----------*/
+            --gr_btn_buy_text: var(--on_gr_accent_text);
+            --gr_btn_buy_text_h: var(--on_gr_accent_text);
+            --gr_btn_buy_text_a: rgba(255,255,255,.7);
+    
+            --gr_btn_buy_icon: var(--on_gr_accent_icon);
+            --gr_btn_buy_icon_h: var(--on_gr_accent_icon);
+            --gr_btn_buy_icon_a: rgba(255,255,255,.7);
+    
+            --gr_btn_buy_backgroun: var(--gr_accent);
+            --gr_btn_buy_backgroun_h: var(--gr_accent);
+            --gr_btn_buy_backgroun_a: var(--gr_accent);
+    
+            --gr_btn_buy_shadow: none;
+            --gr_btn_buy_shadow_h: none;
+            --gr_btn_buy_shadow_a: none;
+    /*----------Кнопка купить----------*/
     
     
     /*----------Тени----------*/

@@ -702,27 +702,27 @@ a.tpl-button,
 .shop-product-btn {
   font-weight: var(--font2_500);
   font-family: var(--font2);
-  color: var(--gr_btn_2_text);
+  color: var(--gr_btn_buy_text);
   border: none;
-  background: var(--gr_accent);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: var(--gr_btn_buy_backgroun);
+  -webkit-box-shadow: var(--gr_btn_buy_shadow);
+          box-shadow: var(--gr_btn_buy_shadow);
 }
 
 .shop-product-btn:hover {
-  color: var(--gr_btn_2_text_h);
+  color: var(--gr_btn_buy_text_h);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_accent);
+  -webkit-box-shadow: var(--gr_btn_buy_shadow_h);
+          box-shadow: var(--gr_btn_buy_shadow_h);
+  background: var(--gr_btn_buy_backgroun_h);
 }
 
 .shop-product-btn:active {
-  color: var(--gr_btn_2_text_a);
+  color: var(--gr_btn_buy_text_a);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_accent);
+  -webkit-box-shadow: var(--gr_btn_buy_shadow_a);
+          box-shadow: var(--gr_btn_buy_shadow_a);
+  background: var(--gr_btn_buy_backgroun_a);
 }
 
 .shop-product-btn span {
@@ -899,9 +899,9 @@ body .product-compare .gr-compare-plus input {
   font-family: var(--font2);
   color: var(--gr_btn_1_text);
   border: none;
-  background: var(--gr_primary);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: var(--gr_btn_1_backgroun);
+  -webkit-box-shadow: var(--gr_btn_1_shadow);
+          box-shadow: var(--gr_btn_1_shadow);
 }
 
 .gr-btn-1 svg {
@@ -911,9 +911,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-1:hover {
   color: var(--gr_btn_1_text_h);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_1_shadow_h);
+          box-shadow: var(--gr_btn_1_shadow_h);
+  background: var(--gr_btn_1_backgroun_h);
 }
 
 .gr-btn-1:hover svg {
@@ -923,9 +923,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-1:active {
   color: var(--gr_btn_1_text_a);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_1_shadow_a);
+          box-shadow: var(--gr_btn_1_shadow_a);
+  background: var(--gr_btn_1_backgroun_a);
 }
 
 .gr-btn-1:active svg {
@@ -935,9 +935,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-1-style {
   color: var(--gr_btn_1_text);
   border: none;
-  background: var(--gr_primary);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: var(--gr_btn_1_backgroun);
+  -webkit-box-shadow: var(--gr_btn_1_shadow);
+          box-shadow: var(--gr_btn_1_shadow);
 }
 
 .gr-btn-1-style svg {
@@ -947,9 +947,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-1-style:hover {
   color: var(--gr_btn_1_text_h);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_1_shadow_h);
+          box-shadow: var(--gr_btn_1_shadow_h);
+  background: var(--gr_btn_1_backgroun_h);
 }
 
 .gr-btn-1-style:hover svg {
@@ -959,9 +959,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-1-style:active {
   color: var(--gr_btn_1_text_a);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_1_shadow_a);
+          box-shadow: var(--gr_btn_1_shadow_a);
+  background: var(--gr_btn_1_backgroun_a);
 }
 
 .gr-btn-1-style:active svg {
@@ -973,9 +973,9 @@ body .product-compare .gr-compare-plus input {
   font-family: var(--font2);
   color: var(--gr_btn_2_text);
   border: none;
-  background: var(--gr_accent);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: var(--gr_btn_2_backgroun);
+  -webkit-box-shadow: var(--gr_btn_2_shadow);
+          box-shadow: var(--gr_btn_2_shadow);
 }
 
 .gr-btn-2 svg {
@@ -985,9 +985,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-2:hover {
   color: var(--gr_btn_2_text_h);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_accent);
+  -webkit-box-shadow: var(--gr_btn_2_shadow_h);
+          box-shadow: var(--gr_btn_2_shadow_h);
+  background: var(--gr_btn_2_backgroun_h);
 }
 
 .gr-btn-2:hover svg {
@@ -997,9 +997,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-2:active {
   color: var(--gr_btn_2_text_a);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_accent);
+  -webkit-box-shadow: var(--gr_btn_2_shadow_a);
+          box-shadow: var(--gr_btn_2_shadow_a);
+  background: var(--gr_btn_2_backgroun_a);
 }
 
 .gr-btn-2:active svg {
@@ -1009,9 +1009,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-2-style {
   color: var(--gr_btn_2_text);
   border: none;
-  background: var(--gr_accent);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: var(--gr_btn_2_backgroun);
+  -webkit-box-shadow: var(--gr_btn_2_shadow);
+          box-shadow: var(--gr_btn_2_shadow);
 }
 
 .gr-btn-2-style svg {
@@ -1021,9 +1021,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-2-style:hover {
   color: var(--gr_btn_2_text_h);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_accent);
+  -webkit-box-shadow: var(--gr_btn_2_shadow_h);
+          box-shadow: var(--gr_btn_2_shadow_h);
+  background: var(--gr_btn_2_backgroun_h);
 }
 
 .gr-btn-2-style:hover svg {
@@ -1033,9 +1033,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-2-style:active {
   color: var(--gr_btn_2_text_a);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_accent);
+  -webkit-box-shadow: var(--gr_btn_2_shadow_a);
+          box-shadow: var(--gr_btn_2_shadow_a);
+  background: var(--gr_btn_2_backgroun_a);
 }
 
 .gr-btn-2-style:active svg {
@@ -1048,9 +1048,9 @@ body .product-compare .gr-compare-plus input {
   font-family: var(--font2);
   color: var(--gr_btn_3_text);
   border: none;
-  background: none;
-  -webkit-box-shadow: inset 0 0 0 2px var(--gr_primary_6);
-          box-shadow: inset 0 0 0 2px var(--gr_primary_6);
+  background: var(--gr_btn_3_backgroun);
+  -webkit-box-shadow: var(--gr_btn_3_shadow);
+          box-shadow: var(--gr_btn_3_shadow);
 }
 
 .gr-btn-3 svg, .gr-field-style input[type="button"] svg, .tpl-field input[type="button"] svg, .shop2-btn.shop2-btn-back svg {
@@ -1061,9 +1061,9 @@ body .product-compare .gr-compare-plus input {
 .tpl-field input:hover[type="button"], .shop2-btn.shop2-btn-back:hover {
   color: var(--gr_btn_3_text_h);
   border: none;
-  -webkit-box-shadow: inset 0 0 0 2px var(--gr_primary);
-          box-shadow: inset 0 0 0 2px var(--gr_primary);
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_3_shadow_h);
+          box-shadow: var(--gr_btn_3_shadow_h);
+  background: var(--gr_btn_3_backgroun_h);
 }
 
 .gr-btn-3:hover:before, .gr-field-style input[type="button"]:hover:before,
@@ -1079,9 +1079,9 @@ body .product-compare .gr-compare-plus input {
 .tpl-field input:active[type="button"], .shop2-btn.shop2-btn-back:active {
   color: var(--gr_btn_3_text_a);
   border: none;
-  -webkit-box-shadow: inset 0 0 0 2px var(--gr_primary);
-          box-shadow: inset 0 0 0 2px var(--gr_primary);
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_3_shadow_a);
+          box-shadow: var(--gr_btn_3_shadow_a);
+  background: var(--gr_btn_3_backgroun_a);
 }
 
 .gr-btn-3:active:before, .gr-field-style input[type="button"]:active:before,
@@ -1096,9 +1096,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-3-style {
   color: var(--gr_btn_3_text);
   border: none;
-  background: none;
-  -webkit-box-shadow: inset 0 0 0 2px var(--gr_primary_6);
-          box-shadow: inset 0 0 0 2px var(--gr_primary_6);
+  background: var(--gr_btn_3_backgroun);
+  -webkit-box-shadow: var(--gr_btn_3_shadow);
+          box-shadow: var(--gr_btn_3_shadow);
 }
 
 .gr-btn-3-style svg {
@@ -1108,9 +1108,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-3-style:hover {
   color: var(--gr_btn_3_text_h);
   border: none;
-  -webkit-box-shadow: inset 0 0 0 2px var(--gr_primary);
-          box-shadow: inset 0 0 0 2px var(--gr_primary);
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_3_shadow_h);
+          box-shadow: var(--gr_btn_3_shadow_h);
+  background: var(--gr_btn_3_backgroun_h);
 }
 
 .gr-btn-3-style:hover svg {
@@ -1120,9 +1120,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-3-style:active {
   color: var(--gr_btn_3_text_a);
   border: none;
-  -webkit-box-shadow: inset 0 0 0 2px var(--gr_primary);
-          box-shadow: inset 0 0 0 2px var(--gr_primary);
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_3_shadow_a);
+          box-shadow: var(--gr_btn_3_shadow_a);
+  background: var(--gr_btn_3_backgroun_a);
 }
 
 .gr-btn-3-style:active:before {
@@ -1138,9 +1138,9 @@ body .product-compare .gr-compare-plus input {
   font-family: var(--font2);
   color: var(--gr_btn_4_text);
   border: none;
-  background: var(--gr_btn_4_bg);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: var(--gr_btn_4_backgroun);
+  -webkit-box-shadow: var(--gr_btn_4_shadow);
+          box-shadow: var(--gr_btn_4_shadow);
 }
 
 .gr-btn-4 svg {
@@ -1150,9 +1150,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-4:hover {
   color: var(--gr_btn_4_text_h);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_btn_4_bg_h);
+  -webkit-box-shadow: var(--gr_btn_4_shadow_h);
+          box-shadow: var(--gr_btn_4_shadow_h);
+  background: var(--gr_btn_4_backgroun_h);
 }
 
 .gr-btn-4:hover svg {
@@ -1162,9 +1162,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-4:active {
   color: var(--gr_btn_4_text_a);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_btn_4_bg_a);
+  -webkit-box-shadow: var(--gr_btn_4_shadow_a);
+          box-shadow: var(--gr_btn_4_shadow_a);
+  background: var(--gr_btn_4_backgroun_a);
 }
 
 .gr-btn-4:active svg {
@@ -1182,9 +1182,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-4-style {
   color: var(--gr_btn_4_text);
   border: none;
-  background: var(--gr_btn_4_bg);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: var(--gr_btn_4_backgroun);
+  -webkit-box-shadow: var(--gr_btn_4_shadow);
+          box-shadow: var(--gr_btn_4_shadow);
 }
 
 .gr-btn-4-style svg {
@@ -1194,9 +1194,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-4-style:hover {
   color: var(--gr_btn_4_text_h);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_btn_4_bg_h);
+  -webkit-box-shadow: var(--gr_btn_4_shadow_h);
+          box-shadow: var(--gr_btn_4_shadow_h);
+  background: var(--gr_btn_4_backgroun_h);
 }
 
 .gr-btn-4-style:hover svg {
@@ -1206,9 +1206,9 @@ body .product-compare .gr-compare-plus input {
 .gr-btn-4-style:active {
   color: var(--gr_btn_4_text_a);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_btn_4_bg_a);
+  -webkit-box-shadow: var(--gr_btn_4_shadow_a);
+          box-shadow: var(--gr_btn_4_shadow_a);
+  background: var(--gr_btn_4_backgroun_a);
 }
 
 .gr-btn-4-style:active svg {
@@ -1233,8 +1233,8 @@ body .product-compare .gr-compare-plus input {
   transition: var(--siteTransition);
   border: none;
   background: var(--gr_icon_btn_1_bg);
-  -webkit-box-shadow: 0 0 0 1px var(--gr_icon_btn_1_border);
-          box-shadow: 0 0 0 1px var(--gr_icon_btn_1_border);
+  -webkit-box-shadow: var(--gr_icon_btn_1_shadow);
+          box-shadow: var(--gr_icon_btn_1_shadow);
 }
 
 .gr-icon-btn-1:before, .tns-controls button:before {
@@ -1243,9 +1243,9 @@ body .product-compare .gr-compare-plus input {
 
 .gr-icon-btn-1:hover, .tns-controls button:hover {
   border: none;
-  -webkit-box-shadow: 0 0 0 1px var(--gr_icon_btn_1_border_h);
-          box-shadow: 0 0 0 1px var(--gr_icon_btn_1_border_h);
-  background: var(--gr_icon_btn_1_bg);
+  -webkit-box-shadow: var(--gr_icon_btn_1_shadow_h);
+          box-shadow: var(--gr_icon_btn_1_shadow_h);
+  background: var(--gr_icon_btn_1_bg_h);
 }
 
 .gr-icon-btn-1:hover svg, .tns-controls button:hover svg {
@@ -1254,9 +1254,9 @@ body .product-compare .gr-compare-plus input {
 
 .gr-icon-btn-1:active, .tns-controls button:active {
   border: none;
-  -webkit-box-shadow: 0 0 0 1px var(--gr_icon_btn_1_border_a);
-          box-shadow: 0 0 0 1px var(--gr_icon_btn_1_border_a);
-  background: var(--gr_icon_btn_1_bg);
+  -webkit-box-shadow: var(--gr_icon_btn_1_shadow_a);
+          box-shadow: var(--gr_icon_btn_1_shadow_a);
+  background: var(--gr_icon_btn_1_bg_a);
 }
 
 .gr-icon-btn-1:active svg, .tns-controls button:active svg {
@@ -1281,8 +1281,8 @@ body .product-compare .gr-compare-plus input {
   transition: var(--siteTransition);
   border: none;
   background: var(--gr_icon_btn_2_bg);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: var(--gr_icon_btn_2_shadow);
+          box-shadow: var(--gr_icon_btn_2_shadow);
 }
 
 .gr-icon-btn-2:before {
@@ -1292,8 +1292,8 @@ body .product-compare .gr-compare-plus input {
 
 .gr-icon-btn-2:hover {
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: var(--gr_icon_btn_2_shadow_h);
+          box-shadow: var(--gr_icon_btn_2_shadow_h);
   background: var(--gr_icon_btn_2_bg);
 }
 
@@ -1303,8 +1303,8 @@ body .product-compare .gr-compare-plus input {
 
 .gr-icon-btn-2:active {
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: var(--gr_icon_btn_2_shadow_a);
+          box-shadow: var(--gr_icon_btn_2_shadow_a);
   background: var(--gr_icon_btn_2_bg);
 }
 
@@ -1330,8 +1330,8 @@ body .product-compare .gr-compare-plus input {
   transition: var(--siteTransition);
   border: none;
   background: var(--gr_icon_btn_3_bg);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: var(--gr_icon_btn_3_shadow);
+          box-shadow: var(--gr_icon_btn_3_shadow);
 }
 
 .gr-icon-btn-3:before {
@@ -1341,8 +1341,8 @@ body .product-compare .gr-compare-plus input {
 
 .gr-icon-btn-3:hover {
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: var(--gr_icon_btn_3_shadow_h);
+          box-shadow: var(--gr_icon_btn_3_shadow_h);
   background: var(--gr_icon_btn_3_bg);
 }
 
@@ -1352,8 +1352,8 @@ body .product-compare .gr-compare-plus input {
 
 .gr-icon-btn-3:active {
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: var(--gr_icon_btn_3_shadow_a);
+          box-shadow: var(--gr_icon_btn_3_shadow_a);
   background: var(--gr_icon_btn_3_bg);
 }
 
@@ -1444,9 +1444,9 @@ a.tpl-button,
   font-family: var(--font2);
   color: var(--gr_btn_1_text);
   border: none;
-  background: var(--gr_primary);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background: var(--gr_btn_1_backgroun);
+  -webkit-box-shadow: var(--gr_btn_1_shadow);
+          box-shadow: var(--gr_btn_1_shadow);
 }
 
 button.shop2-btn:hover,
@@ -1464,9 +1464,9 @@ a.tpl-button:hover,
 .gr-field-style input[type="submit"]:hover {
   color: var(--gr_btn_1_text_h);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_1_shadow_h);
+          box-shadow: var(--gr_btn_1_shadow_h);
+  background: var(--gr_btn_1_backgroun_h);
 }
 
 button.shop2-btn:active,
@@ -1484,9 +1484,9 @@ a.tpl-button:active,
 .gr-field-style input[type="submit"]:active {
   color: var(--gr_btn_1_text_a);
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: var(--gr_primary);
+  -webkit-box-shadow: var(--gr_btn_1_shadow_a);
+          box-shadow: var(--gr_btn_1_shadow_a);
+  background: var(--gr_btn_1_backgroun_a);
 }
 
 button.shop2-btn.notavailable,
@@ -1603,6 +1603,8 @@ a.tpl-button.disabled,
   top: 120px;
   z-index: 99;
   line-height: 28px;
+  letter-spacing: normal;
+  font-family: var(--font_stngs);
 }
 
 .settings-panel.active {
@@ -1611,7 +1613,7 @@ a.tpl-button.disabled,
 }
 
 .settings-panel__inner {
-  background: var(--on_gr_bg_bg);
+  background: var(--gr_bg);
   position: relative;
   border-radius: 0 0 0 var(--gr_wrap_radius);
   border: 2px solid var(--on_gr_bg_border2);
@@ -1633,7 +1635,7 @@ a.tpl-button.disabled,
 }
 
 .settings-panel__btn.active {
-  background: var(--on_gr_bg_bg);
+  background: var(--gr_bg);
 }
 
 .settings-panel__btn.active .open-icon {
@@ -1687,7 +1689,6 @@ a.tpl-button.disabled,
 
 .settings-panel__title {
   padding: 34px 34px 10px 40px;
-  font-family: var(--font2);
   font-weight: var(--font2_700);
   font-size: 26px;
   margin-bottom: 20px;
@@ -1733,7 +1734,6 @@ a.tpl-button.disabled,
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  font-family: var(--font2);
   font-weight: var(--font2_500);
   font-size: 18px;
 }
@@ -1780,6 +1780,10 @@ a.tpl-button.disabled,
   padding: 15px;
 }
 
+.settings-panel__item:not(.color-setting).ffam-setting .settings-panel__list label[for=ffam_2] {
+  font-family: var(--font3);
+}
+
 .settings-panel__item.color-setting .settings-panel__list label {
   width: 58px;
   height: 58px;
@@ -1799,30 +1803,13 @@ a.tpl-button.disabled,
 }
 
 .settings-panel__item.color-setting .settings-panel__list label[for=sc_0] span {
-  position: relative;
-  background: var(--gr_accent);
-  position: relative;
-  z-index: 2;
-}
-
-.settings-panel__item.color-setting .settings-panel__list label[for=sc_0] span:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), to(indigo));
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo);
-  z-index: -1;
-  border-radius: 50%;
+  background: var(--Accent_for_stngs);
+  border: 10px solid var(--Primary_for_stngs);
 }
 
 .settings-panel__item.color-setting .settings-panel__list label[for=sc_1] span {
   background: #000000;
   border: 10px solid #FFFFFF;
-  -webkit-box-shadow: 0 0 0 1px #000000;
-          box-shadow: 0 0 0 1px #000000;
 }
 
 .settings-panel__item.color-setting .settings-panel__list label[for=sc_2] span {

@@ -3,6 +3,7 @@
     /*----------Fonts----------*/
         --font1: 'Roboto', sans-serif; 
         --font2: 'Inter', sans-serif;
+        --font3: "PT Serif", serif;
 
         --font1Ratio: 1; 
         --font2Ratio: 1;
@@ -10,15 +11,17 @@
         --lineHeightRatio: 1; 
 
         --siteTransition: all 0.3s ease;
+        
+        --font_stngs: 'Inter', sans-serif;
 
 
     /*----------Primary----------*/
-        --Primary: #000000;
-        --Primary_1: rgba(0, 0, 0, .1);
-        --Primary_4: rgba(0, 0, 0, .4);
-        --Primary_6: rgba(0, 0, 0, .6);
-        --Primary_8: rgba(0, 0, 0, .8);
-        --Primary_lg: linear-gradient(90deg, #000000 50%, #000000 100%);
+        --Primary: #F7F3D6;
+        --Primary_1: rgba(247, 243, 214, .1);
+        --Primary_4: rgba(247, 243, 214, .4);
+        --Primary_6: rgba(247, 243, 214, .6);
+        --Primary_8: rgba(247, 243, 214, .8);
+        --Primary_lg: linear-gradient(90deg, #F7F3D6 50%, #F7F3D6 100%);
     
         --gr_primary: var(--Primary);
         --gr_primary_1: var(--Primary_1);
@@ -27,25 +30,25 @@
         --gr_primary_8: var(--Primary_8);
         --gr_primary_lg: var(--Primary_lg);
     
-        --on_gr_primary_text: #fff;
-        --on_gr_primary_text_5: rgba(255, 255, 255, .5);
-        --on_gr_primary_text_6: rgba(255, 255, 255, .6);
-        --on_gr_primary_text_8: rgba(255, 255, 255, .8);
-        --on_gr_primary_icon: #fff;
-        --on_gr_primary_bg: #fff;
-        --on_gr_primary_bg_1: rgba(255, 255, 255, .1);
-        --on_gr_primary_border: #fff;
-        --on_gr_primary_border_2: rgba(255, 255, 255, .2);
+        --on_gr_primary_text: #4D4B42;
+        --on_gr_primary_text_5: rgba(77, 75, 66, .5);
+        --on_gr_primary_text_6: rgba(77, 75, 66, .6);
+        --on_gr_primary_text_8: rgba(77, 75, 66, .8);
+        --on_gr_primary_icon: #4D4B42;
+        --on_gr_primary_bg: #4D4B42;
+        --on_gr_primary_bg_1: rgba(77, 75, 66, .1);
+        --on_gr_primary_border: #4D4B42;
+        --on_gr_primary_border_2: rgba(77, 75, 66, .2);
     /*----------Primary----------*/
     
     
     /*----------Accent----------*/
-        --Accent: #000000;
-        --Accent_1: rgba(0, 0, 0, .1);
-        --Accent_4: rgba(0, 0, 0, .4);
-        --Accent_6: rgba(0, 0, 0, .6);
-        --Accent_8: rgba(0, 0, 0, .8);
-        --Accent_lg: linear-gradient(90deg, #000000 50%, #000000 100%);
+        --Accent: #4D4B42;
+        --Accent_1: rgba(77, 75, 66, .1);
+        --Accent_4: rgba(77, 75, 66, .4);
+        --Accent_6: rgba(77, 75, 66, .6);
+        --Accent_8: rgba(77, 75, 66, .8);
+        --Accent_lg: linear-gradient(90deg, #4D4B42 50%, #4D4B42 100%);
     
         --gr_accent: var(--Accent);
         --gr_accent_1: var(--Accent_1);
@@ -54,22 +57,22 @@
         --gr_accent_8: var(--Accent_8);
         --gr_accent_lg: var(--Accent_lg);
     
-        --on_gr_accent_text: #fff;
-        --on_gr_accent_text_7: rgba(255, 255, 255, .7);
-        --on_gr_accent_icon: #fff;
-        --on_gr_accent_bg: #fff;
-        --on_gr_accent_bg_1: rgba(255, 255, 255, .1);
-        --on_gr_accent_border: #fff;
-        --on_gr_accent_border_2: rgba(255, 255, 255, .2);
+        --on_gr_accent_text: #F7F3D6;
+        --on_gr_accent_text_7: rgba(247, 243, 214, .7);
+        --on_gr_accent_icon: #F7F3D6;
+        --on_gr_accent_bg: #F7F3D6;
+        --on_gr_accent_bg_1: rgba(247, 243, 214, .1);
+        --on_gr_accent_border: #F7F3D6;
+        --on_gr_accent_border_2: rgba(247, 243, 214, .2);
     /*----------Accent----------*/
     
     
     /*----------Additional----------*/
-        --Additional: #ffffff;
-        --Additional_1: rgba(255, 255, 255, .1);
-        --Additional_4: rgba(255, 255, 255, .4);
-        --Additional_6: rgba(255, 255, 255, .6);
-        --Additional_8: rgba(255, 255, 255, .8);
+        --Additional: #F7F3D6;
+        --Additional_1: rgba(247, 243, 214, .1);
+        --Additional_4: rgba(247, 243, 214, .4);
+        --Additional_6: rgba(247, 243, 214, .6);
+        --Additional_8: rgba(247, 243, 214, .8);
     
         --gr_additional: var(--Additional);
         --gr_additional_1: var(--Additional_1);
@@ -77,49 +80,49 @@
         --gr_additional_6: var(--Additional_6);
         --gr_additional_8: var(--Additional_8);
     
-        --on_gr_additional_text: #000000;
-        --on_gr_additional_text_7: rgba(0, 0, 0, .7);
-        --on_gr_additional_icon: #000000;
-        --on_gr_additional_bg: #000000;
-        --on_gr_additional_bg_1: rgba(0, 0, 0, .1);
-        --on_gr_additional_border: #000000;
-        --on_gr_additional_border_2: rgba(0, 0, 0, .2);
+        --on_gr_additional_text: #4D4B42;
+        --on_gr_additional_text_7: rgba(77, 75, 66, .7);
+        --on_gr_additional_icon: #4D4B42;
+        --on_gr_additional_bg: #4D4B42;
+        --on_gr_additional_bg_1: rgba(77, 75, 66, .1);
+        --on_gr_additional_border: #4D4B42;
+        --on_gr_additional_border_2: rgba(77, 75, 66, .2);
     /*----------Additional----------*/
     
     
     /*----------Background----------*/
-        --gr_bg: #FFFFFF;
+        --gr_bg: #F7F3D6;
     
-        --on_gr_bg_acc_text: #000000;
-        --on_gr_bg_acc_text_5: rgba(0, 0, 0, .5);
+        --on_gr_bg_acc_text: #4D4B42;
+        --on_gr_bg_acc_text_5: rgba(77, 75, 66, .5);
     
-        --on_gr_bg_sec_text: #000000;
-        --on_gr_bg_sec_text_5: rgba(0, 0, 0, .5);
-        --on_gr_bg_sec_text_6: rgba(0, 0, 0, .6);
-        --on_gr_bg_sec_text_8: rgba(0, 0, 0, .8);
+        --on_gr_bg_sec_text: #4D4B42;
+        --on_gr_bg_sec_text_5: rgba(77, 75, 66, .5);
+        --on_gr_bg_sec_text_6: rgba(77, 75, 66, .6);
+        --on_gr_bg_sec_text_8: rgba(77, 75, 66, .8);
     
-        --on_gr_bg_icon: #000000;
-        --on_gr_bg_icon_2: rgba(0, 0, 0, .2);
+        --on_gr_bg_icon: #4D4B42;
+        --on_gr_bg_icon_2: rgba(77, 75, 66, .2);
     
-        --on_gr_bg_border: #000000;
-        --on_gr_bg_border_1: rgba(0, 0, 0, .1);
-        --on_gr_bg_border_15: rgba(0, 0, 0, .15);
+        --on_gr_bg_border: #4D4B42;
+        --on_gr_bg_border_1: rgba(77, 75, 66, .1);
+        --on_gr_bg_border_15: rgba(77, 75, 66, .15);
 
-        --on_gr_bg_border2: #000000;
-        --on_gr_bg_border2_07: rgba(0, 0, 0, .07);
-        --on_gr_bg_border2_1: rgba(0, 0, 0, .1);
+        --on_gr_bg_border2: #4D4B42;
+        --on_gr_bg_border2_07: rgba(77, 75, 66, .07);
+        --on_gr_bg_border2_1: rgba(77, 75, 66, .1);
     
-        --on_gr_bg_bg: #ffffff;
-        --on_gr_bg_bg_5: rgb(255, 255, 255, .5);
+        --on_gr_bg_bg: #F7F3D6;
+        --on_gr_bg_bg_5: rgb(247, 243, 214, .5);
 
-        --on_gr_bg_lg: linear-gradient(90deg, #ffffff 3.57%, #ffffff 100%);
+        --on_gr_bg_lg: linear-gradient(90deg, #F7F3D6 3.57%, #F7F3D6 100%);
 
-        --on_gr_bg_link: #000000;
-        --on_gr_bg_link_5: rgba(0, 0, 0, .5);
+        --on_gr_bg_link: #4D4B42;
+        --on_gr_bg_link_5: rgba(77, 75, 66, .5);
     /*----------Background----------*/
     
     /*----------Закругления----------*/
-        --gr_wrap_radius: 5px;
+        --gr_wrap_radius: 6px;
         --gr_inner_radius: 4px;
         --gr_medium_radius: 3px;
         --gr_small_radius: 2px;
@@ -141,6 +144,14 @@
             --gr_btn_1_icon_h: var(--on_gr_primary_icon);
             --gr_btn_1_icon_a: rgba(255,255,255,.7);
     
+            --gr_btn_1_backgroun: var(--gr_primary);
+            --gr_btn_1_backgroun_h: var(--gr_primary);
+            --gr_btn_1_backgroun_a: var(--gr_primary);
+    
+            --gr_btn_1_shadow: none;
+            --gr_btn_1_shadow_h: none;
+            --gr_btn_1_shadow_a: none;
+    
         /*Кнопка 2*/
             --gr_btn_2_text: var(--on_gr_accent_text);
             --gr_btn_2_text_h: var(--on_gr_accent_text);
@@ -150,14 +161,30 @@
             --gr_btn_2_icon_h: var(--on_gr_accent_icon);
             --gr_btn_2_icon_a: rgba(255,255,255,.7);
     
+            --gr_btn_2_backgroun: var(--gr_accent);
+            --gr_btn_2_backgroun_h: var(--gr_accent);
+            --gr_btn_2_backgroun_a: var(--gr_accent);
+    
+            --gr_btn_2_shadow: none;
+            --gr_btn_2_shadow_h: none;
+            --gr_btn_2_shadow_a: none;
+    
         /*Кнопка 3*/
-            --gr_btn_3_text: var(--gr_primary);
+            --gr_btn_3_text: var(--gr_accent);
             --gr_btn_3_text_h: #fff;
             --gr_btn_3_text_a: rgba(255,255,255,.7);
     
-            --gr_btn_3_icon: var(--gr_primary);
+            --gr_btn_3_icon: var(--gr_accent);
             --gr_btn_3_icon_h: #fff;
             --gr_btn_3_icon_a: rgba(255,255,255,.7);
+    
+            --gr_btn_3_backgroun: none;
+            --gr_btn_3_backgroun_h: var(--gr_accent);
+            --gr_btn_3_backgroun_a: var(--gr_accent);
+    
+            --gr_btn_3_shadow: inset 0 0 0 2px var(--gr_accent_6);             
+            --gr_btn_3_shadow_h: inset 0 0 0 2px var(--gr_accent);             
+            --gr_btn_3_shadow_a: inset 0 0 0 2px var(--gr_accent);
     
         /*Кнопка 4*/
             --gr_btn_4_text: var(--gr_white);
@@ -167,22 +194,30 @@
             --gr_btn_4_icon: var(--gr_white);
             --gr_btn_4_icon_h: #fff;
             --gr_btn_4_icon_a: rgba(255,255,255,.7);
+    
+            --gr_btn_4_backgroun: none;
+            --gr_btn_4_backgroun_h: none;
+            --gr_btn_4_backgroun_a: none;
+    
+            --gr_btn_4_shadow: none;
+            --gr_btn_4_shadow_h: none;
+            --gr_btn_4_shadow_a: none;
     /*----------Кнопки с текстом----------*/
     
     
     /*----------Кнопки только с иконкой----------*/
         /*Кнопка 1*/
-            --gr_icon_btn_1_icon: var(--on_gr_bg_icon);
+            --gr_icon_btn_1_icon: var(--on_gr_primary_icon);
             --gr_icon_btn_1_icon_h: var(--on_gr_primary_icon);
             --gr_icon_btn_1_icon_a: var(--on_gr_primary_icon);
     
-            --gr_icon_btn_1_bg: var(--gr_primary_1);
+            --gr_icon_btn_1_bg: var(--gr_primary);
             --gr_icon_btn_1_bg_h: var(--gr_primary);
             --gr_icon_btn_1_bg_a: var(--gr_primary);
     
-            --gr_icon_btn_1_border: none;
-            --gr_icon_btn_1_border_h: none;
-            --gr_icon_btn_1_border_a: none;
+            --gr_icon_btn_1_shadow: none;
+            --gr_icon_btn_1_shadow_h: none;
+            --gr_icon_btn_1_shadow_a: none;
     
         /*Кнопка 2*/
             --gr_icon_btn_2_icon: var(--on_gr_bg_icon);
@@ -193,6 +228,10 @@
             --gr_icon_btn_2_bg_h: var(--gr_primary);
             --gr_icon_btn_2_bg_a: var(--gr_primary);
     
+            --gr_icon_btn_2_shadow: none;
+            --gr_icon_btn_2_shadow_h: none;
+            --gr_icon_btn_2_shadow_a: none;
+    
         /*Кнопка 3*/
             --gr_icon_btn_3_icon: var(--on_gr_bg_icon);
             --gr_icon_btn_3_icon_h: var(--gr_primary_6);
@@ -202,15 +241,29 @@
             --gr_icon_btn_3_bg_h: transparent;
             --gr_icon_btn_3_bg_a: transparent;
     
-        /*Кнопка 4*/
-            --gr_icon_btn_4_icon: var(--on_gr_primary_icon);
-            --gr_icon_btn_4_icon_h: var(--on_gr_primary_icon);
-            --gr_icon_btn_4_icon_a: var(--on_gr_primary_icon);
-    
-            --gr_icon_btn_4_bg: var(--gr_primary);
-            --gr_icon_btn_4_bg_h: var(--gr_primary);
-            --gr_icon_btn_4_bg_a: var(--gr_primary);
+            --gr_icon_btn_3_shadow: none;
+            --gr_icon_btn_3_shadow_h: none;
+            --gr_icon_btn_3_shadow_a: none;
     /*----------Кнопки только с иконкой----------*/
+
+
+    /*----------Кнопка купить----------*/
+            --gr_btn_buy_text: var(--on_gr_accent_text);
+            --gr_btn_buy_text_h: var(--on_gr_accent_text);
+            --gr_btn_buy_text_a: rgba(255,255,255,.7);
+    
+            --gr_btn_buy_icon: var(--on_gr_accent_icon);
+            --gr_btn_buy_icon_h: var(--on_gr_accent_icon);
+            --gr_btn_buy_icon_a: rgba(255,255,255,.7);
+    
+            --gr_btn_buy_backgroun: var(--gr_accent);
+            --gr_btn_buy_backgroun_h: var(--gr_accent);
+            --gr_btn_buy_backgroun_a: var(--gr_accent);
+    
+            --gr_btn_buy_shadow: none;
+            --gr_btn_buy_shadow_h: none;
+            --gr_btn_buy_shadow_a: none;
+    /*----------Кнопка купить----------*/
     
     
     /*----------Тени----------*/

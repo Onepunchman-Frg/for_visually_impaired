@@ -4,6 +4,9 @@
     top: 120px;
     z-index: 99;
     line-height: 28px;
+    letter-spacing: normal;
+
+    font-family: var(--font_stngs);
 
     &.active {
         right: 0;
@@ -11,7 +14,7 @@
     }
 
     &__inner {
-        background: var(--on_gr_bg_bg);
+        background: var(--gr_bg);
         position: relative;
         border-radius: 0 0 0 var(--gr_wrap_radius);
         border: 2px solid var(--on_gr_bg_border2);
@@ -32,7 +35,7 @@
         cursor: pointer;
 
         &.active {            
-            background: var(--on_gr_bg_bg);
+            background: var(--gr_bg);
 
             .open-icon {
                 display: none;
@@ -73,7 +76,6 @@
     }
     &__title {
         padding: 34px 34px 10px 40px;
-        font-family: var(--font2);
         font-weight: var(--font2_700);
         font-size: 26px;
         margin-bottom: 20px;
@@ -104,7 +106,6 @@
                     justify-content: center;
                     flex-grow: 1;
 
-                    font-family: var(--font2);
                     font-weight: var(--font2_500);
                     font-size: 18px;
 
@@ -151,6 +152,17 @@
                     }
                 }
             }
+
+            &.ffam-setting {
+                .settings-panel__list {
+                    label {
+                        &[for=ffam_2] {
+                            font-family: var(--font3);                            
+                        }
+                    }
+                }
+            }
+            
         }
         
         &.color-setting {
@@ -169,33 +181,14 @@
                     
                     &[for=sc_0]{
                         span {
-                            // background: var(--gr_accent);
-                            // border:  10px solid var(--gr_primary);
-
-
-                            position: relative;
-                            background: var(--gr_accent);
-                            position: relative;
-                            z-index: 2;
-                            
-                            &:before {
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-                                background: linear-gradient(to right, red,orange,yellow,green,blue,indigo);
-                                z-index: -1;
-                                border-radius: 50%;
-                            }
+                            background: var(--Accent_for_stngs);
+                            border:  10px solid var(--Primary_for_stngs);
                         }
                     }
                     &[for=sc_1]{
                         span {
                             background: #000000;
                             border:  10px solid #FFFFFF;
-                            box-shadow: 0 0 0 1px #000000;
                         }
                     }
                     &[for=sc_2]{
