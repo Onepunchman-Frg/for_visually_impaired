@@ -60,14 +60,6 @@ body.img_setting_2 img {
   filter: grayscale(100%);
 }
 
-body.fs_200 svg {
-  zoom: 200%;
-}
-
-body.fs_150 svg {
-  zoom: 150%;
-}
-
 .show-text {
   display: none;
 }
@@ -1608,23 +1600,14 @@ a.tpl-button.disabled,
 .settings-panel {
   position: fixed;
   left: 100%;
-  top: 300px;
+  top: 120px;
   z-index: 99;
+  line-height: 28px;
 }
 
 .settings-panel.active {
   right: 0;
   left: auto;
-}
-
-.settings-panel.active .open-icon {
-  display: none;
-}
-
-.settings-panel.active .close-icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 .settings-panel__inner {
@@ -1642,11 +1625,25 @@ a.tpl-button.disabled,
   left: -82px;
   width: 82px;
   height: 82px;
-  background: var(--on_gr_bg_bg);
+  background: var(--gr_accent);
   border-radius: var(--gr_wrap_radius) 0 0 var(--gr_wrap_radius);
   border: 2px solid var(--on_gr_bg_border2);
   border-right: 0;
   cursor: pointer;
+}
+
+.settings-panel__btn.active {
+  background: var(--on_gr_bg_bg);
+}
+
+.settings-panel__btn.active .open-icon {
+  display: none;
+}
+
+.settings-panel__btn.active .close-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .settings-panel__icon {
@@ -1667,6 +1664,10 @@ a.tpl-button.disabled,
   display: none;
 }
 
+.settings-panel__icon.close-icon .gr-svg-icon {
+  fill: var(--on_gr_bg_icon);
+}
+
 .settings-panel__icon i {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1675,7 +1676,7 @@ a.tpl-button.disabled,
 }
 
 .settings-panel__icon .gr-svg-icon {
-  fill: var(--on_gr_bg_icon);
+  fill: var(--on_gr_accent_icon);
 }
 
 .settings-panel__icon .gr-svg-icon.gr_big_icon {
@@ -1688,12 +1689,12 @@ a.tpl-button.disabled,
   padding: 34px 34px 10px 40px;
   font-family: var(--font2);
   font-weight: var(--font2_700);
-  font-size: calc(26px * var(--font2Ratio));
+  font-size: 26px;
   margin-bottom: 20px;
 }
 
 .settings-panel__items {
-  max-height: 40vh;
+  max-height: calc(85vh - 120px);
   padding: 14px 34px 40px 40px;
   overflow-y: auto;
 }
@@ -1702,6 +1703,201 @@ a.tpl-button.disabled,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.settings-panel__item:last-child {
+  margin-bottom: 0;
+}
+
+.settings-panel__item:not(.color-setting) .settings-panel__list {
+  border: 2px solid var(--gr_accent);
+  border-radius: var(--gr_wrap_radius);
+  overflow: hidden;
+}
+
+.settings-panel__item:not(.color-setting) .settings-panel__list label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-family: var(--font2);
+  font-weight: var(--font2_500);
+  font-size: 18px;
+}
+
+.settings-panel__item:not(.color-setting) .settings-panel__list label:last-child span {
+  border: 0;
+}
+
+.settings-panel__item:not(.color-setting) .settings-panel__list span {
+  padding: 10px;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-right: 2px solid var(--gr_accent);
+  cursor: pointer;
+}
+
+.settings-panel__item:not(.color-setting) .settings-panel__list input:checked + span {
+  background: var(--gr_accent);
+  color: var(--on_gr_accent_text);
+}
+
+.settings-panel__item:not(.color-setting).fs-setting .settings-panel__list label {
+  font-size: 28px;
+}
+
+.settings-panel__item:not(.color-setting).fs-setting .settings-panel__list label:first-child {
+  font-size: 18px;
+}
+
+.settings-panel__item:not(.color-setting).fs-setting .settings-panel__list label:last-child {
+  font-size: 38px;
+}
+
+.settings-panel__item:not(.color-setting).fs-setting .settings-panel__list span {
+  padding: 15px;
+}
+
+.settings-panel__item.color-setting .settings-panel__list label {
+  width: 58px;
+  height: 58px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border-radius: var(--gr_wrap_radius);
+  overflow: hidden;
+}
+
+.settings-panel__item.color-setting .settings-panel__list label[for=sc_0] span {
+  position: relative;
+  background: var(--gr_accent);
+  position: relative;
+  z-index: 2;
+}
+
+.settings-panel__item.color-setting .settings-panel__list label[for=sc_0] span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), to(indigo));
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.settings-panel__item.color-setting .settings-panel__list label[for=sc_1] span {
+  background: #000000;
+  border: 10px solid #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1px #000000;
+          box-shadow: 0 0 0 1px #000000;
+}
+
+.settings-panel__item.color-setting .settings-panel__list label[for=sc_2] span {
+  background: #FFFFFF;
+  border: 10px solid #000000;
+}
+
+.settings-panel__item.color-setting .settings-panel__list label[for=sc_3] span {
+  background: #063462;
+  border: 10px solid #9DD1FF;
+}
+
+.settings-panel__item.color-setting .settings-panel__list label[for=sc_4] span {
+  background: #A9E44D;
+  border: 10px solid #3B2715;
+}
+
+.settings-panel__item.color-setting .settings-panel__list label[for=sc_5] span {
+  background: #4D4B42;
+  border: 10px solid #F7F3D6;
+}
+
+.settings-panel__item.color-setting .settings-panel__list span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.settings-panel__item.color-setting .settings-panel__list ins {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gr_accent);
+  opacity: 0;
+}
+
+.settings-panel__item.color-setting .settings-panel__list input:checked ~ ins {
+  opacity: 1;
+}
+
+.settings-panel__name {
+  font-size: 18px;
+  font-weight: var(--font1_500);
+  margin-bottom: 10px;
+}
+
+.settings-panel__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.settings-panel__list label {
+  position: relative;
+}
+
+.settings-panel__list input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .header {
@@ -1887,8 +2083,13 @@ a.tpl-button.disabled,
           justify-content: center;
 }
 
-.contacts-block__more_btn svg {
+.contacts-block__more_btn .gr-svg-icon {
   fill: var(--on_gr_bg_icon);
+  display: none;
+}
+
+.contacts-block__more_btn .gr-svg-icon.gr_small_icon {
+  display: block;
 }
 
 .site-menu__list {

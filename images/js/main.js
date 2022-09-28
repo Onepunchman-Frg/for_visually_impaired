@@ -9,11 +9,6 @@ $(function() {
             "moreWidth": 130
         });
 
-        $('.footer-menu').rowMenu({
-            "moreText":"<span>Ещё</span>",
-            "moreWidth": 130
-        });
-
         // if (!isMobile) {
         //     $('.menu-top ul').parent().each(function() {
         //         var o = $(this);

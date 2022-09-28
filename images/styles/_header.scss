@@ -118,8 +118,13 @@
             justify-content: center;
         }
 
-        svg {
+        .gr-svg-icon {
             fill: var(--on_gr_bg_icon);
+            display: none; 
+
+            &.gr_small_icon {
+                display: block;
+            }
         }
     }
 }
