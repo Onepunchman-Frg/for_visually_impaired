@@ -14,16 +14,16 @@
 
 
         --font_stngs: 'Inter', sans-serif;
-        --Primary_for_stngs: #3CACFE;
-        --Accent_for_stngs: #FF6B03;
+        --Primary_for_stngs: #2D38AC;
+        --Accent_for_stngs: #D70940;
     /*----------Primary----------*/
-        --Primary: #3CACFE;
-        --Primary_1: rgba(60, 172, 254, .1);
-        --Primary_3: rgba(60, 172, 254, .3);
-        --Primary_4: rgba(60, 172, 254, .4);
-        --Primary_6: rgba(60, 172, 254, .6);
-        --Primary_8: rgba(60, 172, 254, .8);
-        --Primary_lg: linear-gradient(90deg, #3CACFE 50%, #5BBAFF 100%);
+        --Primary: #2D38AC;
+        --Primary_1: rgba(45, 56, 172, .1);
+        --Primary_3: rgba(45, 56, 172, .3);
+        --Primary_4: rgba(45, 56, 172, .4);
+        --Primary_6: rgba(45, 56, 172, .6);
+        --Primary_8: rgba(45, 56, 172, .8);
+        --Primary_lg: linear-gradient(90deg, #2D38AC 50%, #4A54C1 100%);
     
         --gr_primary: var(--Primary);
         --gr_primary_1: var(--Primary_1);
@@ -46,13 +46,13 @@
     
     
     /*----------Accent----------*/
-        --Accent: #FF6B03;
-        --Accent_1: rgba(255, 107, 3, .1);
-        --Accent_3: rgba(255, 107, 3, .3);
-        --Accent_4: rgba(255, 107, 3, .4);
-        --Accent_6: rgba(255, 107, 3, .6);
-        --Accent_8: rgba(255, 107, 3, .8);
-        --Accent_lg: linear-gradient(90deg, #FF6B03 50%, #FF9F5B 100%);
+        --Accent: #D70940;
+        --Accent_1: rgba(215, 9, 64, .1);
+        --Accent_3: rgba(215, 9, 64, .3);
+        --Accent_4: rgba(215, 9, 64, .4);
+        --Accent_6: rgba(215, 9, 64, .6);
+        --Accent_8: rgba(215, 9, 64, .8);
+        --Accent_lg: linear-gradient(90deg, #D70940 50%, #FB3267 100%);
     
         --gr_accent: var(--Accent);
         --gr_accent_1: var(--Accent_1);
@@ -73,12 +73,12 @@
     
     
     /*----------Additional----------*/
-        --Additional: #143650;
-        --Additional_1: rgba(20, 54, 80, .1);
-        --Additional_3: rgba(20, 54, 80, .3);
-        --Additional_4: rgba(20, 54, 80, .4);
-        --Additional_6: rgba(20, 54, 80, .6);
-        --Additional_8: rgba(20, 54, 80, .8);
+        --Additional: #1A2491;
+        --Additional_1: rgba(26, 36, 144, .1);
+        --Additional_3: rgba(26, 36, 144, .3);
+        --Additional_4: rgba(26, 36, 144, .4);
+        --Additional_6: rgba(26, 36, 144, .6);
+        --Additional_8: rgba(26, 36, 144, .8);
     
         --gr_additional: var(--Additional);
         --gr_additional_1: var(--Additional_1);
