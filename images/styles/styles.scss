@@ -52,7 +52,8 @@ body {
             opacity: 0;
         }
         .show-text {
-            display: block;
+            visibility: visible;
+            opacity: 1;
         }
     }
 
@@ -65,7 +66,8 @@ body {
 }
 
 .show-text {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 ul,
@@ -267,6 +269,9 @@ button {
 @import '_faq_block.scss';
 @import '_partners_block.scss';
 @import '_footer.scss';
+
+
+@import '_site_settings.scss';
 
 
 

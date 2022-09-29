@@ -31,6 +31,7 @@
         display: inline-flex;
         position: relative;
         padding-top: 51.5%;
+        z-index: -1;
 
         img {
             position: absolute;
@@ -46,6 +47,8 @@
     &__text {
         background: var(--on_gr_bg_bg);
         padding: 40px;
+        position: relative;
+        z-index: -1;
     }
     &__name {
     }
@@ -66,5 +69,21 @@
     }
     &__btn {
         margin-left: 15px;
+    }
+
+    
+    .show-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px dashed var(--on_gr_bg_border2);
+        padding: 20px;
+
+        font-size: calc(16px * var(--font1Ratio));
     }
 }

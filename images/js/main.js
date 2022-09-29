@@ -2,6 +2,7 @@
 
 $(function() {
     
+	var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     setTimeout(function(){
         $('.header-menu').rowMenu({
@@ -9,6 +10,47 @@ $(function() {
             "moreWidth": 130
         });
     }, 300);
+
+    if (!isMobile) {
+        
+        $('.header-menu ul').parent().each(function() {
+            var o = $(this);
+            var s = o.find('>ul');
+            var l = o.parents('ul').length;
+            var k = false;
+            o.hover(
+                function() {
+                    o.find('>a').addClass('active').removeClass('normal');
+                    for (let i = $('.header-menu ul').length; i >= 0; i--) {
+                        o.parent().find('>li').not(o).find('ul').eq(i).hide();
+                    }
+                    k = true;
+                    
+                    s.show();
+                    
+                    var fixedMenuWidth = Math.ceil(o.offset().left) + o.find('>ul').outerWidth() + o.outerWidth();
+                    
+                    if (fixedMenuWidth > $(window).outerWidth()) {
+                        o.find('>ul').addClass('right_level');
+                    };
+                    
+                    if ($(document).outerWidth() > $(window).outerWidth()) {
+                        o.find('>ul').addClass('right_level');
+                    };
+                },
+                function() {
+                    o.find('>a').removeClass('active').addClass('normal');
+                    k = false;
+                    window.setTimeout(function() {
+                        if (!k) {
+                            s.hide()
+                            o.find('>ul').removeClass('right_level');
+                        };
+                    }, 500);
+                }
+            );
+        });
+    };
 
     $.fn.accordion = function(options) {
         options = $.extend({
@@ -32,6 +74,7 @@ $(function() {
     
     $(function() {
         $('.faq-block__accordion').accordion();
+        $('.faq-block__accordion .faq-block__item:first-child .faq-block__question').trigger('click');
     }); /*Аккордеон*/
 
     (function( ) {
@@ -468,7 +511,12 @@ $(function() {
             $('body').removeClass('img_setting_2').addClass('img_setting_3');
         } else if (rdCke == '2') {
             $('body').removeClass('img_setting_3').addClass('img_setting_2');
-            $("#sc_1").prop("checked", true).trigger("change");
+            
+            var siteColorCookie = readCookie('ui_color_stng');
+            if (siteColorCookie == 0) {
+                $("#sc_1").prop("checked", true).trigger("change");
+            };
+            
         } else {
             $('body').removeClass('img_setting_2').removeClass('img_setting_3');
         }

@@ -86,4 +86,19 @@
         margin-top: 6px;
         font-size: calc(16px * var(--font1Ratio));
     }
+
+    .show-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed var(--on_gr_bg_border2);
+        padding: 20px;
+
+        font-size: calc(16px * var(--font1Ratio));
+    }
 }

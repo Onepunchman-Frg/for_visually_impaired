@@ -52,6 +52,7 @@
         border-radius: var(--gr_wrap_radius);
         background: var(--on_gr_bg_bg);
 
+        border: 2px solid transparent;
         position: relative;
     }
     &__date {

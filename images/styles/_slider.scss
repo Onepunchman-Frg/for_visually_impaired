@@ -99,4 +99,28 @@
     &__btn {
         margin-top: 30px;
     }
+
+    
+    .show-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        border-top: 2px dashed var(--on_gr_bg_border2);
+        border-bottom: 2px dashed var(--on_gr_bg_border2);
+        padding: 50px 0;
+
+        font-size: calc(16px * var(--font1Ratio));
+
+        span {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            justify-content: center;
+        }
+    }
 }

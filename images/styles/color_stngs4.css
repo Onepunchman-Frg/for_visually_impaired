@@ -18,6 +18,7 @@
     /*----------Primary----------*/
         --Primary: #3B2715;
         --Primary_1: rgba(59, 39, 21, .1);
+        --Primary_3: rgba(59, 39, 21, .3);
         --Primary_4: rgba(59, 39, 21, .4);
         --Primary_6: rgba(59, 39, 21, .6);
         --Primary_8: rgba(59, 39, 21, .8);
@@ -25,6 +26,7 @@
     
         --gr_primary: var(--Primary);
         --gr_primary_1: var(--Primary_1);
+        --gr_primary_3: var(--Primary_3);
         --gr_primary_4: var(--Primary_4);
         --gr_primary_6: var(--Primary_6);
         --gr_primary_8: var(--Primary_8);
@@ -45,6 +47,7 @@
     /*----------Accent----------*/
         --Accent: #A9E44D;
         --Accent_1: rgba(169, 228, 77, .1);
+        --Accent_3: rgba(169, 228, 77, .3);
         --Accent_4: rgba(169, 228, 77, .4);
         --Accent_6: rgba(169, 228, 77, .6);
         --Accent_8: rgba(169, 228, 77, .8);
@@ -52,6 +55,7 @@
     
         --gr_accent: var(--Accent);
         --gr_accent_1: var(--Accent_1);
+        --gr_accent_3: var(--Accent_3);
         --gr_accent_4: var(--Accent_4);
         --gr_accent_6: var(--Accent_6);
         --gr_accent_8: var(--Accent_8);
@@ -70,12 +74,14 @@
     /*----------Additional----------*/
         --Additional: #3B2715;
         --Additional_1: rgba(59, 39, 21, .1);
+        --Additional_3: rgba(59, 39, 21, .3);
         --Additional_4: rgba(59, 39, 21, .4);
         --Additional_6: rgba(59, 39, 21, .6);
         --Additional_8: rgba(59, 39, 21, .8);
     
         --gr_additional: var(--Additional);
         --gr_additional_1: var(--Additional_1);
+        --gr_additional_3: var(--Additional_3);
         --gr_additional_4: var(--Additional_4);
         --gr_additional_6: var(--Additional_6);
         --gr_additional_8: var(--Additional_8);
@@ -127,7 +133,7 @@
         --gr_medium_radius: 3px;
         --gr_small_radius: 2px;
     
-        --gr_btn_radius: 3px;
+        --gr_btn_radius: 6px;
         --gr_icon_btn_radius: 3px;
     
         --gr_form_radius: 3px;
@@ -207,13 +213,13 @@
     
     /*----------Кнопки только с иконкой----------*/
         /*Кнопка 1*/
-            --gr_icon_btn_1_icon: var(--on_gr_primary_icon);
-            --gr_icon_btn_1_icon_h: var(--on_gr_primary_icon);
-            --gr_icon_btn_1_icon_a: var(--on_gr_primary_icon);
+            --gr_icon_btn_1_icon: var(--on_gr_accent_icon);
+            --gr_icon_btn_1_icon_h: var(--on_gr_accent_icon);
+            --gr_icon_btn_1_icon_a: var(--on_gr_accent_icon);
     
-            --gr_icon_btn_1_bg: var(--gr_primary);
-            --gr_icon_btn_1_bg_h: var(--gr_primary);
-            --gr_icon_btn_1_bg_a: var(--gr_primary);
+            --gr_icon_btn_1_bg: var(--gr_accent);
+            --gr_icon_btn_1_bg_h: var(--gr_accent);
+            --gr_icon_btn_1_bg_a: var(--gr_accent);
     
             --gr_icon_btn_1_shadow: none;
             --gr_icon_btn_1_shadow_h: none;
