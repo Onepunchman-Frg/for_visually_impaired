@@ -1,6 +1,5 @@
 .partners-block {
     background: var(--on_gr_bg_bg);
-    margin-bottom: 100px;
 
     .tns-nav {
         margin-top: 72px;
@@ -56,7 +55,7 @@
     }
     &__img {
         border-radius: var(--gr_wrap_radius);
-        border: 1px solid var(--on_gr_bg_border2_07);
+        box-shadow: inset 0 0 0 1px var(--on_gr_bg_border2_07);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -64,7 +63,8 @@
         position: relative;
 
         img {
-            
+            position: relative;
+            z-index: -1;
         }
     }
 

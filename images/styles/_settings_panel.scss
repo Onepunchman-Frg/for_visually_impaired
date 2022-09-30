@@ -6,7 +6,7 @@
     line-height: 28px;
     letter-spacing: normal;
 
-    font-family: var(--font_stngs);
+    font-family: var(--font2);
 
     &.active {
         right: 0;
@@ -19,7 +19,7 @@
         border-radius: 0 0 0 var(--gr_wrap_radius);
         border: 2px solid var(--on_gr_bg_border2);
         border-right: 0;
-        max-width: 480px;
+        width: 480px;
     }
     &__btn {
         position: absolute;
@@ -96,7 +96,7 @@
 
         &:not(.color-setting) {
             .settings-panel__list {
-                border: 2px solid var(--gr_accent);
+                box-shadow: inset 0 0 0 2px var(--gr_accent);
                 border-radius: var(--gr_wrap_radius);
                 overflow: hidden;
 
@@ -156,6 +156,9 @@
             &.ffam-setting {
                 .settings-panel__list {
                     label {
+                        &[for=ffam_1] {
+                            font-family: var(--font4);                            
+                        }
                         &[for=ffam_2] {
                             font-family: var(--font3);                            
                         }

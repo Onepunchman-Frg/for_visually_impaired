@@ -18,6 +18,29 @@
         position: absolute;
         bottom: 60px;
         z-index: 10;
+        
+
+	button {
+		background: var(--on_gr_bg_bg);
+        opacity: .15;
+
+		&.tns-nav-active {
+            opacity: 1;
+			background: var(--on_gr_bg_bg);
+
+			&:hover,
+			&:active {
+                opacity: 1;
+				background: var(--on_gr_bg_bg);
+			}
+		}
+
+        &:hover,
+        &:active {
+            opacity: 1;
+            background: var(--on_gr_bg_bg);
+        }
+	}
     }
 
     &__inner {

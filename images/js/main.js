@@ -163,16 +163,69 @@ $(function() {
 
     })(); /*Слайдер в шапке*/
 
-    (function( ) {		
+    const reviewsSliderInit = () => {		
         var slider = document.querySelector('.reviews_slider');
         var sliderAutoplay = +slider.getAttribute('data-autoplay');
+        var respSettings;
 
-        var respSettings = {
-            320: {controls: false,items: 1,gutter: 20},
-            768: {controls: false,items: 2,gutter: 20},
-            1024: {controls: true,items: 2,gutter: 20},
-            1261: {controls: true,items: 2,gutter: 35}
+        if ($('body').hasClass('fs_200')) {
+            var resp1261 = 1;
+            var resp1024 = 1;
+            var resp768 = 1;
+            var resp320 = 1;
+        } else if ($('body').hasClass('fs_150')) {
+            var resp1261 = 2;
+            var resp1024 = 1;
+            var resp768 = 1;
+            var resp320 = 1;
+        } else {
+            var resp1261 = 2;
+            var resp1024 = 2;
+            var resp768 = 2;
+            var resp320 = 1;
+        }
+
+        respSettings = {
+            320: {controls: false,items: resp320,gutter: 20},
+            768: {controls: false,items: resp768,gutter: 20},
+            1024: {controls: true,items: resp1024,gutter: 20},
+            1261: {controls: true,items: resp1261,gutter: 35}
         };
+        
+
+        $(".settings-panel__items input:radio").on('change', function() {
+            if ($('body').hasClass('fs_200')) {
+                var resp1261 = 1;
+                var resp1024 = 1;
+                var resp768 = 1;
+                var resp320 = 1;
+
+                console.log(200)
+            } else if ($('body').hasClass('fs_150')) {
+                var resp1261 = 2;
+                var resp1024 = 1;
+                var resp768 = 1;
+                var resp320 = 1;
+
+                console.log(150)
+            } else {
+                var resp1261 = 2;
+                var resp1024 = 2;
+                var resp768 = 2;
+                var resp320 = 1;
+
+                console.log(123123123)
+            }
+
+            respSettings = {
+                320: {controls: false,items: resp320,gutter: 20},
+                768: {controls: false,items: resp768,gutter: 20},
+                1024: {controls: true,items: resp1024,gutter: 20},
+                1261: {controls: true,items: resp1261,gutter: 35}
+            };
+            
+            reviewsSlider.refresh();
+        });
 
         var reviewsSlider = tns({
             loop: false,
@@ -196,7 +249,10 @@ $(function() {
         setTimeout(function(){
             $('.reviews-block__text').matchHeight();
         }, 100);
-    })(); /*Отзывы*/
+    }; /*Отзывы*/
+    setTimeout(function(){
+        reviewsSliderInit();
+    }, 100);
 
     (function( ) {		
         var slider = document.querySelector('.articles_slider');
@@ -324,7 +380,7 @@ $(function() {
             $('.reviews-block__text').matchHeight();
             $('.articles-block__content').matchHeight();
             $('.gallery-block__content').matchHeight();
-        }, 200);
+        }, 100);
     });
 
     let readCookieFontSize = () => {

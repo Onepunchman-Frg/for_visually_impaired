@@ -37,32 +37,6 @@ body {
     background: var(--gr_bg);
     line-height: calc(1.5 * var(--lineHeightRatio));
     color: var(--on_gr_bg_sec_text);
-
-    &.ls_3 {
-        letter-spacing: 5px;
-    }
-
-    &.ls_2 {
-        letter-spacing: 2.16px;
-    }
-
-    &.img_setting_3 {
-        img {
-            visibility: hidden;
-            opacity: 0;
-        }
-        .show-text {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-
-    &.img_setting_2 {
-        img {
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-        }
-    }
 }
 
 .show-text {

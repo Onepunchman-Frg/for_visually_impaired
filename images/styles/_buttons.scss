@@ -263,131 +263,131 @@
 }
 
 /*----Text buttons----*/
-	.gr-large-btn-desktop {
+.gr-large-btn-desktop {
+	font-size: calc(16px * var(--font2Ratio));
+	line-height: calc(1.125 * var(--lineHeightRatio));
+	padding: 19px 30px;
+}
+.gr-large-btn-tablet {
+	@media all and (max-width: 1260px) {
 		font-size: calc(16px * var(--font2Ratio));
 		line-height: calc(1.125 * var(--lineHeightRatio));
 		padding: 19px 30px;
 	}
-	.gr-large-btn-tablet {
-		@media all and (max-width: 1260px) {
-			font-size: calc(16px * var(--font2Ratio));
-			line-height: calc(1.125 * var(--lineHeightRatio));
-			padding: 19px 30px;
-		}
+}
+.gr-large-btn-mobile {
+	@media all and (max-width: 767px) {
+		font-size: calc(16px * var(--font2Ratio));
+		line-height: calc(1.125 * var(--lineHeightRatio));
+		padding: 16px 24px;
 	}
-	.gr-large-btn-mobile {
-		@media all and (max-width: 767px) {
-			font-size: calc(16px * var(--font2Ratio));
-			line-height: calc(1.125 * var(--lineHeightRatio));
-			padding: 16px 24px;
-		}
-	}
+}
 
 
-	.gr-medium-btn-desktop {
+.gr-medium-btn-desktop {
+	font-size: calc(16px * var(--font2Ratio));
+	line-height: calc(1.125 * var(--lineHeightRatio));
+	padding: 15px 30px;
+}
+.gr-medium-btn-tablet {
+	@media all and (max-width: 1260px) {
 		font-size: calc(16px * var(--font2Ratio));
 		line-height: calc(1.125 * var(--lineHeightRatio));
 		padding: 15px 30px;
 	}
-	.gr-medium-btn-tablet {
-		@media all and (max-width: 1260px) {
-			font-size: calc(16px * var(--font2Ratio));
-			line-height: calc(1.125 * var(--lineHeightRatio));
-			padding: 15px 30px;
-		}
+}
+.gr-medium-btn-mobile {
+	@media all and (max-width: 767px) {
+		font-size: calc(16px * var(--font2Ratio));
+		line-height: calc(1.125 * var(--lineHeightRatio));
+		padding: 12px 20px;
 	}
-	.gr-medium-btn-mobile {
-		@media all and (max-width: 767px) {
-			font-size: calc(16px * var(--font2Ratio));
-			line-height: calc(1.125 * var(--lineHeightRatio));
-			padding: 12px 20px;
-		}
-	}
+}
 
 
-	.gr-small-btn-desktop {
+.gr-small-btn-desktop {
+	font-size: calc(15px * var(--font2Ratio));
+	line-height: calc(1.2 * var(--lineHeightRatio));
+	padding: 11px 20px;
+}
+.gr-small-btn-tablet {
+	@media all and (max-width: 1260px) {
 		font-size: calc(15px * var(--font2Ratio));
 		line-height: calc(1.2 * var(--lineHeightRatio));
 		padding: 11px 20px;
 	}
-	.gr-small-btn-tablet {
-		@media all and (max-width: 1260px) {
-			font-size: calc(15px * var(--font2Ratio));
-			line-height: calc(1.2 * var(--lineHeightRatio));
-			padding: 11px 20px;
-		}
+}
+.gr-small-btn-mobile {
+	@media all and (max-width: 767px) {
+		font-size: calc(14px * var(--font2Ratio));
+		line-height: calc(1.2 * var(--lineHeightRatio));	
+		padding: 11px 16px;
 	}
-	.gr-small-btn-mobile {
-		@media all and (max-width: 767px) {
-			font-size: calc(14px * var(--font2Ratio));
-			line-height: calc(1.2 * var(--lineHeightRatio));	
-			padding: 11px 16px;
-		}
-	}
+}
 /*----Text buttons----*/
 
 /*----Icon buttons----*/
-	.gr-large-icon-btn-desktop {
-		width: 60px;
-		height: 60px;
-		min-height: 60px;
+.gr-large-icon-btn-desktop {
+	width: 60px;
+	height: 60px;
+	min-height: 60px;
+}
+.gr-large-icon-btn-tablet {
+	@media all and (max-width: 1260px) {
+		width: 56px;
+		height: 56px;
+		min-height: 56px;
 	}
-	.gr-large-icon-btn-tablet {
-		@media all and (max-width: 1260px) {
-			width: 56px;
-			height: 56px;
-			min-height: 56px;
-		}
+}
+.gr-large-icon-btn-mobile {
+	@media all and (max-width: 767px) {
+		width: 52px;
+		height: 52px;
+		min-height: 52px;
 	}
-	.gr-large-icon-btn-mobile {
-		@media all and (max-width: 767px) {
-			width: 52px;
-			height: 52px;
-			min-height: 52px;
-		}
-	}
+}
 
 
-	.gr-medium-icon-btn-desktop {
-		width: 50px;
-		height: 50px;
-		min-height: 50px;
+.gr-medium-icon-btn-desktop {
+	width: 50px;
+	height: 50px;
+	min-height: 50px;
+}
+.gr-medium-icon-btn-tablet {
+	@media all and (max-width: 1260px) {
+		width: 48px;
+		height: 48px;
+		min-height: 48px;
 	}
-	.gr-medium-icon-btn-tablet {
-		@media all and (max-width: 1260px) {
-			width: 48px;
-			height: 48px;
-			min-height: 48px;
-		}
+}
+.gr-medium-icon-btn-mobile {
+	@media all and (max-width: 767px) {
+		width: 46px;
+		height: 46px;
+		min-height: 46px;
 	}
-	.gr-medium-icon-btn-mobile {
-		@media all and (max-width: 767px) {
-			width: 46px;
-			height: 46px;
-			min-height: 46px;
-		}
-	}
+}
 
 
-	.gr-small-icon-btn-desktop {
-		width: 40px;
-		height: 40px;
-		min-height: 40px;
+.gr-small-icon-btn-desktop {
+	width: 40px;
+	height: 40px;
+	min-height: 40px;
+}
+.gr-small-icon-btn-tablet {
+	@media all and (max-width: 1260px) {
+		width: 36px;
+		height: 36px;
+		min-height: 36px;
 	}
-	.gr-small-icon-btn-tablet {
-		@media all and (max-width: 1260px) {
-			width: 36px;
-			height: 36px;
-			min-height: 36px;
-		}
+}
+.gr-small-icon-btn-mobile {
+	@media all and (max-width: 767px) {
+		width: 30px;
+		height: 30px;
+		min-height: 30px;
 	}
-	.gr-small-icon-btn-mobile {
-		@media all and (max-width: 767px) {
-			width: 30px;
-			height: 30px;
-			min-height: 30px;
-		}
-	}
+}
 /*----Icon buttons----*/
 
 .gr-btn-icon-left {
@@ -1222,7 +1222,7 @@ body .product-compare {
 		min-height: 8px;
 		height: 8px;
 		width: 8px;
-		border-radius: var(--gr_icon_btn_radius);
+		border-radius: 250px;
 		
 		font-size: 0;
 
@@ -1236,9 +1236,9 @@ body .product-compare {
 
 		@media all and (max-width: 767px) {
 			margin: 0 3px;
-			min-height: 5px;
-			height: 5px;
-			width: 5px;
+			min-height: 6px;
+			height: 6px;
+			width: 6px;
 		}
 
 		&.tns-nav-active {

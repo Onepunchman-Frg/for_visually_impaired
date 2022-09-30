@@ -4,6 +4,7 @@
         --font1: 'Roboto', sans-serif; 
         --font2: 'Inter', sans-serif;
         --font3: "PT Serif", serif;
+        --font4: 'Inter', sans-serif;
 
         --font1Ratio: 1; 
         --font2Ratio: 1;
@@ -11,8 +12,6 @@
         --lineHeightRatio: 1; 
 
         --siteTransition: all 0.3s ease;
-        
-        --font_stngs: 'Inter', sans-serif;
 
 
     /*----------Primary----------*/

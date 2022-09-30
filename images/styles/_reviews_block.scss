@@ -87,17 +87,6 @@
             z-index: -1;
         }
     }
-    &__icon {
-        font-size: 0;
-        margin-bottom: 24px;
-
-        i {
-            display: inline-flex;
-        }
-        svg {
-            fill: var(--gr_accent_3);
-        }
-    }
     &__text {
         color: var(--on_gr_bg_sec_text);
         font-size: calc(17px * var(--font1Ratio));
