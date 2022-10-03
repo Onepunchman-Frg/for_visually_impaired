@@ -123,67 +123,54 @@ body {
 
 
     &.fs_150 {
-        // .gr-large-btn-desktop {
-        //     font-size: calc(16px * var(--font2Ratio));
-        //     line-height: calc(1.125 * var(--lineHeightRatio));
-        //     padding: 19px 30px;
-        // }
-        // .gr-large-btn-tablet {
-        //     @media all and (max-width: 1260px) {
-        //         font-size: calc(16px * var(--font2Ratio));
-        //         line-height: calc(1.125 * var(--lineHeightRatio));
-        //         padding: 19px 30px;
-        //     }
-        // }
-        // .gr-large-btn-mobile {
-        //     @media all and (max-width: 767px) {
-        //         font-size: calc(16px * var(--font2Ratio));
-        //         line-height: calc(1.125 * var(--lineHeightRatio));
-        //         padding: 16px 24px;
-        //     }
-        // }
+        $siteWidth: 1600px;
+        .block-width {
+            max-width: $siteWidth;
+        }
+
+        .gr-large-btn-desktop {
+            padding: 26.5px 30px;
+        }
+        .gr-large-btn-tablet {
+            @media all and (max-width: 1260px) {
+                padding: 22.5px 30px;
+            }
+        }
+        .gr-large-btn-mobile {
+            @media all and (max-width: 767px) {
+                padding: 20.5px 24px;
+            }
+        }
         
         
-        // .gr-medium-btn-desktop {
-        //     font-size: calc(16px * var(--font2Ratio));
-        //     line-height: calc(1.125 * var(--lineHeightRatio));
-        //     padding: 15px 30px;
-        // }
-        // .gr-medium-btn-tablet {
-        //     @media all and (max-width: 1260px) {
-        //         font-size: calc(16px * var(--font2Ratio));
-        //         line-height: calc(1.125 * var(--lineHeightRatio));
-        //         padding: 15px 30px;
-        //     }
-        // }
-        // .gr-medium-btn-mobile {
-        //     @media all and (max-width: 767px) {
-        //         font-size: calc(16px * var(--font2Ratio));
-        //         line-height: calc(1.125 * var(--lineHeightRatio));
-        //         padding: 12px 20px;
-        //     }
-        // }
+        .gr-medium-btn-desktop {
+            padding: 21.5px 30px;
+        }
+        .gr-medium-btn-tablet {
+            @media all and (max-width: 1260px) {
+                padding: 18.5px 30px;
+            }
+        }
+        .gr-medium-btn-mobile {
+            @media all and (max-width: 767px) {
+                padding: 16.5px 20px;
+            }
+        }
         
         
-        // .gr-small-btn-desktop {
-        //     font-size: calc(15px * var(--font2Ratio));
-        //     line-height: calc(1.2 * var(--lineHeightRatio));
-        //     padding: 11px 20px;
-        // }
-        // .gr-small-btn-tablet {
-        //     @media all and (max-width: 1260px) {
-        //         font-size: calc(15px * var(--font2Ratio));
-        //         line-height: calc(1.2 * var(--lineHeightRatio));
-        //         padding: 11px 20px;
-        //     }
-        // }
-        // .gr-small-btn-mobile {
-        //     @media all and (max-width: 767px) {
-        //         font-size: calc(14px * var(--font2Ratio));
-        //         line-height: calc(1.2 * var(--lineHeightRatio));	
-        //         padding: 11px 16px;
-        //     }
-        // }
+        .gr-small-btn-desktop {
+            padding: 16.5px 20px;
+        }
+        .gr-small-btn-tablet {
+            @media all and (max-width: 1260px) {
+                padding: 12.5px 20px;
+            }
+        }
+        .gr-small-btn-mobile {
+            @media all and (max-width: 767px) {
+                padding: 13.5px 16px;
+            }
+        }
 
 
         .gr-large-icon-btn-desktop {
@@ -240,9 +227,9 @@ body {
         }
         .gr-small-icon-btn-mobile {
             @media all and (max-width: 767px) {
-                width: 44px;
-                height: 44px;
-                min-height: 44px;
+                width: 52px;
+                height: 52px;
+                min-height: 52px;
             }
         }
         
@@ -369,6 +356,54 @@ body {
     }
 
     &.fs_200 {
+        $siteWidth: 1920px;
+        .block-width {
+            max-width: $siteWidth;
+        }
+
+        .gr-large-btn-desktop {
+            padding: 27px 30px;
+        }
+        .gr-large-btn-tablet {
+            @media all and (max-width: 1260px) {
+                padding: 23px 30px;
+            }
+        }
+        .gr-large-btn-mobile {
+            @media all and (max-width: 767px) {
+                padding: 21px 24px;
+            }
+        }
+        
+        
+        .gr-medium-btn-desktop {
+            padding: 22px 30px;
+        }
+        .gr-medium-btn-tablet {
+            @media all and (max-width: 1260px) {
+                padding: 19px 30px;
+            }
+        }
+        .gr-medium-btn-mobile {
+            @media all and (max-width: 767px) {
+                padding: 17px 20px;
+            }
+        }
+        
+        
+        .gr-small-btn-desktop {
+            padding: 17px 20px;
+        }
+        .gr-small-btn-tablet {
+            @media all and (max-width: 1260px) {
+                padding: 13px 20px;
+            }
+        }
+        .gr-small-btn-mobile {
+            @media all and (max-width: 767px) {
+                padding: 14px 16px;
+            }
+        }
 
 
         .gr-large-icon-btn-desktop {
@@ -425,9 +460,9 @@ body {
         }
         .gr-small-icon-btn-mobile {
             @media all and (max-width: 767px) {
-                width: 54px;
-                height: 54px;
-                min-height: 54px;
+                width: 62px;
+                height: 62px;
+                min-height: 62px;
             }
         }
         
@@ -482,16 +517,18 @@ body {
 
             &__text {
                 max-width: 100%;
-                padding: 60px 0;
+                padding: 60px 40px;
             }
 
             .tns-nav {
                 bottom: auto;
                 top: -100px;
+                left: 40px;
             }
             .tns-controls {
                 bottom: auto;
                 top: -120px;
+                right: 40px;
             }
         }
 
@@ -521,6 +558,10 @@ body {
                     bottom: -18px;
                 }
             }
+        }
+
+        .gallery-block {
+            @extend .block-padding;
         }
 
         .form-block {

@@ -1,5 +1,5 @@
 $siteFontFamily: var(--font1);			// Основное семейство	
-
+$siteWidth: 1200px;	
 
 
 *,
@@ -153,10 +153,11 @@ h6 {
     }
 }
 
+
 .block-width {
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: $siteWidth;
 }
 .block-padding {
     padding: 0 40px;
@@ -283,6 +284,6 @@ button {
 }
 
 .test {
-  max-width: 1200px;
+  max-width: $siteWidth;
   margin: 0 auto;
 }

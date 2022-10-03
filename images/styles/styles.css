@@ -193,7 +193,7 @@ h6 {
   max-width: 1200px;
 }
 
-.block-padding {
+.block-padding, body.fs_200 .gallery-block {
   padding: 0 40px;
 }
 
@@ -462,7 +462,6 @@ input.shop2-btn:active[type="submit"],
 
 .gr-medium-btn-desktop,
 .shop-product-btn, .shop-product-btn.type-2, .gr-btn-1,
-.gr-btn-2,
 .gr-btn-3, .gr-field-style input[type="button"],
 .tpl-field input[type="button"], .shop2-btn.shop2-btn-back,
 .gr-btn-4,
@@ -486,7 +485,10 @@ a.tpl-button,
 
 @media all and (max-width: 1260px) {
   .gr-medium-btn-tablet,
-  .shop-product-btn {
+  .shop-product-btn, .gr-btn-1,
+  .gr-btn-3, .gr-field-style input[type="button"],
+  .tpl-field input[type="button"], .shop2-btn.shop2-btn-back,
+  .gr-btn-4 {
     font-size: calc(16px * var(--font2Ratio));
     line-height: calc(1.125 * var(--lineHeightRatio));
     padding: 15px 30px;
@@ -495,21 +497,26 @@ a.tpl-button,
 
 @media all and (max-width: 767px) {
   .gr-medium-btn-mobile,
-  .shop-product-btn {
+  .shop-product-btn, .gr-btn-1,
+  .gr-btn-3, .gr-field-style input[type="button"],
+  .tpl-field input[type="button"], .shop2-btn.shop2-btn-back,
+  .gr-btn-4 {
     font-size: calc(16px * var(--font2Ratio));
     line-height: calc(1.125 * var(--lineHeightRatio));
     padding: 12px 20px;
   }
 }
 
-.gr-small-btn-desktop, .shop-product-btn.type-1, .shop2-btn.shop2-btn-back {
+.gr-small-btn-desktop, .shop-product-btn.type-1,
+.gr-btn-2, .shop2-btn.shop2-btn-back {
   font-size: calc(15px * var(--font2Ratio));
   line-height: calc(1.2 * var(--lineHeightRatio));
   padding: 11px 20px;
 }
 
 @media all and (max-width: 1260px) {
-  .gr-small-btn-tablet {
+  .gr-small-btn-tablet,
+  .gr-btn-2 {
     font-size: calc(15px * var(--font2Ratio));
     line-height: calc(1.2 * var(--lineHeightRatio));
     padding: 11px 20px;
@@ -517,7 +524,8 @@ a.tpl-button,
 }
 
 @media all and (max-width: 767px) {
-  .gr-small-btn-mobile {
+  .gr-small-btn-mobile,
+  .gr-btn-2 {
     font-size: calc(14px * var(--font2Ratio));
     line-height: calc(1.2 * var(--lineHeightRatio));
     padding: 11px 16px;
@@ -3568,6 +3576,81 @@ body.img_setting_3 .site-info__img img {
           filter: grayscale(100%);
 }
 
+body.fs_150 .block-width {
+  max-width: 1600px;
+}
+
+body.fs_150 .gr-large-btn-desktop, body.fs_150 .shop-product-btn.type-3 {
+  padding: 26.5px 30px;
+}
+
+@media all and (max-width: 1260px) {
+  body.fs_150 .gr-large-btn-tablet {
+    padding: 22.5px 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  body.fs_150 .gr-large-btn-mobile {
+    padding: 20.5px 24px;
+  }
+}
+
+body.fs_150 .gr-medium-btn-desktop,
+body.fs_150 .shop-product-btn, body.fs_150 .gr-btn-1,
+body.fs_150 .gr-btn-3, body.fs_150 .gr-field-style input[type="button"], .gr-field-style body.fs_150 input[type="button"],
+body.fs_150 .tpl-field input[type="button"], .tpl-field body.fs_150 input[type="button"],
+body.fs_150 .gr-btn-4,
+body.fs_150 .shop2-btn,
+body.fs_150 .tpl-button,
+body.fs_150 .tpl-field button, .tpl-field body.fs_150 button,
+body.fs_150 .tpl-field input[type="file"], .tpl-field body.fs_150 input[type="file"],
+body.fs_150 .tpl-field input[type="submit"], .tpl-field body.fs_150 input[type="submit"],
+body.fs_150 .gr-field-style button, .gr-field-style body.fs_150 button,
+body.fs_150 .gr-field-style input[type="file"], .gr-field-style body.fs_150 input[type="file"],
+body.fs_150 .gr-field-style input[type="submit"], .gr-field-style body.fs_150 input[type="submit"] {
+  padding: 21.5px 30px;
+}
+
+@media all and (max-width: 1260px) {
+  body.fs_150 .gr-medium-btn-tablet,
+  body.fs_150 .shop-product-btn, body.fs_150 .gr-btn-1,
+  body.fs_150 .gr-btn-3, body.fs_150 .gr-field-style input[type="button"], .gr-field-style body.fs_150 input[type="button"],
+  body.fs_150 .tpl-field input[type="button"], .tpl-field body.fs_150 input[type="button"], body.fs_150 .shop2-btn.shop2-btn-back,
+  body.fs_150 .gr-btn-4 {
+    padding: 18.5px 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  body.fs_150 .gr-medium-btn-mobile,
+  body.fs_150 .shop-product-btn, body.fs_150 .gr-btn-1,
+  body.fs_150 .gr-btn-3, body.fs_150 .gr-field-style input[type="button"], .gr-field-style body.fs_150 input[type="button"],
+  body.fs_150 .tpl-field input[type="button"], .tpl-field body.fs_150 input[type="button"], body.fs_150 .shop2-btn.shop2-btn-back,
+  body.fs_150 .gr-btn-4 {
+    padding: 16.5px 20px;
+  }
+}
+
+body.fs_150 .gr-small-btn-desktop, body.fs_150 .shop-product-btn.type-1,
+body.fs_150 .gr-btn-2, body.fs_150 .shop2-btn.shop2-btn-back {
+  padding: 16.5px 20px;
+}
+
+@media all and (max-width: 1260px) {
+  body.fs_150 .gr-small-btn-tablet,
+  body.fs_150 .gr-btn-2 {
+    padding: 12.5px 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  body.fs_150 .gr-small-btn-mobile,
+  body.fs_150 .gr-btn-2 {
+    padding: 13.5px 16px;
+  }
+}
+
 body.fs_150 .gr-large-icon-btn-desktop {
   width: 80px;
   height: 80px;
@@ -3637,9 +3720,9 @@ body.fs_150 .gr-small-icon-btn-desktop {
 
 @media all and (max-width: 767px) {
   body.fs_150 .gr-small-icon-btn-mobile {
-    width: 44px;
-    height: 44px;
-    min-height: 44px;
+    width: 52px;
+    height: 52px;
+    min-height: 52px;
   }
 }
 
@@ -3762,6 +3845,81 @@ body.fs_150 .footer .counter-block {
   margin-top: 50px;
 }
 
+body.fs_200 .block-width {
+  max-width: 1920px;
+}
+
+body.fs_200 .gr-large-btn-desktop, body.fs_200 .shop-product-btn.type-3 {
+  padding: 27px 30px;
+}
+
+@media all and (max-width: 1260px) {
+  body.fs_200 .gr-large-btn-tablet {
+    padding: 23px 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  body.fs_200 .gr-large-btn-mobile {
+    padding: 21px 24px;
+  }
+}
+
+body.fs_200 .gr-medium-btn-desktop,
+body.fs_200 .shop-product-btn, body.fs_200 .gr-btn-1,
+body.fs_200 .gr-btn-3, body.fs_200 .gr-field-style input[type="button"], .gr-field-style body.fs_200 input[type="button"],
+body.fs_200 .tpl-field input[type="button"], .tpl-field body.fs_200 input[type="button"],
+body.fs_200 .gr-btn-4,
+body.fs_200 .shop2-btn,
+body.fs_200 .tpl-button,
+body.fs_200 .tpl-field button, .tpl-field body.fs_200 button,
+body.fs_200 .tpl-field input[type="file"], .tpl-field body.fs_200 input[type="file"],
+body.fs_200 .tpl-field input[type="submit"], .tpl-field body.fs_200 input[type="submit"],
+body.fs_200 .gr-field-style button, .gr-field-style body.fs_200 button,
+body.fs_200 .gr-field-style input[type="file"], .gr-field-style body.fs_200 input[type="file"],
+body.fs_200 .gr-field-style input[type="submit"], .gr-field-style body.fs_200 input[type="submit"] {
+  padding: 22px 30px;
+}
+
+@media all and (max-width: 1260px) {
+  body.fs_200 .gr-medium-btn-tablet,
+  body.fs_200 .shop-product-btn, body.fs_200 .gr-btn-1,
+  body.fs_200 .gr-btn-3, body.fs_200 .gr-field-style input[type="button"], .gr-field-style body.fs_200 input[type="button"],
+  body.fs_200 .tpl-field input[type="button"], .tpl-field body.fs_200 input[type="button"], body.fs_200 .shop2-btn.shop2-btn-back,
+  body.fs_200 .gr-btn-4 {
+    padding: 19px 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  body.fs_200 .gr-medium-btn-mobile,
+  body.fs_200 .shop-product-btn, body.fs_200 .gr-btn-1,
+  body.fs_200 .gr-btn-3, body.fs_200 .gr-field-style input[type="button"], .gr-field-style body.fs_200 input[type="button"],
+  body.fs_200 .tpl-field input[type="button"], .tpl-field body.fs_200 input[type="button"], body.fs_200 .shop2-btn.shop2-btn-back,
+  body.fs_200 .gr-btn-4 {
+    padding: 17px 20px;
+  }
+}
+
+body.fs_200 .gr-small-btn-desktop, body.fs_200 .shop-product-btn.type-1,
+body.fs_200 .gr-btn-2, body.fs_200 .shop2-btn.shop2-btn-back {
+  padding: 17px 20px;
+}
+
+@media all and (max-width: 1260px) {
+  body.fs_200 .gr-small-btn-tablet,
+  body.fs_200 .gr-btn-2 {
+    padding: 13px 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  body.fs_200 .gr-small-btn-mobile,
+  body.fs_200 .gr-btn-2 {
+    padding: 14px 16px;
+  }
+}
+
 body.fs_200 .gr-large-icon-btn-desktop {
   width: 90px;
   height: 90px;
@@ -3831,9 +3989,9 @@ body.fs_200 .gr-small-icon-btn-desktop {
 
 @media all and (max-width: 767px) {
   body.fs_200 .gr-small-icon-btn-mobile {
-    width: 54px;
-    height: 54px;
-    min-height: 54px;
+    width: 62px;
+    height: 62px;
+    min-height: 62px;
   }
 }
 
@@ -3885,17 +4043,19 @@ body.fs_200 .main-slider__content {
 
 body.fs_200 .main-slider__text {
   max-width: 100%;
-  padding: 60px 0;
+  padding: 60px 40px;
 }
 
 body.fs_200 .main-slider .tns-nav {
   bottom: auto;
   top: -100px;
+  left: 40px;
 }
 
 body.fs_200 .main-slider .tns-controls {
   bottom: auto;
   top: -120px;
+  right: 40px;
 }
 
 body.fs_200 .services-block__addition {

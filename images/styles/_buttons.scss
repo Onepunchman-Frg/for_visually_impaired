@@ -736,6 +736,8 @@ body .product-compare {
 	font-family: $btnsFontFamily;
 
 	@extend .gr-medium-btn-desktop;
+	@extend .gr-medium-btn-tablet;
+	@extend .gr-medium-btn-mobile;
 
 	color: $btn1ColorDefault;
 	border: $btn1BorderDefault;
@@ -807,7 +809,9 @@ body .product-compare {
 	font-weight: $btn2Weight;
 	font-family: $btnsFontFamily;
 
-	@extend .gr-medium-btn-desktop;
+	@extend .gr-small-btn-desktop;
+	@extend .gr-small-btn-tablet;
+	@extend .gr-small-btn-mobile;
 
 	color: $btn2ColorDefault;
 	border: $btn2BorderDefault;
@@ -880,6 +884,8 @@ body .product-compare {
 	font-family: $btnsFontFamily;
 
 	@extend .gr-medium-btn-desktop;
+	@extend .gr-medium-btn-tablet;
+	@extend .gr-medium-btn-mobile;
 
 	color: $btn3ColorDefault;
 	border: $btn3BorderDefault;
@@ -964,6 +970,8 @@ body .product-compare {
 	font-family: $btnsFontFamily;
 
 	@extend .gr-medium-btn-desktop;
+	@extend .gr-medium-btn-tablet;
+	@extend .gr-medium-btn-mobile;
 
 	color: $btn4ColorDefault;
 	border: $btn4BorderDefault;
