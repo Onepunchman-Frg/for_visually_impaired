@@ -809,9 +809,9 @@ body .product-compare {
 	font-weight: $btn2Weight;
 	font-family: $btnsFontFamily;
 
-	@extend .gr-small-btn-desktop;
-	@extend .gr-small-btn-tablet;
-	@extend .gr-small-btn-mobile;
+	@extend .gr-medium-btn-desktop;
+	@extend .gr-medium-btn-tablet;
+	@extend .gr-medium-btn-mobile;
 
 	color: $btn2ColorDefault;
 	border: $btn2BorderDefault;

@@ -27,7 +27,7 @@
         display: inline-flex;
         padding-bottom: 35px;
         width: calc(50% - 35px);
-        border-bottom: 1px solid var(--on_gr_bg_border2_1);
+        box-shadow: inset 0 -1px 0 0 var(--on_gr_bg_border2_1);
     }
     &__count {
         margin-right: 24px;

@@ -3,9 +3,9 @@
     /*----------Fonts----------*/
         --font1: 'Roboto', sans-serif; 
         --font2: 'Inter', sans-serif;
-        --font3: "PT Serif", serif;
+        --font3: "Lora", serif;
         --font4: 'Inter', sans-serif;
-
+        
         --font1Ratio: 1; 
         --font2Ratio: 1;
 
@@ -137,7 +137,7 @@
         --gr_btn_radius: 6px;
         --gr_icon_btn_radius: 3px;
     
-        --gr_form_radius: 3px;
+        --gr_form_radius: 6px;
         --gr_checkbox_radius: 3px;
     /*----------Закругления----------*/
     

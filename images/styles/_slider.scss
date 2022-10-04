@@ -3,44 +3,70 @@
     padding: 0;
     margin-bottom: 100px;
 
-    .tns-controls {
+    &__body {
+        height: 100%;
+        position: relative;
+    }
+
+    &__controls {
         position: absolute;
+        width: 100%;
         bottom: 60px;
         right: 0;
         z-index: 10;
 
-        button[data-controls="next"] {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__arrows {
+        display: flex;
+    }
+
+    &__arrow {
+		@extend .gr-icon-btn-1;
+
+        &.main-slider__arrow_next {
             margin-left: 10px;
         }
     }
+
+    // .tns-controls {
+    //     position: absolute;
+    //     bottom: 60px;
+    //     right: 0;
+    //     z-index: 10;
+
+    //     button[data-controls="next"] {
+    //         margin-left: 10px;
+    //     }
+    // }
     
     .tns-nav {
-        position: absolute;
-        bottom: 60px;
-        z-index: 10;
-        
+        margin: 0;
 
-	button {
-		background: var(--on_gr_bg_bg);
-        opacity: .15;
-
-		&.tns-nav-active {
-            opacity: 1;
-			background: var(--on_gr_bg_bg);
-
-			&:hover,
-			&:active {
-                opacity: 1;
-				background: var(--on_gr_bg_bg);
-			}
-		}
-
-        &:hover,
-        &:active {
-            opacity: 1;
+        button {
             background: var(--on_gr_bg_bg);
+            opacity: .15;
+
+            &.tns-nav-active {
+                opacity: 1;
+                background: var(--on_gr_bg_bg);
+
+                &:hover,
+                &:active {
+                    opacity: 1;
+                    background: var(--on_gr_bg_bg);
+                }
+            }
+
+            &:hover,
+            &:active {
+                opacity: 1;
+                background: var(--on_gr_bg_bg);
+            }
         }
-	}
     }
 
     &__inner {

@@ -89,7 +89,8 @@
     &__arrow {
         margin-left: 15px;
 
-        svg {
+        .gr-svg-icon {
+            display: none;
             &.gr_small_icon {
                 display: block;
             }

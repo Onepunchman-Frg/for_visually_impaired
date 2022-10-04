@@ -4,8 +4,20 @@ body {
     &.color_3,
     &.color_4,
     &.color_5 {
-        .services-block__item {
+        .header__bottom {
+            box-shadow: 0 -2px 0 0 var(--on_gr_bg_border2);
+        }
+        .main-slider__text {
             box-shadow: inset 0 0 0 2px var(--on_gr_bg_border2);
+        }
+        .services-block{
+            &__item {
+                position: relative;
+                box-shadow: inset 0 0 0 2px var(--on_gr_bg_border2);
+            }
+            &__text {
+                background: none;
+            }
         }
         .reviews-block__body {
             box-shadow: inset 0 0 0 2px var(--on_gr_bg_border2);
@@ -70,8 +82,27 @@ body {
             }
         }
 
-        .advantage-block__count {
-            color: var(--gr_accent_3);
+        .advantage-block {
+            &__item {
+                box-shadow: inset 0 -2px 0 0 var(--on_gr_bg_border2);
+            }
+            &__count {
+                color: var(--gr_accent_3);
+            }
+        }
+
+        .partners-block {
+            &__img {
+                box-shadow: inset 0 0 0 2px var(--on_gr_bg_border2);
+            }
+        }
+
+        .footer__item {
+            box-shadow: 0 2px 0 0 var(--on_gr_bg_border2);
+
+            &:last-child {
+                box-shadow: none;
+            }
         }
     }
 
@@ -119,6 +150,11 @@ body {
                 filter: grayscale(100%);
             }
         }        
+        .partners-block {
+            &__img {
+                box-shadow: none;
+            }
+        }
     }
 
 
@@ -138,7 +174,7 @@ body {
         }
         .gr-large-btn-mobile {
             @media all and (max-width: 767px) {
-                padding: 20.5px 24px;
+                padding: 20.5px 28px;
             }
         }
         
@@ -153,7 +189,7 @@ body {
         }
         .gr-medium-btn-mobile {
             @media all and (max-width: 767px) {
-                padding: 16.5px 20px;
+                padding: 16.5px 28px;
             }
         }
         
@@ -168,7 +204,7 @@ body {
         }
         .gr-small-btn-mobile {
             @media all and (max-width: 767px) {
-                padding: 13.5px 16px;
+                padding: 13.5px 20px;
             }
         }
 
@@ -263,6 +299,7 @@ body {
 
             &__inner {
                 height: auto;
+                box-shadow: 0 2px 0 0 var(--on_gr_bg_border2);
             }
 
             &__images {
@@ -285,15 +322,18 @@ body {
             &__text {
                 max-width: 100%;
                 padding: 50px 0;
+                box-shadow: none;
             }
 
-            .tns-nav {
+            .main-slider__controls {
                 bottom: auto;
                 top: -100px;
             }
-            .tns-controls {
-                bottom: auto;
-                top: -110px;
+        }
+
+        .services-block {
+            &__text {
+                padding: 50px;
             }
         }
 
@@ -304,6 +344,29 @@ body {
 
             &__item {
                 width: 100%;
+            }
+        }
+        .reviews-block {
+            &__body {
+                padding: 50px;
+            }
+        }
+
+        .form-block {
+            &__content {
+                padding: 50px;
+            }
+        }
+
+        .articles-block {
+            &__content {
+                padding: 50px;
+            }
+        }
+
+        .faq-block {
+            &__question {
+                padding: 30px 30px 30px 50px;
             }
         }
 
@@ -355,6 +418,7 @@ body {
 
     }
 
+
     &.fs_200 {
         $siteWidth: 1920px;
         .block-width {
@@ -362,46 +426,46 @@ body {
         }
 
         .gr-large-btn-desktop {
-            padding: 27px 30px;
+            padding: 27px 40px;
         }
         .gr-large-btn-tablet {
             @media all and (max-width: 1260px) {
-                padding: 23px 30px;
+                padding: 23px 40px;
             }
         }
         .gr-large-btn-mobile {
             @media all and (max-width: 767px) {
-                padding: 21px 24px;
+                padding: 21px 38px;
             }
         }
         
         
         .gr-medium-btn-desktop {
-            padding: 22px 30px;
+            padding: 22px 40px;
         }
         .gr-medium-btn-tablet {
             @media all and (max-width: 1260px) {
-                padding: 19px 30px;
+                padding: 19px 40px;
             }
         }
         .gr-medium-btn-mobile {
             @media all and (max-width: 767px) {
-                padding: 17px 20px;
+                padding: 17px 38px;
             }
         }
         
         
         .gr-small-btn-desktop {
-            padding: 17px 20px;
+            padding: 22px 40px;
         }
         .gr-small-btn-tablet {
             @media all and (max-width: 1260px) {
-                padding: 13px 20px;
+                padding: 13px 40px;
             }
         }
         .gr-small-btn-mobile {
             @media all and (max-width: 767px) {
-                padding: 14px 16px;
+                padding: 14px 30px;
             }
         }
 
@@ -496,6 +560,13 @@ body {
 
             &__inner {
                 height: auto;
+                box-shadow: 0 2px 0 0 var(--on_gr_bg_border2);
+            }
+            &__arrow {
+                svg {
+                    width: 45px;
+                    height: 45px;
+                }
             }
 
             &__images {
@@ -517,18 +588,13 @@ body {
 
             &__text {
                 max-width: 100%;
-                padding: 60px 40px;
+                padding: 60px 0;
+                box-shadow: none;
             }
 
-            .tns-nav {
+            .main-slider__controls {
                 bottom: auto;
                 top: -100px;
-                left: 40px;
-            }
-            .tns-controls {
-                bottom: auto;
-                top: -120px;
-                right: 40px;
             }
         }
 
@@ -541,10 +607,15 @@ body {
                 width: 100%;
                 margin: 40px 0 0;
             }
+
+            &__text {
+                padding: 60px;
+            }
         }
 
         .reviews-block {
             &__body {
+                padding: 60px;
                 &:before {
                     width: 40px;
                     height: 40px;
@@ -585,6 +656,12 @@ body {
             }
         }
 
+        .articles-block {
+            &__content {
+                padding: 60px;
+            }
+        }
+
         .advantage-block {
             &__items {
                 flex-direction: column;
@@ -597,6 +674,8 @@ body {
         
         .faq-block {
             &__question {
+                padding: 50px;
+                
                 &:before {
                     width: 40px;
                     height: 40px;
@@ -610,6 +689,22 @@ body {
                     bottom: -18px;
                 }
             }
+            &__arrow {
+                .gr-svg-icon {
+                    display: block;
+
+                    &.gr_small_icon,
+                    &.gr_big_icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .partners-block {
+            &__img {                
+                padding-top: 41.4%;
+            } 
         }
 
         .footer {
@@ -640,7 +735,6 @@ body {
                 width: 100%;
                 padding: 0;
                 margin-top: 60px;
-                text-align: center;
             }
 
             .schedule-block {
@@ -673,6 +767,17 @@ body {
                 width: 100%;
                 padding: 0;
                 margin-top: 60px;
+            }
+
+            .link-top-btn {
+                .gr-svg-icon {
+                    display: block;
+    
+                    &.gr_small_icon,
+                    &.gr_big_icon {
+                        display: none;
+                    }
+                }
             }
         }
 

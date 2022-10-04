@@ -3,7 +3,7 @@
     /*----------Fonts----------*/
         --font1: 'Roboto', sans-serif; 
         --font2: 'Inter', sans-serif;
-        --font3: "PT Serif", serif;
+        --font3: "Lora", serif;
         --font4: 'Inter', sans-serif;
 
         --font1Ratio: 1; 
@@ -134,7 +134,7 @@
         --gr_btn_radius: 6px;
         --gr_icon_btn_radius: 3px;
     
-        --gr_form_radius: 3px;
+        --gr_form_radius: 6px;
         --gr_checkbox_radius: 3px;
     /*----------Закругления----------*/
     
@@ -159,11 +159,11 @@
         /*Кнопка 2*/
             --gr_btn_2_text: var(--on_gr_accent_text);
             --gr_btn_2_text_h: var(--on_gr_accent_text);
-            --gr_btn_2_text_a: rgba(255,255,255,.7);
+            --gr_btn_2_text_a: rgba(0,0,0,.7);
     
             --gr_btn_2_icon: var(--on_gr_accent_icon);
             --gr_btn_2_icon_h: var(--on_gr_accent_icon);
-            --gr_btn_2_icon_a: rgba(255,255,255,.7);
+            --gr_btn_2_icon_a: rgba(0,0,0,.7);
     
             --gr_btn_2_backgroun: var(--gr_accent);
             --gr_btn_2_backgroun_h: var(--gr_accent);

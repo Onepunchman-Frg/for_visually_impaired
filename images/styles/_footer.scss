@@ -8,10 +8,10 @@
 
     &__item {
         padding: 45px 0;
-        border-bottom: 1px solid var(--on_gr_additional_bg_1);
+        box-shadow: 0 1px 0 0 var(--on_gr_additional_bg_1);
 
         &:last-child {
-            border: 0;
+            box-shadow: none;
         }
     }
     &__menu {
@@ -199,8 +199,12 @@
     .link-top-btn {
         padding-left: 10px;
 
-        svg {
-            display: block;
+        .gr-svg-icon {
+            display: none;
+            
+            &.gr_small_icon {
+                display: block;
+            }
         }
     }
     .company-name {

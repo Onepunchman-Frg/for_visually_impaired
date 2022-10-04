@@ -108,7 +108,8 @@ $(function() {
                 controlsPosition: "bottom", 
                 autoplayButton: false,
                 autoplayButtonOutput: false,
-                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                controlsContainer: document.querySelector('.main-slider__arrows'),
+                // controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
                 responsive: {
                     320: {
                         autoplay: false,
@@ -155,6 +156,11 @@ $(function() {
             vslider.events.on('indexChanged', function(){
                 small_slider.goTo(vslider.getInfo().index);
             });
+            
+            let sliderNav = $('.main-slider__body .tns-nav');
+            let sliderNavContainer = $('.main-slider__nav');
+
+            sliderNavContainer.append(sliderNav);
 				
             setTimeout(function(){
                 $('.main-slider__text').matchHeight();
@@ -236,7 +242,7 @@ $(function() {
                 320: {controls: false,items: 1,gutter: 20},
                 768: {controls: false,items: 1,gutter: 20},
                 1024: {controls: true,items: 1,gutter: 20},
-                1261: {controls: true,items: 1,gutter: 35}
+                1261: {controls: true,items: 2,gutter: 35}
             },
         };
         
@@ -274,7 +280,7 @@ $(function() {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 20},
                         1024: {controls: true,items: 1,gutter: 20},
-                        1261: {controls: true,items: 1,gutter: 35}
+                        1261: {controls: true,items: 2,gutter: 35}
                     },
                 });
             } else if ($('body').hasClass('fs_150')) {
@@ -462,7 +468,7 @@ $(function() {
             $('.reviews-block__text').matchHeight();
             $('.articles-block__content').matchHeight();
             $('.gallery-block__content').matchHeight();
-        }, 100);
+        }, 200);
     });
 
     let readCookieFontSize = () => {
@@ -471,16 +477,41 @@ $(function() {
             $('body').removeClass('fs_150').addClass('fs_200');
             document.documentElement.style.setProperty('--font1Ratio', '2');
             document.documentElement.style.setProperty('--font2Ratio', '2');
+
+            document.documentElement.style.setProperty('--gr_wrap_radius', '10px');
+            document.documentElement.style.setProperty('--gr_inner_radius', '8px');
+            document.documentElement.style.setProperty('--gr_medium_radius', '6px');
+            document.documentElement.style.setProperty('--gr_small_radius', '4px');
+            document.documentElement.style.setProperty('--gr_btn_radius', '10px');
+            document.documentElement.style.setProperty('--gr_icon_btn_radius', '6px');
+            document.documentElement.style.setProperty('--gr_form_radius', '10px');
+            document.documentElement.style.setProperty('--gr_checkbox_radius', '6px');
         } else if (rdCke == '150') {
             $('body').removeClass('fs_200').addClass('fs_150');
             document.documentElement.style.setProperty('--font1Ratio', '1.5');
             document.documentElement.style.setProperty('--font2Ratio', '1.5');
+
+            document.documentElement.style.setProperty('--gr_wrap_radius', '8px');
+            document.documentElement.style.setProperty('--gr_inner_radius', '6px');
+            document.documentElement.style.setProperty('--gr_medium_radius', '4px');
+            document.documentElement.style.setProperty('--gr_small_radius', '3px');
+            document.documentElement.style.setProperty('--gr_btn_radius', '8px');
+            document.documentElement.style.setProperty('--gr_icon_btn_radius', '4px');
+            document.documentElement.style.setProperty('--gr_form_radius', '8px');
+            document.documentElement.style.setProperty('--gr_checkbox_radius', '4px');
         } else {
             $('body').removeClass('fs_200').removeClass('fs_150');
-            document.documentElement.style.removeProperty('--font1Ratio', '2');
-            document.documentElement.style.removeProperty('--font2Ratio', '2');
-            document.documentElement.style.removeProperty('--font1Ratio', '1.5');
-            document.documentElement.style.removeProperty('--font2Ratio', '1.5');
+            document.documentElement.style.removeProperty('--font1Ratio');
+            document.documentElement.style.removeProperty('--font2Ratio');
+            
+            document.documentElement.style.removeProperty('--gr_wrap_radius');
+            document.documentElement.style.removeProperty('--gr_inner_radius');
+            document.documentElement.style.removeProperty('--gr_medium_radius');
+            document.documentElement.style.removeProperty('--gr_small_radius');
+            document.documentElement.style.removeProperty('--gr_btn_radius');
+            document.documentElement.style.removeProperty('--gr_icon_btn_radius');
+            document.documentElement.style.removeProperty('--gr_form_radius');
+            document.documentElement.style.removeProperty('--gr_checkbox_radius');
         }
     }
 

@@ -3,7 +3,7 @@
     /*----------Fonts----------*/
         --font1: 'Roboto', sans-serif; 
         --font2: 'Inter', sans-serif;
-        --font3: "PT Serif", serif;
+        --font3: "Lora", serif;
         --font4: 'Inter', sans-serif;
 
         --font1Ratio: 1; 
@@ -135,7 +135,7 @@
         --gr_btn_radius: 6px;
         --gr_icon_btn_radius: 3px;
     
-        --gr_form_radius: 3px;
+        --gr_form_radius: 6px;
         --gr_checkbox_radius: 3px;
     /*----------Закругления----------*/
     
@@ -143,11 +143,11 @@
         /*Кнопка 1*/
             --gr_btn_1_text: var(--on_gr_primary_text);
             --gr_btn_1_text_h: var(--on_gr_primary_text);
-            --gr_btn_1_text_a: rgba(255,255,255,.7);
+            --gr_btn_1_text_a: rgba(157, 209, 255,.7);
     
             --gr_btn_1_icon: var(--on_gr_primary_icon);
             --gr_btn_1_icon_h: var(--on_gr_primary_icon);
-            --gr_btn_1_icon_a: rgba(255,255,255,.7);
+            --gr_btn_1_icon_a: rgba(157, 209, 255,.7);
     
             --gr_btn_1_backgroun: var(--gr_primary);
             --gr_btn_1_backgroun_h: var(--gr_primary);
@@ -160,11 +160,11 @@
         /*Кнопка 2*/
             --gr_btn_2_text: var(--on_gr_accent_text);
             --gr_btn_2_text_h: var(--on_gr_accent_text);
-            --gr_btn_2_text_a: rgba(255,255,255,.7);
+            --gr_btn_2_text_a: rgba(157, 209, 255,.7);
     
             --gr_btn_2_icon: var(--on_gr_accent_icon);
             --gr_btn_2_icon_h: var(--on_gr_accent_icon);
-            --gr_btn_2_icon_a: rgba(255,255,255,.7);
+            --gr_btn_2_icon_a: rgba(157, 209, 255,.7);
     
             --gr_btn_2_backgroun: var(--gr_accent);
             --gr_btn_2_backgroun_h: var(--gr_accent);
@@ -176,12 +176,12 @@
     
         /*Кнопка 3*/
             --gr_btn_3_text: var(--gr_accent);
-            --gr_btn_3_text_h: #fff;
-            --gr_btn_3_text_a: rgba(255,255,255,.7);
+            --gr_btn_3_text_h: var(--on_gr_accent_text);
+            --gr_btn_3_text_a: rgba(157, 209, 255,.7);
     
             --gr_btn_3_icon: var(--gr_accent);
-            --gr_btn_3_icon_h: #fff;
-            --gr_btn_3_icon_a: rgba(255,255,255,.7);
+            --gr_btn_3_icon_h: var(--on_gr_accent_text);
+            --gr_btn_3_icon_a: rgba(157, 209, 255,.7);
     
             --gr_btn_3_backgroun: none;
             --gr_btn_3_backgroun_h: var(--gr_accent);
@@ -193,12 +193,12 @@
     
         /*Кнопка 4*/
             --gr_btn_4_text: var(--gr_white);
-            --gr_btn_4_text_h: #fff;
-            --gr_btn_4_text_a: rgba(255,255,255,.7);
+            --gr_btn_4_text_h: var(--on_gr_accent_text);
+            --gr_btn_4_text_a: rgba(157, 209, 255,.7);
     
             --gr_btn_4_icon: var(--gr_white);
-            --gr_btn_4_icon_h: #fff;
-            --gr_btn_4_icon_a: rgba(255,255,255,.7);
+            --gr_btn_4_icon_h: var(--on_gr_accent_text);
+            --gr_btn_4_icon_a: rgba(157, 209, 255,.7);
     
             --gr_btn_4_backgroun: none;
             --gr_btn_4_backgroun_h: none;
@@ -255,11 +255,11 @@
     /*----------Кнопка купить----------*/
             --gr_btn_buy_text: var(--on_gr_accent_text);
             --gr_btn_buy_text_h: var(--on_gr_accent_text);
-            --gr_btn_buy_text_a: rgba(255,255,255,.7);
+            --gr_btn_buy_text_a: rgba(157, 209, 255,.7);
     
             --gr_btn_buy_icon: var(--on_gr_accent_icon);
             --gr_btn_buy_icon_h: var(--on_gr_accent_icon);
-            --gr_btn_buy_icon_a: rgba(255,255,255,.7);
+            --gr_btn_buy_icon_a: rgba(157, 209, 255,.7);
     
             --gr_btn_buy_backgroun: var(--gr_accent);
             --gr_btn_buy_backgroun_h: var(--gr_accent);
