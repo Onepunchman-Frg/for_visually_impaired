@@ -1,5 +1,4 @@
 .services-block {
-    margin-bottom: 100px;
     
     &__inner {
     }
@@ -33,6 +32,10 @@
         padding-top: 51.5%;
         z-index: -1;
 
+        @media all and (max-width: 1420px) {
+            padding-top: 55%;
+        }
+
         img {
             position: absolute;
             right: 0;
@@ -64,6 +67,7 @@
     &__price {
         font-family: var(--font2);
         font-weight: var(--font2_700);
+        color: var(--on_gr_bg_acc_text);
         font-size: calc(20px * var(--font2Ratio));
     }
     &__btn {

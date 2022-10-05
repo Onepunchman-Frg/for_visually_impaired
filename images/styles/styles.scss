@@ -1,7 +1,6 @@
 $siteFontFamily: var(--font1);			// Основное семейство	
 $siteWidth: 1200px;	
 
-
 *,
 *::before,
 *::after {
@@ -172,10 +171,13 @@ h6 {
 .main {
     flex: 1 0 auto;
     background: var(--on_gr_bg_bg);
-    margin-bottom: 100px;
 
     &__inner {
         padding: 100px 0;
+
+        @media all and (max-width: 1420px) {
+            padding: 60px 0;
+        }
     }
 
     &__title {
@@ -224,6 +226,35 @@ button {
     &.gr_big_icon {
         width: 40px;
         height: 40px;
+    }
+}
+
+.block-on-main {
+    margin-bottom: 100px;
+
+    @media all and (max-width: 1420px) {
+        margin-bottom: 60px;
+    }
+}
+
+.slider-style {
+}
+.site-nav-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    .tns-outer {
+        position: relative;
+    }
+
+    .tns-controls {
+        display: flex;
+        justify-content: flex-end;
+
+        button[data-controls="next"] {
+            margin-left: 10px;
+        }
     }
 }
 

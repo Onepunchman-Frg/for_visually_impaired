@@ -9,7 +9,7 @@ $(function() {
             "moreText":"<span>Ещё</span>",
             "moreWidth": 130
         });
-    }, 300);
+    }, 250);
 
     if (!isMobile) {
         
@@ -254,7 +254,7 @@ $(function() {
             reviewsSlider = tns(reviewsSlider_1);
         }
 
-        $(".settings-panel__items input:radio").on('change', function() {
+        $(".settings-panel__items .fs-setting input:radio").on('change', function() {
             reviewsSlider.destroy();
 
             let slider = document.querySelector('.reviews_slider');
@@ -332,11 +332,28 @@ $(function() {
                     },
                 });
             }
+
+            navAppend();
         });
         
         setTimeout(function(){
             $('.reviews-block__text').matchHeight();
-        }, 100);
+
+            navAppend();
+        }, 100);    
+
+        let navAppend = () => {
+            $('.reviews-block__nav-container').empty();
+            
+            let sliderNav = $('.reviews-block .tns-nav');
+            let sliderContols = $('.reviews-block .tns-controls');
+            let sliderNavContainer = $('.reviews-block__nav-container');
+
+
+            sliderNavContainer.append(sliderNav);
+            sliderNavContainer.append(sliderContols);
+        }
+        
     }; /*Отзывы*/
     setTimeout(function(){
         reviewsSliderFunc();
@@ -374,6 +391,13 @@ $(function() {
         
         setTimeout(function(){
             $('.articles-block__content').matchHeight();
+
+            let sliderNav = $('.articles-block .tns-nav');
+            let sliderContols = $('.articles-block .tns-controls');
+            let sliderNavContainer = $('.articles-block__nav-container');
+
+            sliderNavContainer.append(sliderNav);
+            sliderNavContainer.append(sliderContols);
         }, 100);
     })(); /*Статьи*/
 
@@ -410,6 +434,13 @@ $(function() {
         
         setTimeout(function(){
             $('.gallery-block__content').matchHeight();
+
+            let sliderNav = $('.gallery-block .tns-nav');
+            let sliderContols = $('.gallery-block .tns-controls');
+            let sliderNavContainer = $('.gallery-block__nav-container');
+
+            sliderNavContainer.append(sliderNav);
+            sliderNavContainer.append(sliderContols);
         }, 100);
     })(); /*Галерея*/
 
@@ -442,6 +473,15 @@ $(function() {
             controlsPosition: "bottom",
             responsive: respSettings
         });
+        
+        setTimeout(function(){
+            let sliderNav = $('.partners-block .tns-nav');
+            let sliderContols = $('.partners-block .tns-controls');
+            let sliderNavContainer = $('.partners-block__nav-container');
+
+            sliderNavContainer.append(sliderNav);
+            sliderNavContainer.append(sliderContols);
+        }, 100);
     })(); /*Бренды*/
 
 
@@ -463,12 +503,14 @@ $(function() {
 
     $(".settings-panel__items input:radio").on('change', function() {
         setTimeout(function(){
-            window.dispatchEvent(new Event('resize'));
             $('.main-slider__text').matchHeight();
             $('.reviews-block__text').matchHeight();
             $('.articles-block__content').matchHeight();
             $('.gallery-block__content').matchHeight();
         }, 200);
+        setTimeout(function(){
+            window.dispatchEvent(new Event('resize'));
+        }, 300);
     });
 
     let readCookieFontSize = () => {

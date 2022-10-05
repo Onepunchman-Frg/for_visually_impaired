@@ -1,28 +1,6 @@
 .partners-block {
     background: var(--on_gr_bg_bg);
 
-    .tns-nav {
-        margin-top: 72px;
-        display: inline-flex;
-        text-align: left;
-    }
-
-    .tns-outer {
-        position: relative;
-    }
-
-    .tns-controls {
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        right: 0;
-        bottom: -13px;
-
-        button[data-controls="next"] {
-            margin-left: 10px;
-        }
-    }
-
     &__inner {
     }
     
