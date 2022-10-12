@@ -93,7 +93,7 @@ $(function() {
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
                 animateDelay: 0,
-                speed: 0,
+                speed: 800,
                 mouseDrag: true,
                 center: true,
                 autoWidth: false,
@@ -109,52 +109,16 @@ $(function() {
                 autoplayButton: false,
                 autoplayButtonOutput: false,
                 controlsContainer: document.querySelector('.main-slider__arrows'),
-                // controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
                 responsive: {
                     320: {
                         autoplay: false,
                         controls: false
                     },
-                    1024: {
+                    1261: {
                         autoplay: sliderAutoplay,
                         controls: true
                     }
                 }
-            });
-
-            var small_slider = tns({
-                container: '.main-slider__images_content',
-                loop: false,
-                rewind: true,
-                gutter: 0,
-                center:false,
-                mouseDrag: true,
-                nav: false,
-                lazyload: true,
-                controls: false,
-                navPosition: 'bottom',
-                preventActionWhenRunning: true,
-                axis: 'horizontal',
-                mode: 'gallery',
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-                animateDelay: 10,
-                speed: 500,
-                items: 1
-            });
-            
-            var navIndex = $('.main-slider__items .main-slider__item').index();
-                $('.main-slider__images_content .main-slider__img').removeClass('tns-nav-active');
-                $('.main-slider__images_content .main-slider__img').eq(navIndex).addClass('tns-nav-active');
-            
-            vslider.events.on('indexChanged', function(){
-                var navIndex = $('.main-slider__items .tns-nav-active').index();
-                $('.main-slider__images_content .main-slider__img').removeClass('tns-nav-active');
-                $('.main-slider__images_content .main-slider__img').eq(navIndex).addClass('tns-nav-active');
-            });
-
-            vslider.events.on('indexChanged', function(){
-                small_slider.goTo(vslider.getInfo().index);
             });
             
             let sliderNav = $('.main-slider__body .tns-nav');
@@ -173,85 +137,79 @@ $(function() {
         var slider = document.querySelector('.reviews_slider');
         var sliderAutoplay = +slider.getAttribute('data-autoplay');
         var reviewsSlider;
-
-        var reviewsSlider_1 = {
-            loop: false,
-            rewind: true,
-            container: slider,
-            slideBy: 1,
-            mode: "carousel",
-            axis: "horizontal",
-            autoplayHoverPause: true,
-            autoplay: sliderAutoplay,
-            autoplayButtonOutput: false,
-            mouseDrag: true,
-            nav: true,
-            navPosition: "bottom",
-            controlsPosition: "bottom",   
-            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
-            preventActionWhenRunning: true,
-            responsive: {
-                320: {controls: false,items: 1,gutter: 20},
-                768: {controls: false,items: 2,gutter: 20},
-                1024: {controls: true,items: 2,gutter: 20},
-                1261: {controls: true,items: 2,gutter: 35}
-            },
-        };
-
-        var reviewsSlider_2 = {
-            loop: false,
-            rewind: true,
-            container: slider,
-            slideBy: 1,
-            mode: "carousel",
-            axis: "horizontal",
-            autoplayHoverPause: true,
-            autoplay: sliderAutoplay,
-            autoplayButtonOutput: false,
-            mouseDrag: true,
-            nav: true,
-            navPosition: "bottom",
-            controlsPosition: "bottom",   
-            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
-            preventActionWhenRunning: true,
-            responsive: {
-                320: {controls: false,items: 1,gutter: 20},
-                768: {controls: false,items: 1,gutter: 20},
-                1024: {controls: true,items: 2,gutter: 20},
-                1261: {controls: true,items: 2,gutter: 35}
-            },
-        };
-
-        var reviewsSlider_3 = {
-            loop: false,
-            rewind: true,
-            container: slider,
-            slideBy: 1,
-            mode: "carousel",
-            axis: "horizontal",
-            autoplayHoverPause: true,
-            autoplay: sliderAutoplay,
-            autoplayButtonOutput: false,
-            mouseDrag: true,
-            nav: true,
-            navPosition: "bottom",
-            controlsPosition: "bottom",   
-            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
-            preventActionWhenRunning: true,
-            responsive: {
-                320: {controls: false,items: 1,gutter: 20},
-                768: {controls: false,items: 1,gutter: 20},
-                1024: {controls: true,items: 1,gutter: 20},
-                1261: {controls: true,items: 2,gutter: 35}
-            },
-        };
         
         if ($('body').hasClass('fs_200')) {
-            reviewsSlider = tns(reviewsSlider_3);
+            reviewsSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20},
+                    768: {controls: false,items: 1,gutter: 20},
+                    1024: {controls: true,items: 1,gutter: 20},
+                    1261: {controls: true,items: 2,gutter: 35}
+                },
+            });
         } else if ($('body').hasClass('fs_150')) {
-            reviewsSlider = tns(reviewsSlider_2);
+            reviewsSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20},
+                    768: {controls: false,items: 1,gutter: 20},
+                    1024: {controls: true,items: 1,gutter: 20},
+                    1261: {controls: true,items: 2,gutter: 35}
+                },
+            });
         } else {
-            reviewsSlider = tns(reviewsSlider_1);
+            reviewsSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20},
+                    768: {controls: false,items: 1,gutter: 30},
+                    1024: {controls: true,items: 2,gutter: 35},
+                    1261: {controls: true,items: 2,gutter: 35}
+                },
+            });
         }
 
         $(".settings-panel__items .fs-setting input:radio").on('change', function() {
@@ -303,7 +261,7 @@ $(function() {
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 20},
-                        1024: {controls: true,items: 2,gutter: 20},
+                        1024: {controls: true,items: 1,gutter: 20},
                         1261: {controls: true,items: 2,gutter: 35}
                     },
                 });
@@ -326,8 +284,8 @@ $(function() {
                     preventActionWhenRunning: true,
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20},
-                        768: {controls: false,items: 2,gutter: 20},
-                        1024: {controls: true,items: 2,gutter: 20},
+                        768: {controls: false,items: 1,gutter: 30},
+                        1024: {controls: true,items: 2,gutter: 35},
                         1261: {controls: true,items: 2,gutter: 35}
                     },
                 });
@@ -349,7 +307,6 @@ $(function() {
             let sliderContols = $('.reviews-block .tns-controls');
             let sliderNavContainer = $('.reviews-block__nav-container');
 
-
             sliderNavContainer.append(sliderNav);
             sliderNavContainer.append(sliderContols);
         }
@@ -359,47 +316,187 @@ $(function() {
         reviewsSliderFunc();
     }, 100);
 
-    (function( ) {		
+    const articlesSliderFunc = () => {	
         var slider = document.querySelector('.articles_slider');
         var sliderAutoplay = +slider.getAttribute('data-autoplay');
+        var articlesSlider;
 
-        var respSettings = {
-            320: {controls: false,items: 1,gutter: 20},
-            768: {controls: false,items: 2,gutter: 20},
-            1024: {controls: true,items: 2,gutter: 20},
-            1261: {controls: true,items: 2,gutter: 35}
-        };
+        if ($('body').hasClass('fs_200')) {
+            articlesSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20},
+                    768: {controls: false,items: 1,gutter: 20},
+                    1024: {controls: true,items: 1,gutter: 20},
+                    1261: {controls: true,items: 2,gutter: 35}
+                },
+            });
+        } else if ($('body').hasClass('fs_150')) {
+            articlesSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20},
+                    768: {controls: false,items: 1,gutter: 20},
+                    1024: {controls: true,items: 1,gutter: 20},
+                    1261: {controls: true,items: 2,gutter: 35}
+                },
+            });
+        } else {
+            articlesSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20},
+                    768: {controls: false,items: 1,gutter: 30},
+                    1024: {controls: true,items: 2,gutter: 35},
+                    1261: {controls: true,items: 2,gutter: 35}
+                },
+            });
+        }
 
-        var articlesSlider = tns({
-            loop: false,
-            rewind: true,
-            container: slider,
-            slideBy: 1,
-            mode: "carousel",
-            axis: "horizontal",
-            autoplayHoverPause: true,
-            autoplay: sliderAutoplay,
-            autoplayButtonOutput: false,
-            mouseDrag: true,
-            nav: true,
-            navPosition: "bottom",
-            controlsPosition: "bottom",   
-            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
-            preventActionWhenRunning: true,
-            responsive: respSettings,
+        $(".settings-panel__items .fs-setting input:radio").on('change', function() {
+            articlesSlider.destroy();
+
+            let slider = document.querySelector('.articles_slider');
+
+            if ($('body').hasClass('fs_200')) {
+                articlesSlider = tns({
+                    loop: false,
+                    rewind: true,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsPosition: "bottom",   
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    responsive: {
+                        320: {controls: false,items: 1,gutter: 20},
+                        768: {controls: false,items: 1,gutter: 20},
+                        1024: {controls: true,items: 1,gutter: 20},
+                        1261: {controls: true,items: 2,gutter: 35}
+                    },
+                });
+            } else if ($('body').hasClass('fs_150')) {
+                articlesSlider = tns({
+                    loop: false,
+                    rewind: true,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsPosition: "bottom",   
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    responsive: {
+                        320: {controls: false,items: 1,gutter: 20},
+                        768: {controls: false,items: 1,gutter: 20},
+                        1024: {controls: true,items: 1,gutter: 20},
+                        1261: {controls: true,items: 2,gutter: 35}
+                    },
+                });
+            } else {
+                articlesSlider = tns({
+                    loop: false,
+                    rewind: true,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsPosition: "bottom",   
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    responsive: {
+                        320: {controls: false,items: 1,gutter: 20},
+                        768: {controls: false,items: 1,gutter: 30},
+                        1024: {controls: true,items: 2,gutter: 35},
+                        1261: {controls: true,items: 2,gutter: 35}
+                    },
+                });
+            }
+
+            navAppend();
         });
         
         setTimeout(function(){
             $('.articles-block__content').matchHeight();
 
+            navAppend();
+        }, 100);    
+
+        let navAppend = () => {
+            $('.articles-block__nav-container').empty();
+            
             let sliderNav = $('.articles-block .tns-nav');
             let sliderContols = $('.articles-block .tns-controls');
             let sliderNavContainer = $('.articles-block__nav-container');
 
             sliderNavContainer.append(sliderNav);
             sliderNavContainer.append(sliderContols);
-        }, 100);
-    })(); /*Статьи*/
+        }
+    }; /*Статьи*/
+    setTimeout(function(){
+        articlesSliderFunc();
+    }, 100);
 
     (function( ) {		
         var slider = document.querySelector('.gallery_slider');

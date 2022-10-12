@@ -160,6 +160,14 @@ h6 {
 }
 .block-padding {
     padding: 0 40px;
+
+    @media all and (max-width: 1023px) {   
+        padding: 0 30px;
+    }
+
+    @media all and (max-width: 767px) {   
+        padding: 0 20px;
+    }
 }
 
 .site-wrapper {
@@ -277,6 +285,7 @@ button {
 @import '_footer.scss';
 
 
+@import '_burger_block.scss';
 @import '_site_settings.scss';
 
 

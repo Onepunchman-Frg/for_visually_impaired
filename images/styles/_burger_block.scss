@@ -1,0 +1,14 @@
+.burger-block {
+    display: none;
+
+    @media all and (max-width: 1260px) {
+        display: block;
+        margin-right: 30px;
+    }
+
+    &__inner {
+    }
+    &__btn {
+		@extend .gr-icon-btn-1;
+    }
+}

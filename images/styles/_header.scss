@@ -9,9 +9,21 @@
         display: flex;
         justify-content: space-between;
         padding: 28px 0;
+
+        &_left {
+            display: inline-flex;
+            align-items: center;
+        }
+        &_right {
+            display: inline-flex;
+        }
     }
     &__bottom {
         box-shadow: 0 -1px 0 0 var(--on_gr_bg_border2_07);
+
+        @media all and (max-width: 1260px) {
+            display: none;
+        }
     }
     .site-info {
         display: flex;
@@ -37,6 +49,10 @@
                 font-family: var(--font2);
                 font-weight: var(--font2_700);
                 color: var(--on_gr_bg_acc_text);
+
+                @media all and (max-width: 1260px) {
+                    font-size: calc(22px * var(--font2Ratio));
+                }
             }
         }
         &__desc {

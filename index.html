@@ -7,10 +7,6 @@
     <title>Document</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="images/js/cookie.js"></script>
-    <script src="images/js/main.js"></script>
-    <link rel="stylesheet" href="images/styles/color.css">
-    <link rel="stylesheet" href="images/styles/styles.css">
 </head>
 <body>
     <div class="site-wrapper" id="wrapper">
@@ -192,52 +188,68 @@
         <header class="header block-padding">
             <div class="header__inner block-width">
                 <div class="header__top">
-                    <div class="site-info">
-                        <div class="site-info__logo">
-                            <a class="site-info__img" href="#">
-                                <img src="images/img/Logo.svg" alt="Логотип">
-                            </a>
+                    <div class="header__top_left">
+                        <div class="burger-block">
+                            <div class="burger-block__inner">
+                                <button class="burger-block__btn">
+                                    <i>
+                                        <svg class="gr-svg-icon">
+                                            <use xlink:href="#icon_site_burger"></use>
+                                        </svg>
+                                    </i>
+                                </button>
+                            </div>
                         </div>
-                        <div class="site-info__text">
-                            <div class="site-info__name">
-                                <a href="#">
-                                    Название сайта
+
+                        <div class="site-info">
+                            <div class="site-info__logo">
+                                <a class="site-info__img" href="#">
+                                    <img src="images/img/Logo.svg" alt="Логотип">
                                 </a>
                             </div>
-                            <div class="site-info__desc">
-                                <span>Универсальное решение</span>
+                            <div class="site-info__text">
+                                <div class="site-info__name">
+                                    <a href="#">
+                                        Название сайта
+                                    </a>
+                                </div>
+                                <div class="site-info__desc">
+                                    <span>Универсальное решение</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="contacts-block">
-                        <div class="contacts-block__items">
-                            <div class="contacts-block__item">
+                    <div class="header__top_right">
+                        <div class="contacts-block">
+                            <div class="contacts-block__items">
+                                <div class="contacts-block__item">
 
-                                <div class="contacts-block__desc">
-                                    <span>г. Москва</span>
-                                </div>
-
-                                <div class="contacts-block__links">
-                                    <div class="contacts-block__links-left">
-                                        <a href="#" class="contacts-block__social social-icon" target="_blank">
-                                            <img width="28" height="28" src="images/img/tg.png" class="" alt="Telegram" title="Telegram">
-                                        </a>
-                                    </div>
-                                    <div class="contacts-block__links-right">
-                                        <a class="contacts-block__number" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                                    <div class="contacts-block__desc">
+                                        <span>г. Москва</span>
                                     </div>
 
-                                    <div class="contacts-block__more">
-                                        <button class="contacts-block__more_btn">
-                                            <i>
-                                                <svg class="gr-svg-icon gr_small_icon">
-                                                    <use xlink:href="#icon_site_more"></use>
-                                                </svg>
-                                            </i>
-                                        </button>
+                                    <div class="contacts-block__links">
+                                        <div class="contacts-block__links-left">
+                                            <a href="#" class="contacts-block__social social-icon" target="_blank">
+                                                <img width="28" height="28" src="images/img/tg.png" class="" alt="Telegram" title="Telegram">
+                                            </a>
+                                        </div>
+                                        <div class="contacts-block__links-right">
+                                            <a class="contacts-block__number" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                                        </div>
+
+                                        <div class="contacts-block__more">
+                                            <button class="contacts-block__more_btn">
+                                                <i>
+                                                    <svg class="gr-svg-icon gr_small_icon">
+                                                        <use xlink:href="#icon_site_more"></use>
+                                                    </svg>
+                                                </i>
+                                            </button>
+                                        </div>
+                                        
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -322,27 +334,17 @@
         </header>
 
         <section class="main-slider block-on-main">
-            <div class="main-slider__images">
-                <div class="main-slider__images_content">
-                    <div class="main-slider__img">
-                        <img src="images/img/slider_1.jpg" alt="ОПИСАНИЕ" title="ОПИСАНИЕ">
-                        <div class="show-text">                                
-                            <span>ОПИСАНИЕ</span>
-                        </div>
-                    </div>
-                    <div class="main-slider__img">
-                        <img src="images/img/slider_2.jpg" alt="ОПИСАНИЕ" title="ОПИСАНИЕ">
-                        <div class="show-text">                                
-                            <span>ОПИСАНИЕ</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="main-slider__inner block-padding">
                 <div class="main-slider__body block-width">
                     <div class="main-slider__items" data-autoplay="true">
 
                         <div class="main-slider__item">
+                            <div class="main-slider__img">
+                                <img src="images/img/slider_1.jpg" alt="ОПИСАНИЕ" title="ОПИСАНИЕ">
+                                <div class="show-text">                                
+                                    <span>ОПИСАНИЕ</span>
+                                </div>
+                            </div>
                             <div class="main-slider__content">
                                 <div class="main-slider__text">
                                     <div class="main-slider__title">
@@ -359,6 +361,12 @@
                             </div>
                         </div>
                         <div class="main-slider__item">
+                            <div class="main-slider__img">
+                                <img src="images/img/slider_2.jpg" alt="ОПИСАНИЕ" title="ОПИСАНИЕ">
+                                <div class="show-text">                                
+                                    <span>ОПИСАНИЕ</span>
+                                </div>
+                            </div>
                             <div class="main-slider__content">
                                 <div class="main-slider__text">
                                     <div class="main-slider__title">
@@ -378,26 +386,28 @@
                     </div>
 
                     <div class="main-slider__controls">
-                        <div class="main-slider__nav">
-                        </div>
-                        
-                        <div class="main-slider__arrows">
-                            <span class="main-slider__arrow main-slider__arrow_prev">
-                                <svg class="gr-svg-icon">
-                                    <use xlink:href="#icon_shop_slider_prev"></use>
-                                </svg>
-                                <svg class="gr-svg-icon gr_small_icon">
-                                    <use xlink:href="#icon_shop_slider_prev_small"></use>
-                                </svg>
-                            </span>
-                            <span class="main-slider__arrow main-slider__arrow_next">
-                                <svg class="gr-svg-icon">
-                                    <use xlink:href="#icon_shop_slider_next"></use>
-                                </svg>
-                                <svg class="gr-svg-icon gr_small_icon">
-                                    <use xlink:href="#icon_shop_slider_next_small"></use>
-                                </svg>
-                            </span>
+                        <div class="main-slider__controls_inner block-width">
+                            <div class="main-slider__nav">
+                            </div>
+                            
+                            <div class="main-slider__arrows">
+                                <span class="main-slider__arrow main-slider__arrow_prev">
+                                    <svg class="gr-svg-icon">
+                                        <use xlink:href="#icon_shop_slider_prev"></use>
+                                    </svg>
+                                    <svg class="gr-svg-icon gr_small_icon">
+                                        <use xlink:href="#icon_shop_slider_prev_small"></use>
+                                    </svg>
+                                </span>
+                                <span class="main-slider__arrow main-slider__arrow_next">
+                                    <svg class="gr-svg-icon">
+                                        <use xlink:href="#icon_shop_slider_next"></use>
+                                    </svg>
+                                    <svg class="gr-svg-icon gr_small_icon">
+                                        <use xlink:href="#icon_shop_slider_next_small"></use>
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1200,9 +1210,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <script src="images/js/plugins.js"></script>
+    <script src="images/js/cookie.js"></script>
+    <script src="images/js/main.js"></script>
     
     <link rel="stylesheet" href="images/styles/plugins.css">
-    <script src="images/js/plugins.js"></script>
+    <link rel="stylesheet" href="images/styles/color.css">
+    <link rel="stylesheet" href="images/styles/styles.css">
 
     
 </body>
