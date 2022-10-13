@@ -7,25 +7,56 @@
         justify-content: space-between;
     }
     &__heading {
-    }
-    &__title {
-        h2 {
-            margin: 0;
+        @media all and (max-width: 639px) {
+            width: 100%;
         }
     }
+    &__title {
+    }
     &__desc {
-        margin-top: 6px;
     }
     &__btn {
         margin-left: 15px;
+
+        @media all and (max-width: 1023px) {
+            display: none;        
+        }
+
+        &_bottom {
+            @media all and (min-width: 1024px) {
+                display: none;
+            }
+
+            @media all and (max-width: 1023px) {
+                display: inline-flex;     
+                width: 100%;   
+                margin: 30px 0 0;
+            }
+
+            @media all and (max-width: 639px) {
+                margin-top: 20px;
+            }
+        }
     }
     &__items {
         margin-top: 50px;
+
+        @media all and (max-width: 1260px) {
+            margin-top: 35px;
+        }
+
+        @media all and (max-width: 639px) {
+            margin-top: 20px;
+        }
     }
     &__accordion {
     }
     &__item {
         margin-top: 20px;
+
+        @media all and (max-width: 639px) {
+            margin-top: 14px;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -51,16 +82,43 @@
         border-radius: var(--gr_wrap_radius);
         position: relative;
 
-        &:before {
+        @media all and (max-width: 1260px) {
+            padding: 20px 20px 20px 35px;
+        }
+
+        @media all and (max-width: 1023px) {
+            padding: 20px 20px 20px 30px;
+        }
+
+        @media all and (max-width: 639px) {
+            padding: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &:before,
+        &:after {
             content: '';
             width: 30px;
             height: 30px;
             background: var(--on_gr_bg_bg);
             border-radius: var(--gr_wrap_radius);
-            position: absolute;
             left: 61px;
-            bottom: -10px;
+            position: absolute;
             transform: rotate(45deg);
+
+            @media all and (max-width: 1260px) {
+                left: 56px;
+            }
+
+            @media all and (max-width: 639px) {
+                left: 50%;
+                margin-left: -15px;
+            }
+        }
+
+        &:before {
+            bottom: -10px;
             z-index: 1;
             opacity: 0;
 
@@ -68,16 +126,8 @@
         }
         
         &:after {
-            content: '';
-            width: 30px;
-            height: 30px;
-            background: var(--on_gr_bg_bg);
-            border-radius: var(--gr_wrap_radius);
-            position: absolute;
-            left: 61px;
             bottom: -12px;
             opacity: 0;
-            transform: rotate(45deg);
             z-index: -1;
         }
 
@@ -87,6 +137,11 @@
     }
     &__arrow {
         margin-left: 15px;
+
+        @media all and (max-width: 639px) {
+            margin: 20px 0 0;
+            width: 100%;
+        }
 
         .gr-svg-icon {
             display: none;
@@ -100,5 +155,13 @@
     }
     &__text {
         padding: 40px 40px 24px;
+
+        @media all and (max-width: 1260px) {
+            padding: 35px 35px 20px;
+        }
+
+        @media all and (max-width: 639px) {
+            padding: 35px 20px 14px;
+        }
     }
 }

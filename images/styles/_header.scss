@@ -10,12 +10,15 @@
         justify-content: space-between;
         padding: 28px 0;
 
-        &_left {
-            display: inline-flex;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            padding: 24px 60px;
         }
-        &_right {
-            display: inline-flex;
+
+        @media all and (max-width: 767px) {
+            padding: 20px 0;
         }
     }
     &__bottom {
@@ -28,10 +31,24 @@
     .site-info {
         display: flex;
         align-items: center;
+
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     
         &__logo {
             margin-right: 24px;
             display: inline-flex;
+
+            @media all and (max-width: 1023px) {
+                margin: 0 0 14px;
+            }
+
+            @media all and (max-width: 767px) {
+                margin: 0 0 12px;
+            }
         }
     
         &__img {
@@ -39,6 +56,9 @@
             font-size: 0;
         }
         &__text {
+            @media all and (max-width: 1023px) {
+                text-align: center;
+            }
         }
         &__name {
             a {
@@ -53,12 +73,20 @@
                 @media all and (max-width: 1260px) {
                     font-size: calc(22px * var(--font2Ratio));
                 }
+
+                @media all and (max-width: 767px) {
+                    font-size: calc(18px * var(--font2Ratio));
+                }
             }
         }
         &__desc {
             font-size: calc(17px * var(--font1Ratio));
             color: var(--on_gr_bg_sec_text);
             line-height: calc(1.2 * var(--lineHeightRatio));
+
+            @media all and (max-width: 767px) {
+                font-size: calc(16px * var(--font1Ratio));
+            }
         }
     }
     .contacts-block {
@@ -66,6 +94,11 @@
         align-items: center;
         position: relative;
         padding-right: 24px;
+
+        @media all and (max-width: 1023px) {
+            padding: 0;
+            margin-top: 14px;
+        }
     
         &__items {
             display: flex;
@@ -82,6 +115,12 @@
         &__item {
             display: flex;
             flex-direction: column;
+
+            @media all and (max-width: 1023px) {
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
         }
         &__links {
             display: flex;
@@ -114,6 +153,14 @@
             font-family: var(--font2);
             font-weight: var(--font2_700);
             color: var(--on_gr_bg_acc_text);
+
+            @media all and (max-width: 1023px) {
+                font-size: calc(18px * var(--font1Ratio));
+            }
+
+            @media all and (max-width: 767px) {
+                font-size: calc(16px * var(--font1Ratio));
+            }
         }
     
         &__more {

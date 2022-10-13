@@ -158,7 +158,7 @@ $(function() {
                 responsive: {
                     320: {controls: false,items: 1,gutter: 20},
                     768: {controls: false,items: 1,gutter: 20},
-                    1024: {controls: true,items: 1,gutter: 20},
+                    1024: {controls: false,items: 1,gutter: 20},
                     1261: {controls: true,items: 2,gutter: 35}
                 },
             });
@@ -182,7 +182,7 @@ $(function() {
                 responsive: {
                     320: {controls: false,items: 1,gutter: 20},
                     768: {controls: false,items: 1,gutter: 20},
-                    1024: {controls: true,items: 1,gutter: 20},
+                    1024: {controls: false,items: 1,gutter: 20},
                     1261: {controls: true,items: 2,gutter: 35}
                 },
             });
@@ -206,7 +206,7 @@ $(function() {
                 responsive: {
                     320: {controls: false,items: 1,gutter: 20},
                     768: {controls: false,items: 1,gutter: 30},
-                    1024: {controls: true,items: 2,gutter: 35},
+                    1024: {controls: false,items: 2,gutter: 30},
                     1261: {controls: true,items: 2,gutter: 35}
                 },
             });
@@ -216,7 +216,7 @@ $(function() {
             reviewsSlider.destroy();
 
             let slider = document.querySelector('.reviews_slider');
-
+        
             if ($('body').hasClass('fs_200')) {
                 reviewsSlider = tns({
                     loop: false,
@@ -237,7 +237,7 @@ $(function() {
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 20},
-                        1024: {controls: true,items: 1,gutter: 20},
+                        1024: {controls: false,items: 1,gutter: 20},
                         1261: {controls: true,items: 2,gutter: 35}
                     },
                 });
@@ -261,7 +261,7 @@ $(function() {
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 20},
-                        1024: {controls: true,items: 1,gutter: 20},
+                        1024: {controls: false,items: 1,gutter: 20},
                         1261: {controls: true,items: 2,gutter: 35}
                     },
                 });
@@ -285,7 +285,7 @@ $(function() {
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 30},
-                        1024: {controls: true,items: 2,gutter: 35},
+                        1024: {controls: false,items: 2,gutter: 30},
                         1261: {controls: true,items: 2,gutter: 35}
                     },
                 });
@@ -365,7 +365,7 @@ $(function() {
                 responsive: {
                     320: {controls: false,items: 1,gutter: 20},
                     768: {controls: false,items: 1,gutter: 20},
-                    1024: {controls: true,items: 1,gutter: 20},
+                    1024: {controls: false,items: 1,gutter: 20},
                     1261: {controls: true,items: 2,gutter: 35}
                 },
             });
@@ -389,7 +389,7 @@ $(function() {
                 responsive: {
                     320: {controls: false,items: 1,gutter: 20},
                     768: {controls: false,items: 1,gutter: 30},
-                    1024: {controls: true,items: 2,gutter: 35},
+                    1024: {controls: false,items: 2,gutter: 30},
                     1261: {controls: true,items: 2,gutter: 35}
                 },
             });
@@ -444,7 +444,7 @@ $(function() {
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 20},
-                        1024: {controls: true,items: 1,gutter: 20},
+                        1024: {controls: false,items: 1,gutter: 20},
                         1261: {controls: true,items: 2,gutter: 35}
                     },
                 });
@@ -468,7 +468,7 @@ $(function() {
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 30},
-                        1024: {controls: true,items: 2,gutter: 35},
+                        1024: {controls: false,items: 2,gutter: 30},
                         1261: {controls: true,items: 2,gutter: 35}
                     },
                 });
@@ -503,10 +503,10 @@ $(function() {
         var sliderAutoplay = +slider.getAttribute('data-autoplay');
         
         var respSettings = {
-            320: {controls: false,items: 1,gutter: 20},
-            768: {controls: false,items: 2,gutter: 20},
-            1024: {controls: true,items: 2,gutter: 20},
-            1261: {controls: true,items: 3,gutter: 40}
+            320: {controls: false,items: 1,gutter: 20,center: false},
+            768: {controls: false,items: 3,gutter: 20,center: false},
+            1024: {controls: false,items: 3,gutter: 30,center: false},
+            1261: {controls: true,items: 3,gutter: 44,center: true}
         };
 
         var gallerySlider = tns({
@@ -523,8 +523,7 @@ $(function() {
             nav: true,
             navPosition: "bottom",
             controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
-            preventActionWhenRunning: true,
-            center: true,
+            preventActionWhenRunning: true,            
             controlsPosition: "bottom",
             responsive: respSettings
         });
@@ -546,9 +545,9 @@ $(function() {
         var sliderAutoplay = +slider.getAttribute('data-autoplay');
         
         var respSettings = {
-            320: {controls: false,items: 1,gutter: 20},
-            768: {controls: false,items: 2,gutter: 20},
-            1024: {controls: true,items: 2,gutter: 20},
+            320: {controls: false,items: 2,gutter: 18},
+            768: {controls: false,items: 4,gutter: 20},
+            1024: {controls: false,items: 4,gutter: 24},
             1261: {controls: true,items: 4,gutter: 28}
         };
 

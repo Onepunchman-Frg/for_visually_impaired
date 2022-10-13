@@ -8,6 +8,8 @@
 
     font-family: var(--font2);
 
+    display: none;
+
     &.active {
         right: 0;
         left: auto;   

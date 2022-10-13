@@ -3,12 +3,19 @@
 
     @media all and (max-width: 1260px) {
         display: block;
-        margin-right: 30px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    @media all and (max-width: 767px) {
+        position: static;
+        margin-top: 20px;
     }
 
     &__inner {
     }
     &__btn {
-		@extend .gr-icon-btn-1;
+		  @extend .gr-icon-btn-1;
     }
 }
