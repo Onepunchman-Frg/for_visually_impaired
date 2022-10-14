@@ -498,38 +498,175 @@ $(function() {
         articlesSliderFunc();
     }, 100);
 
-    (function( ) {		
+    const gallerySliderFunc = () => {	
         var slider = document.querySelector('.gallery_slider');
         var sliderAutoplay = +slider.getAttribute('data-autoplay');
-        
-        var respSettings = {
-            320: {controls: false,items: 1,gutter: 20,center: false},
-            768: {controls: false,items: 3,gutter: 20,center: false},
-            1024: {controls: false,items: 3,gutter: 30,center: false},
-            1261: {controls: true,items: 3,gutter: 44,center: true}
-        };
+        var gallerySlider;
 
-        var gallerySlider = tns({
-            loop: true,
-            rewind: false,
-            container: slider,
-            slideBy: 1,
-            mode: "carousel",
-            axis: "horizontal",
-            autoplayHoverPause: true,
-            autoplay: sliderAutoplay,
-            autoplayButtonOutput: false,
-            mouseDrag: true,
-            nav: true,
-            navPosition: "bottom",
-            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
-            preventActionWhenRunning: true,            
-            controlsPosition: "bottom",
-            responsive: respSettings
+        if ($('body').hasClass('fs_200')) {
+            gallerySlider = tns({
+                loop: true,
+                rewind: false,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20,center: false},
+                    768: {controls: false,items: 1,gutter: 20,center: false},
+                    1024: {controls: false,items: 2,gutter: 30,center: false},
+                    1261: {controls: true,items: 3,gutter: 44,center: true}
+                },
+            });
+        } else if ($('body').hasClass('fs_150')) {
+            gallerySlider = tns({
+                loop: true,
+                rewind: false,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20,center: false},
+                    768: {controls: false,items: 2,gutter: 20,center: false},
+                    1024: {controls: false,items: 3,gutter: 30,center: false},
+                    1261: {controls: true,items: 3,gutter: 44,center: true}
+                },
+            });
+        } else {
+            gallerySlider = tns({
+                loop: true,
+                rewind: false,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsPosition: "bottom",   
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 20,center: false},
+                    768: {controls: false,items: 3,gutter: 20,center: false},
+                    1024: {controls: false,items: 3,gutter: 30,center: false},
+                    1261: {controls: true,items: 3,gutter: 44,center: true}
+                },
+            });
+        }
+
+        $(".settings-panel__items .fs-setting input:radio").on('change', function() {
+            gallerySlider.destroy();
+
+            let slider = document.querySelector('.gallery_slider');
+
+            if ($('body').hasClass('fs_200')) {
+                gallerySlider = tns({
+                    loop: true,
+                    rewind: false,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsPosition: "bottom",   
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    responsive: {
+                        320: {controls: false,items: 1,gutter: 20,center: false},
+                        768: {controls: false,items: 1,gutter: 20,center: false},
+                        1024: {controls: false,items: 2,gutter: 30,center: false},
+                        1261: {controls: true,items: 3,gutter: 44,center: true}
+                    },
+                });
+            } else if ($('body').hasClass('fs_150')) {
+                gallerySlider = tns({
+                    loop: true,
+                    rewind: false,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsPosition: "bottom",   
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    responsive: {
+                        320: {controls: false,items: 1,gutter: 20,center: false},
+                        768: {controls: false,items: 2,gutter: 20,center: false},
+                        1024: {controls: false,items: 3,gutter: 30,center: false},
+                        1261: {controls: true,items: 3,gutter: 44,center: true}
+                    },
+                });
+            } else {
+                gallerySlider = tns({
+                    loop: true,
+                    rewind: false,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsPosition: "bottom",   
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    responsive: {
+                        320: {controls: false,items: 1,gutter: 20,center: false},
+                        768: {controls: false,items: 3,gutter: 20,center: false},
+                        1024: {controls: false,items: 3,gutter: 30,center: false},
+                        1261: {controls: true,items: 3,gutter: 44,center: true}
+                    },
+                });
+            }
+
+            navAppend();
         });
         
         setTimeout(function(){
             $('.gallery-block__content').matchHeight();
+
+            navAppend();
+        }, 100);    
+
+        let navAppend = () => {
+            $('.gallery-block__nav-container').empty();
 
             let sliderNav = $('.gallery-block .tns-nav');
             let sliderContols = $('.gallery-block .tns-controls');
@@ -537,48 +674,195 @@ $(function() {
 
             sliderNavContainer.append(sliderNav);
             sliderNavContainer.append(sliderContols);
-        }, 100);
-    })(); /*Галерея*/
+        }
+    };  /*Галерея*/
+    setTimeout(function(){
+        gallerySliderFunc();
+    }, 100);
 
-    (function( ) {		
+    const partnersSliderFunc = () => {			
         var slider = document.querySelector('.partners_slider');
         var sliderAutoplay = +slider.getAttribute('data-autoplay');
-        
-        var respSettings = {
-            320: {controls: false,items: 2,gutter: 18},
-            768: {controls: false,items: 4,gutter: 20},
-            1024: {controls: false,items: 4,gutter: 24},
-            1261: {controls: true,items: 4,gutter: 28}
-        };
+        var partnersSlider;
 
-        var partnersSlider = tns({
-            loop: false,
-            rewind: true,
-            container: slider,
-            slideBy: 1,
-            mode: "carousel",
-            axis: "horizontal",
-            autoplayHoverPause: true,
-            autoplay: sliderAutoplay,
-            autoplayButtonOutput: false,
-            mouseDrag: true,
-            nav: true,
-            navPosition: "bottom",
-            controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
-            preventActionWhenRunning: true,
-            controlsPosition: "bottom",
-            responsive: respSettings
+        if ($('body').hasClass('fs_200')) {
+            partnersSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                controlsPosition: "bottom",
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 18},
+                    640: {controls: false,items: 2,gutter: 20},
+                    768: {controls: false,items: 2,gutter: 20},
+                    1024: {controls: false,items: 3,gutter: 24},
+                    1261: {controls: true,items: 4,gutter: 28}
+                }
+            });
+        } else if ($('body').hasClass('fs_150')) {
+            partnersSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                controlsPosition: "bottom",
+                responsive: {
+                    320: {controls: false,items: 1,gutter: 18},
+                    640: {controls: false,items: 2,gutter: 20},
+                    768: {controls: false,items: 2,gutter: 20},
+                    1024: {controls: false,items: 3,gutter: 24},
+                    1261: {controls: true,items: 4,gutter: 28}
+                }
+            });
+        } else {
+            partnersSlider = tns({
+                loop: false,
+                rewind: true,
+                container: slider,
+                slideBy: 1,
+                mode: "carousel",
+                axis: "horizontal",
+                autoplayHoverPause: true,
+                autoplay: sliderAutoplay,
+                autoplayButtonOutput: false,
+                mouseDrag: true,
+                nav: true,
+                navPosition: "bottom",
+                controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                preventActionWhenRunning: true,
+                controlsPosition: "bottom",
+                responsive: {
+                    320: {controls: false,items: 2,gutter: 18},
+                    768: {controls: false,items: 4,gutter: 20},
+                    1024: {controls: false,items: 4,gutter: 24},
+                    1261: {controls: true,items: 4,gutter: 28}
+                }
+            });
+        }
+
+        $(".settings-panel__items .fs-setting input:radio").on('change', function() {
+            partnersSlider.destroy();
+
+            let slider = document.querySelector('.partners_slider');
+
+            if ($('body').hasClass('fs_200')) {
+                partnersSlider = tns({
+                    loop: false,
+                    rewind: true,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    controlsPosition: "bottom",
+                    responsive: {
+                        320: {controls: false,items: 1,gutter: 18},
+                        640: {controls: false,items: 2,gutter: 20},
+                        768: {controls: false,items: 2,gutter: 20},
+                        1024: {controls: false,items: 3,gutter: 24},
+                        1261: {controls: true,items: 4,gutter: 28}
+                    }
+                });
+            } else if ($('body').hasClass('fs_150')) {
+                partnersSlider = tns({
+                    loop: false,
+                    rewind: true,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    controlsPosition: "bottom",
+                    responsive: {
+                        320: {controls: false,items: 1,gutter: 18},
+                        640: {controls: false,items: 2,gutter: 20},
+                        768: {controls: false,items: 2,gutter: 20},
+                        1024: {controls: false,items: 3,gutter: 24},
+                        1261: {controls: true,items: 4,gutter: 28}
+                    }
+                });
+            } else {
+                partnersSlider = tns({
+                    loop: false,
+                    rewind: true,
+                    container: slider,
+                    slideBy: 1,
+                    mode: "carousel",
+                    axis: "horizontal",
+                    autoplayHoverPause: true,
+                    autoplay: sliderAutoplay,
+                    autoplayButtonOutput: false,
+                    mouseDrag: true,
+                    nav: true,
+                    navPosition: "bottom",
+                    controlsText: ['<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_prev"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_prev_small"></use></svg>', '<svg class="gr-svg-icon"><use xlink:href="#icon_shop_slider_next"></use></svg><svg class="gr-svg-icon gr_small_icon"><use xlink:href="#icon_shop_slider_next_small"></use></svg>'],
+                    preventActionWhenRunning: true,
+                    controlsPosition: "bottom",
+                    responsive: {
+                        320: {controls: false,items: 2,gutter: 18},
+                        768: {controls: false,items: 4,gutter: 20},
+                        1024: {controls: false,items: 4,gutter: 24},
+                        1261: {controls: true,items: 4,gutter: 28}
+                    }
+                });
+            }
+
+            navAppend();
         });
-        
+
         setTimeout(function(){
+            navAppend();
+        }, 100);    
+
+        let navAppend = () => {
+            $('.partners-block__nav-container').empty();
+
             let sliderNav = $('.partners-block .tns-nav');
             let sliderContols = $('.partners-block .tns-controls');
             let sliderNavContainer = $('.partners-block__nav-container');
 
             sliderNavContainer.append(sliderNav);
             sliderNavContainer.append(sliderContols);
-        }, 100);
-    })(); /*Бренды*/
+        }
+    }; /*Бренды*/
+    setTimeout(function(){
+        partnersSliderFunc();
+    }, 100);
 
 
     
@@ -591,9 +875,11 @@ $(function() {
         if ($this.hasClass('active')){
             $this.removeClass('active');
             $body.removeClass('active');
+            $('html').removeClass('overflowHidden');
         } else {
             $this.addClass('active');
             $body.addClass('active');
+            $('html').addClass('overflowHidden');
         }
     });
 
