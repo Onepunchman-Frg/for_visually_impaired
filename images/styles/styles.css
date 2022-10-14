@@ -5300,9 +5300,11 @@ body.fs_150 .tns-nav button {
   }
 }
 
-body.fs_150 .header .contacts-block__social {
-  width: 40px;
-  height: 40px;
+@media all and (min-width: 768px) {
+  body.fs_150 .header .contacts-block__social {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1260px) {
@@ -5566,9 +5568,11 @@ body.fs_150 .footer__copyright {
   }
 }
 
-body.fs_150 .footer .phones-block__link {
-  width: 40px;
-  height: 40px;
+@media all and (min-width: 768px) {
+  body.fs_150 .footer .phones-block__link {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 1260px) {

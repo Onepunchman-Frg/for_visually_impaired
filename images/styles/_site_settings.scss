@@ -370,8 +370,10 @@ body {
                     margin-top: 14px;
                 }
                 &__social {
-                    width: 40px;
-                    height: 40px;
+                    @media all and (min-width: 768px) {  
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
                 &__item {
                     @media (min-width: 1024px) and (max-width: 1260px) {
@@ -617,8 +619,10 @@ body {
                     margin-bottom: 30px;
                 }
                 &__link {
-                    width: 40px;
-                    height: 40px;
+                    @media all and (min-width: 768px) {  
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
             }
             .schedule-block {
