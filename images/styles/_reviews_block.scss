@@ -12,7 +12,9 @@
         }
     }
     &__heading {
-        width: 100%;
+        @media all and (max-width: 639px) {
+            width: 100%;
+        }
     }
     &__title {
     }

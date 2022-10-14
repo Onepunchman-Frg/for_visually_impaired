@@ -291,6 +291,17 @@ body {
                     width: 40px;
                     height: 40px;
                 }
+                &__more_btn {
+            
+                    .gr-svg-icon {
+                        display: block; 
+            
+                        &.gr_small_icon,
+                        &.gr_big_icon {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
 
@@ -299,35 +310,58 @@ body {
 
             &__inner {
                 height: auto;
+                padding: 0;
                 box-shadow: 0 2px 0 0 var(--on_gr_bg_border2);
             }
 
-            &__images {
-                position: relative;
-
-                .tns-inner {
-                    position: relative;
-                }
+            &__body {
+                max-width: 100%;
             }
 
             &__img {
-                padding-top: 660px;
+                @media all and (min-width: 1421px) {  
+                    min-height: 660px;
+                    position: relative;
+                    padding: 0;
+                }
             }
 
             &__content {
-                padding: 0;
                 min-height: auto;
+                padding: 0 40px;
+                
+                @media all and (max-width: 1023px) {   
+                    padding: 0 30px;
+                }
+            
+                @media all and (max-width: 767px) {   
+                    padding: 0 20px;
+                }
             }
 
             &__text {
                 max-width: 100%;
                 padding: 50px 0;
                 box-shadow: none;
+                max-width: $siteWidth;
+                margin: 0 auto;
             }
 
             .main-slider__controls {
-                bottom: auto;
-                top: -100px;
+                padding: 0 40px;
+            
+                @media all and (min-width: 1421px) {  
+                    bottom: auto;
+                    top: 550px;
+                }
+                
+                @media all and (max-width: 1023px) {   
+                    padding: 0 30px;
+                }
+            
+                @media all and (max-width: 767px) {   
+                    padding: 0 20px;
+                }
             }
         }
 
@@ -346,9 +380,22 @@ body {
                 width: 100%;
             }
         }
+        
         .reviews-block {
             &__body {
                 padding: 50px;
+            }
+        }
+
+        .gallery-block {
+            padding: 0 40px;
+                    
+            @media all and (max-width: 1023px) {   
+                padding: 0 30px;
+            }
+        
+            @media all and (max-width: 767px) {   
+                padding: 0 20px;
             }
         }
 
@@ -551,6 +598,16 @@ body {
                 &__social {
                     width: 45px;
                     height: 45px;
+                }
+                &__more_btn {
+            
+                    .gr-svg-icon {
+                        display: none; 
+            
+                        &.gr_big_icon {
+                            display: block;
+                        }
+                    }
                 }
             }
         }

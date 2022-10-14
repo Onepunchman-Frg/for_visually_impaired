@@ -32,22 +32,30 @@
 
         @media all and (max-width: 1420px) {   
             bottom: auto;
-            top: -100px;
+            top: 380px;
         }
 
         @media all and (max-width: 1260px) {   
-            top: -35px;
+            top: 305px;
             justify-content: center;
         }
 
         @media all and (max-width: 1023px) {   
-            top: -20px;
+            top: 240px;
+        }
+
+        @media all and (max-width: 767px) {   
+            top: 130px;
         }
 
         &_inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @media all and (max-width: 1260px) {   
+                justify-content: center;
+            }
         }
     }
 
