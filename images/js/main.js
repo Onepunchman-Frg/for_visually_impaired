@@ -682,7 +682,7 @@ $(function() {
                     .removeClass('color_4')
                     .addClass('color_5');
             $("LINK[href*='color_stngs']").remove();
-            $('head').append('<link rel="stylesheet" href="images/styles/color_stngs5.css" type="text/css" />');
+            $('body').append('<link rel="stylesheet" href="images/styles/color_stngs5.css" type="text/css" />');
         } else if (rdCke == '4') {
             $('body').removeClass('color_1')
                     .removeClass('color_2')
@@ -690,7 +690,7 @@ $(function() {
                     .removeClass('color_5')
                     .addClass('color_4');
             $("LINK[href*='color_stngs']").remove();
-            $('head').append('<link rel="stylesheet" href="images/styles/color_stngs4.css" type="text/css" />');
+            $('body').append('<link rel="stylesheet" href="images/styles/color_stngs4.css" type="text/css" />');
         } else if (rdCke == '3') {
             $('body').removeClass('color_1')
                     .removeClass('color_2')
@@ -698,7 +698,7 @@ $(function() {
                     .removeClass('color_5')
                     .addClass('color_3');
             $("LINK[href*='color_stngs']").remove();
-            $('head').append('<link rel="stylesheet" href="images/styles/color_stngs3.css" type="text/css" />');
+            $('body').append('<link rel="stylesheet" href="images/styles/color_stngs3.css" type="text/css" />');
         } else if (rdCke == '2') {
             $('body').removeClass('color_1')
                     .removeClass('color_3')
@@ -706,7 +706,7 @@ $(function() {
                     .removeClass('color_5')
                     .addClass('color_2');
             $("LINK[href*='color_stngs']").remove();
-            $('head').append('<link rel="stylesheet" href="images/styles/color_stngs2.css" type="text/css" />');
+            $('body').append('<link rel="stylesheet" href="images/styles/color_stngs2.css" type="text/css" />');
         } else if (rdCke == '1') {
             $('body').removeClass('color_2')
                     .removeClass('color_3')
@@ -714,7 +714,7 @@ $(function() {
                     .removeClass('color_5')
                     .addClass('color_1');
             $("LINK[href*='color_stngs']").remove();
-            $('head').append('<link rel="stylesheet" href="images/styles/color_stngs1.css" type="text/css" />');
+            $('body').append('<link rel="stylesheet" href="images/styles/color_stngs1.css" type="text/css" />');
         } else {
             $('body').removeClass('color_1')
                     .removeClass('color_2')
@@ -722,7 +722,7 @@ $(function() {
                     .removeClass('color_4')
                     .removeClass('color_5');
             $("LINK[href*='color_stngs']").remove();
-            // $('head').append('<link rel="stylesheet" href="images/styles/color.css" type="text/css" />');
+            // $('body').append('<link rel="stylesheet" href="images/styles/color.css" type="text/css" />');
         }
     }
 
