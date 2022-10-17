@@ -76,6 +76,7 @@
         font-weight: var(--font2_700);
         color: var(--gr_primary_3);          
         line-height: calc(1.1 * var(--lineHeightRatio));
+        flex-shrink: 0;
 
         @media all and (max-width: 1260px) {
             font-size: calc(34px * var(--font1Ratio));

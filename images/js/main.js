@@ -159,7 +159,8 @@ $(function() {
                     320: {controls: false,items: 1,gutter: 20},
                     768: {controls: false,items: 1,gutter: 20},
                     1024: {controls: false,items: 1,gutter: 20},
-                    1261: {controls: true,items: 2,gutter: 35}
+                    1261: {controls: true,items: 1,gutter: 20},
+                    1421: {controls: true,items: 2,gutter: 35}
                 },
             });
         } else if ($('body').hasClass('fs_150')) {
@@ -238,7 +239,8 @@ $(function() {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 20},
                         1024: {controls: false,items: 1,gutter: 20},
-                        1261: {controls: true,items: 2,gutter: 35}
+                        1261: {controls: true,items: 1,gutter: 20},
+                        1421: {controls: true,items: 2,gutter: 35}
                     },
                 });
             } else if ($('body').hasClass('fs_150')) {
@@ -341,8 +343,9 @@ $(function() {
                 responsive: {
                     320: {controls: false,items: 1,gutter: 20},
                     768: {controls: false,items: 1,gutter: 20},
-                    1024: {controls: true,items: 1,gutter: 20},
-                    1261: {controls: true,items: 2,gutter: 35}
+                    1024: {controls: false,items: 1,gutter: 20},
+                    1261: {controls: true,items: 1,gutter: 20},
+                    1421: {controls: true,items: 2,gutter: 35}
                 },
             });
         } else if ($('body').hasClass('fs_150')) {
@@ -420,8 +423,9 @@ $(function() {
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20},
                         768: {controls: false,items: 1,gutter: 20},
-                        1024: {controls: true,items: 1,gutter: 20},
-                        1261: {controls: true,items: 2,gutter: 35}
+                        1024: {controls: false,items: 1,gutter: 20},
+                        1261: {controls: true,items: 1,gutter: 20},
+                        1421: {controls: true,items: 2,gutter: 35}
                     },
                 });
             } else if ($('body').hasClass('fs_150')) {
@@ -522,9 +526,11 @@ $(function() {
                 preventActionWhenRunning: true,
                 responsive: {
                     320: {controls: false,items: 1,gutter: 20,center: false},
-                    768: {controls: false,items: 1,gutter: 20,center: false},
+                    640: {controls: false,items: 2,gutter: 20,center: false},
+                    768: {controls: false,items: 2,gutter: 20,center: false},
                     1024: {controls: false,items: 2,gutter: 30,center: false},
-                    1261: {controls: true,items: 3,gutter: 44,center: true}
+                    1261: {controls: true,items: 2,gutter: 30,center: false},
+                    1421: {controls: true,items: 3,gutter: 44,center: true}
                 },
             });
         } else if ($('body').hasClass('fs_150')) {
@@ -601,9 +607,11 @@ $(function() {
                     preventActionWhenRunning: true,
                     responsive: {
                         320: {controls: false,items: 1,gutter: 20,center: false},
-                        768: {controls: false,items: 1,gutter: 20,center: false},
+                        640: {controls: false,items: 2,gutter: 20,center: false},
+                        768: {controls: false,items: 2,gutter: 20,center: false},
                         1024: {controls: false,items: 2,gutter: 30,center: false},
-                        1261: {controls: true,items: 3,gutter: 44,center: true}
+                        1261: {controls: true,items: 2,gutter: 30,center: false},
+                        1421: {controls: true,items: 3,gutter: 44,center: true}
                     },
                 });
             } else if ($('body').hasClass('fs_150')) {
@@ -703,11 +711,11 @@ $(function() {
                 preventActionWhenRunning: true,
                 controlsPosition: "bottom",
                 responsive: {
-                    320: {controls: false,items: 1,gutter: 18},
-                    640: {controls: false,items: 2,gutter: 20},
-                    768: {controls: false,items: 2,gutter: 20},
-                    1024: {controls: false,items: 3,gutter: 24},
-                    1261: {controls: true,items: 4,gutter: 28}
+                    320: {controls: false,items: 1,gutter: 16},
+                    640: {controls: false,items: 1,gutter: 20},
+                    768: {controls: false,items: 1,gutter: 20},
+                    1024: {controls: false,items: 2,gutter: 40},
+                    1261: {controls: true,items: 3,gutter: 40},
                 }
             });
         } else if ($('body').hasClass('fs_150')) {
@@ -784,11 +792,11 @@ $(function() {
                     preventActionWhenRunning: true,
                     controlsPosition: "bottom",
                     responsive: {
-                        320: {controls: false,items: 1,gutter: 18},
-                        640: {controls: false,items: 2,gutter: 20},
-                        768: {controls: false,items: 2,gutter: 20},
-                        1024: {controls: false,items: 3,gutter: 24},
-                        1261: {controls: true,items: 4,gutter: 28}
+                        320: {controls: false,items: 1,gutter: 16},
+                        640: {controls: false,items: 1,gutter: 20},
+                        768: {controls: false,items: 1,gutter: 20},
+                        1024: {controls: false,items: 2,gutter: 40},
+                        1261: {controls: true,items: 3,gutter: 40},
                     }
                 });
             } else if ($('body').hasClass('fs_150')) {
@@ -868,7 +876,7 @@ $(function() {
     
     
     /*Панель для слабовидящих*/
-    $('.settings-panel__btn').on("click", function (){
+    $('.settings-panel__btn, .settings-btn-mobile').on("click", function (){
         var $this = $(this);
         var $body = $('.settings-panel');
 
@@ -881,6 +889,13 @@ $(function() {
             $body.addClass('active');
             $('html').addClass('overflowHidden');
         }
+    });
+
+    $('.settings-panel__close').on("click", function (){
+        $('.settings-btn-mobile').removeClass('active');
+        $('.settings-panel__btn').removeClass('active');
+        $('.settings-panel').removeClass('active');
+        $('html').removeClass('overflowHidden');
     });
 
     $(".settings-panel__items input:radio").on('change', function() {
@@ -1175,5 +1190,44 @@ $(function() {
             scrollTop: 0
         }, 800);
     });/*Кнопка наверх*/	
+
+
+    
+    if (window.matchMedia("(max-width: 1260px)").matches) {
+        if ($('.burger-block').length) {
+            var headerFixFlag = true;
+            var scroll = $(window).scrollTop(),
+                offset = $('.burger-block').offset().top;
+            
+            if (scroll >= offset) {
+                if (headerFixFlag) {
+                    $('.burger-block').addClass('fixed-burger');
+                };
+                headerFixFlag = false;
+            } else {
+                if (!headerFixFlag) {
+                    $('.burger-block').removeClass('fixed-burger');
+                };
+                headerFixFlag = true;
+            };
+            
+            $(window).on('scroll', function(){
+                var scroll = $(window).scrollTop(),
+                    offset = $('.burger-block').offset().top;
+            
+                if (scroll >= offset) {
+                    if (headerFixFlag) {
+                        $('.burger-block').addClass('fixed-burger');
+                    };
+                    headerFixFlag = false;
+                } else {
+                    if (!headerFixFlag) {
+                        $('.burger-block').removeClass('fixed-burger');
+                    };
+                    headerFixFlag = true;
+                };
+            });
+        };
+    };/*Фиксированная панель*/	
 
 });

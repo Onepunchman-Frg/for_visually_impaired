@@ -156,6 +156,14 @@
             font-family: var(--font2);
             font-weight: var(--font2_700);
             color: var(--on_gr_additional_text);
+
+            @media all and (max-width: 1260px) {
+                font-size: calc(18px * var(--font1Ratio));
+            }
+
+            @media all and (max-width: 639px) {
+                font-size: calc(16px * var(--font1Ratio));
+            }
         }
     }
     .schedule-block {
@@ -181,10 +189,7 @@
             display: flex;
             font-size: calc(16px * var(--font1Ratio));
         }
-        &__days {
-            margin-right: 5px;
-        }
-        &__time {
+        &__text {
         }
     }
     .address-block {
@@ -354,6 +359,7 @@
             flex: 1 1 100%; 
             margin-bottom: 20px;
             justify-content: center;
+            text-align: center;
         }
     }
 }

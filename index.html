@@ -11,27 +11,42 @@
 <body>
     <div class="site-wrapper" id="wrapper">
     
-    
-        <div class="settings-panel">
-            <div class="settings-panel__btn settings-panel__btn_mobile">
-                <span class="settings-panel__icon close-icon">
+        <div class="burger-block">
+            <div class="burger-block__inner">
+                <button class="burger-block__btn">
                     <i>
                         <svg class="gr-svg-icon">
-                            <use xlink:href="#icon_site_close"></use>
+                            <use xlink:href="#icon_site_burger"></use>
                         </svg>
-                    </i>
-                </span>
-                <span class="settings-panel__icon open-icon">
-                    <i>
                         <svg class="gr-svg-icon gr_big_icon">
-                            <use xlink:href="#icon_site_glasses"></use>
+                            <use xlink:href="#icon_site_burger"></use>
                         </svg>
                     </i>
-                </span>
-                <span class="settings-panel__btn_title">
-                    Для слабовидящих
-                </span>
+                </button>
             </div>
+        </div>
+
+        <div class="settings-btn-mobile gr-btn-2">
+            <span class="settings-btn-mobile__icon close-icon">
+                <i>
+                    <svg class="gr-svg-icon">
+                        <use xlink:href="#icon_site_close"></use>
+                    </svg>
+                </i>
+            </span>
+            <span class="settings-btn-mobile__icon open-icon">
+                <i>
+                    <svg class="gr-svg-icon gr_big_icon">
+                        <use xlink:href="#icon_site_glasses"></use>
+                    </svg>
+                </i>
+            </span>
+            <span class="settings-btn-mobile__title">
+                Для слабовидящих
+            </span>
+        </div>
+    
+        <div class="settings-panel">
             <div class="settings-panel__inner">
                 <div class="settings-panel__btn">
                     <span class="settings-panel__icon close-icon">
@@ -196,8 +211,13 @@
                             </label>
                         </div>
                     </div>
+                </div>
 
 
+                <div class="settings-panel__close">
+                    <button>
+                        Закрыть
+                    </button>
                 </div>
             </div>
         </div>
@@ -206,17 +226,6 @@
 
         <header class="header block-padding">
             <div class="header__inner block-width">
-                <div class="burger-block">
-                    <div class="burger-block__inner">
-                        <button class="burger-block__btn">
-                            <i>
-                                <svg class="gr-svg-icon">
-                                    <use xlink:href="#icon_site_burger"></use>
-                                </svg>
-                            </i>
-                        </button>
-                    </div>
-                </div>
                 <div class="header__top">
                     <div class="site-info">
                         <div class="site-info__logo">
@@ -279,16 +288,30 @@
                     <nav class="site-menu">
                         <ul class="site-menu__list header-menu" role="menubar">
                             <li role="menuitem" aria-current="page"><a tabindex="0" href="#">Главная</a></li>
-                            <li role="menuitem" aria-haspopup="true">
-                                <a href="#">О нас</a>
+                            <li role="menuitem" aria-haspopup="true" class="has">
+                                <a href="#">
+                                    О нас
+                                    <i>
+                                        <svg class="gr-svg-icon">
+                                            <use xlink:href="#icon_site_bottom_mini"></use>
+                                        </svg>
+                                    </i>
+                                </a>
                                 <ul aria-expanded="true||false" role="menu">
                                     <li role="menuitem"><a href="#">Тест</a></li>
                                     <li role="menuitem"><a href="#">Тест</a></li>
                                 </ul>
                             </li>
                             <li role="menuitem"><a href="#">Галерея</a></li>
-                            <li role="menuitem">
-                                <a href="#">Частые вопросы</a>
+                            <li role="menuitem" class="has">
+                                <a href="#">
+                                    Частые вопросы
+                                    <i>
+                                        <svg class="gr-svg-icon">
+                                            <use xlink:href="#icon_site_bottom_mini"></use>
+                                        </svg>
+                                    </i>
+                                </a>
                                 <ul aria-expanded="true||false" role="menu">
                                     <li role="menuitem"><a href="#">Тест</a></li>
                                     <li role="menuitem"><a href="#">Тест</a></li>
@@ -297,8 +320,15 @@
                                     <li role="menuitem"><a href="#">Тест</a></li>
                                     <li role="menuitem"><a href="#">Тест</a></li>
                                     <li role="menuitem"><a href="#">Тест</a></li>
-                                    <li role="menuitem">
-                                        <a href="#">Тест</a>
+                                    <li role="menuitem" class="has">
+                                        <a href="#">
+                                            Тест
+                                            <i>
+                                                <svg class="gr-svg-icon">
+                                                    <use xlink:href="#icon_site_bottom_mini"></use>
+                                                </svg>
+                                            </i>
+                                        </a>
                                         <ul aria-expanded="true||false" role="menu">
                                             <li role="menuitem"><a href="#">Тест</a></li>
                                             <li role="menuitem"><a href="#">Тест</a></li>
@@ -306,8 +336,15 @@
                                             <li role="menuitem"><a href="#">Тест</a></li>
                                             <li role="menuitem"><a href="#">Тест</a></li>
                                             <li role="menuitem"><a href="#">Тест</a></li>
-                                            <li role="menuitem">
-                                                <a href="#">Тест</a>
+                                            <li role="menuitem" class="has">
+                                                <a href="#">
+                                                    Тест
+                                                    <i>
+                                                        <svg class="gr-svg-icon">
+                                                            <use xlink:href="#icon_site_bottom_mini"></use>
+                                                        </svg>
+                                                    </i>
+                                                </a>
                                                 <ul aria-expanded="true||false" role="menu">
                                                     <li role="menuitem"><a href="#">Тест</a></li>
                                                     <li role="menuitem"><a href="#">Тест</a></li>
@@ -1141,12 +1178,10 @@
                         </div>
                         <div class="schedule-block__items">
                             <div class="schedule-block__item">
-                                <div class="schedule-block__days">Пн-Пт:</div>
-                                <div class="schedule-block__time">с 09:00 до 17:00</div>
+                                <div class="schedule-block__text">Пн-Пт: с 09:00 до 17:00</div>
                             </div>
                             <div class="schedule-block__item">
-                                <div class="schedule-block__days">Суббота:</div>
-                                <div class="schedule-block__time">с 11:00 до 15:00</div>
+                                <div class="schedule-block__text">Суббота: с 11:00 до 15:00</div>
                             </div>
                         </div>
                     </div>

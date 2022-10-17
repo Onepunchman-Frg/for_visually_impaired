@@ -1,12 +1,34 @@
 .burger-block {
+    background: var(--on_gr_bg_bg);
+    min-height: 90px;
+    
     display: none;
 
     @media all and (max-width: 1260px) {
         display: block;
-        margin-top: 20px;
+    }
+
+    @media all and (max-width: 639px) {
+        min-height: 64px;
+    }
+
+    &.fixed-burger {
+        .burger-block__inner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
     }
 
     &__inner {
+        background: var(--on_gr_bg_bg);
+        padding: 20px;
+
+        @media all and (max-width: 639px) {
+            padding: 10px;
+        }
     }
     &__btn {
         @extend .gr-icon-btn-1;
