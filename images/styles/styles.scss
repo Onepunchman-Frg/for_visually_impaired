@@ -23,7 +23,7 @@ html {
 }
 
 html {
-    font-size: calc(18px * var(--font1Ratio));
+    @extend .fsz_1_col;
 }
 
 body {
@@ -36,6 +36,38 @@ body {
     background: var(--gr_bg);
     line-height: calc(1.5 * var(--lineHeightRatio));
     color: var(--on_gr_bg_sec_text);
+}
+
+.fsz_1_col {
+    font-size: calc(18px * var(--font1Ratio));
+
+    @media all and (max-width: 1023px) {
+        font-size: calc(17px * var(--font1Ratio));
+    }
+
+    @media all and (max-width: 767px) {
+        font-size: calc(16px * var(--font1Ratio));
+    }
+}
+
+.fsz_2_col {
+    font-size: calc(17px * var(--font1Ratio));
+
+    @media all and (max-width: 767px) {
+        font-size: calc(16px * var(--font1Ratio));
+    }
+}
+
+.fsz_3_col {
+    font-size: calc(16px * var(--font1Ratio));
+
+    @media all and (max-width: 767px) {
+        font-size: calc(15px * var(--font1Ratio));
+    }
+}
+
+.fsz_4_col {
+    font-size: calc(15px * var(--font1Ratio));
 }
 
 .show-text {
@@ -233,6 +265,17 @@ button {
 
 .overflowHidden {
     overflow: hidden;
+
+    &:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: var(--gr_bg_overlay_a_5);
+        z-index: 99;
+    }
 }
 
 .gr-svg-icon {
@@ -308,11 +351,11 @@ button {
     }
 
     &__desc {
+        @extend .fsz_2_col;
         margin-top: 6px;
         line-height: calc(1.2 * var(--lineHeightRatio));
 
         @media all and (max-width: 639px) {
-            font-size: calc(16px * var(--font1Ratio));
             text-align: center;
         }
     }

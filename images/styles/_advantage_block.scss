@@ -19,6 +19,19 @@
         }
     }
     &__top {
+        margin: 0 0 50px;
+
+        @media all and (max-width: 1260px) {
+            margin: 0 0 35px;
+        }
+
+        @media all and (max-width: 1023px) {
+            margin: 0 0 30px;
+        }
+
+        @media all and (max-width: 639px) {
+            margin: 0 0 20px;
+        }
     }
     &__title {
     }
@@ -27,18 +40,14 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
-        margin: 50px -17.5px 0;
+        margin: 0 -17.5px 0;
 
         @media all and (max-width: 1260px) {
-            margin: 35px -15px 0;
+            margin: 0 -15px 0;
         }
 
         @media all and (max-width: 1023px) {
-            margin: 30px 0 0;
-        }
-
-        @media all and (max-width: 639px) {
-            margin: 20px 0 0;
+            margin: 0;
         }
     }
     &__item {
@@ -70,25 +79,10 @@
         }
     }
     &__count {
-        margin-right: 24px;
-        font-family: var(--font2);
-        font-size: calc(36px * var(--font1Ratio));
-        font-weight: var(--font2_700);
+        @extend h1;
         color: var(--gr_primary_3);          
-        line-height: calc(1.1 * var(--lineHeightRatio));
         flex-shrink: 0;
-
-        @media all and (max-width: 1260px) {
-            font-size: calc(34px * var(--font1Ratio));
-        }
-
-        @media all and (max-width: 1023px) {
-            font-size: calc(30px * var(--font1Ratio));
-        }
-
-        @media all and (max-width: 639px) {
-            font-size: calc(26px * var(--font1Ratio));
-        }
+        
     }
     &__text {
     }
@@ -96,15 +90,11 @@
         margin: 0;
     }
     &__announcement {
+        @extend .fsz_2_col;
         margin-top: 8px;
-        font-size: calc(17px * var(--font1Ratio));
 
         @media all and (max-width: 1023px) {
             margin-top: 4px;
-        }
-
-        @media all and (max-width: 639px) {
-            font-size: calc(16px * var(--font1Ratio));
         }
     }
 }

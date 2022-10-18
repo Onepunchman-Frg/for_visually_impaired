@@ -9,6 +9,7 @@
 
     &__body {
         height: 100%;
+        border-bottom: 2px solid transparent;
 
         @media all and (max-width: 1420px) {   
             height: auto;

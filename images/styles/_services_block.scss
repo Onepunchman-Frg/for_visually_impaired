@@ -121,7 +121,7 @@
         }
     }
     &__announcement {
-        font-size: calc(17px * var(--font1Ratio));
+        @extend .fsz_2_col;
         line-height: calc(1.5 * var(--lineHeightRatio));
         margin-top: 16px;
 
@@ -151,17 +151,10 @@
         }
     }
     &__price {
-        font-family: var(--font2);
-        font-weight: var(--font2_700);
         color: var(--on_gr_bg_acc_text);
-        font-size: calc(20px * var(--font2Ratio));
 
-        @media all and (max-width: 1260px) {            
-            font-size: calc(18px * var(--font2Ratio));
-        }
-
-        @media all and (max-width: 767px) {            
-            font-size: calc(16px * var(--font2Ratio));
+        h5 {
+            margin: 0;
         }
     }
     &__btn {

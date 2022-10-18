@@ -29,6 +29,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 50px;
+
+        @media all and (max-width: 1260px) {
+            margin-bottom: 35px;
+        }
+
+        @media all and (max-width: 1023px) {
+            margin-bottom: 30px;
+        }
+        @media all and (max-width: 639px) {
+            margin-bottom: 20px;
+        }
     }
     &__heading {
 
@@ -43,18 +55,6 @@
     &__btn {
     }
     &__items {
-        margin-top: 50px;
-
-        @media all and (max-width: 1260px) {
-            margin-top: 35px;
-        }
-
-        @media all and (max-width: 1023px) {
-            margin-top: 30px;
-        }
-        @media all and (max-width: 639px) {
-            margin-top: 20px;
-        }
     }
     &__item {
     }
@@ -98,7 +98,7 @@
 
     &__preview {
         margin-top: 6px;
-        font-size: calc(16px * var(--font1Ratio));
+        @extend .fsz_3_col;
 
         @media all and (max-width: 639px) {
             text-align: center;

@@ -316,6 +316,7 @@
         --gr_bg_overlay_5: rgba(0,0,0, .5);
 
         --gr_slider_overlay: rgba(0, 0, 0, .2);
+        --gr_bg_overlay_a_5: rgba(0, 0, 0, .3);
     
         --gr_error: #FF604E;
         --gr_error_1: rgba(255, 96, 78, .1);
